@@ -11,6 +11,23 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(-4, -4)]
+        [InlineData(212, -212)]
+        [InlineData(-125, -125)]
+        [InlineData(932123, -932123)]
+        public void ReturnNegative_ValidNumberShouldConvertToNegative(int n, int expected)
+        {
+            // Arrange
+
+            // Act
+            int actual = Very_Easy.ReturnNegative(n);
+
+            // Asseert
+            Assert.Equal(expected, actual);
+        }
+        
+        
+        [Theory]
         [InlineData(5, 3, 15)]
         [InlineData(8, 5, 40)]
         [InlineData(5, 4, 20)]

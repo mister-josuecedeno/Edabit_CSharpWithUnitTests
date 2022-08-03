@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int ReturnNegative(int n)
+        {
+            return n < 0 ? n : n * -1;
+        }
+
         public static int area(int h, int w)
         {
             if (h <= 0 || w <= 0) return -1;
