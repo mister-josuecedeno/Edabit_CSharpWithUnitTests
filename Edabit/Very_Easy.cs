@@ -8,6 +8,21 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string IsEvenOrOdd(int num)
+        {
+            return num % 2 == 0 ? "even" : "odd";
+        }
+
+        public static string ConcatName(string firstName, string lastName)
+        {
+            return $"{lastName}, {firstName}";
+        }
+
+        public static int NthEven(int n)
+        {
+            return (n - 1) * 2;
+        }
+
         public static int absolute(int num)
         {
             return num < 0 ? -num : num;

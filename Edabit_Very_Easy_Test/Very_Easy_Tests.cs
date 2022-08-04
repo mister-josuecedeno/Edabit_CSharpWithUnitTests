@@ -11,6 +11,68 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(3, "odd")]
+        [InlineData(0, "even")]
+        [InlineData(7, "odd")]
+        [InlineData(12, "even")]
+        [InlineData(6474, "even")]
+        [InlineData(563, "odd")]
+        [InlineData(3, "odd")]
+        [InlineData(301, "odd")]
+        [InlineData(-3, "odd")]
+        [InlineData(-0, "even")]
+        [InlineData(-7, "odd")]
+        [InlineData(-12, "even")]
+        [InlineData(-563, "odd")]
+        [InlineData(-6474, "even")]
+        [InlineData(-3, "odd")]
+        [InlineData(-301, "odd")]
+        public void IsEvenOrOdd_ReturnEvenOrOddAsString(int num, string expected)
+        {
+            // Arrange
+
+            // Act
+            string actual = Very_Easy.IsEvenOrOdd(num);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
+        [InlineData("John", "Doe", "Doe, John")]
+        [InlineData("First", "Last", "Last, First")]
+        [InlineData("A", "B", "B, A")]
+        [InlineData(",", ",", ",, ,")]
+        public void ConcatName_ReturnStringsConcatenated(string firstName, string lastName, string expected)
+        {
+            // Arrange
+
+            // Act
+            string actual = Very_Easy.ConcatName(firstName, lastName);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+        
+        
+        [Theory]
+        [InlineData(1, 0)]
+        [InlineData(2, 2)]
+        [InlineData(3, 4)]
+        [InlineData(100, 198)]
+        [InlineData(1298734, 2597466)]
+        public void NthEven_ReturnsTheNthEvenNumber(int n, int expected)
+        {
+            // Arrange
+
+            // Act
+            int actual = Very_Easy.NthEven(n);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+        
+        [Theory]
         [InlineData(-5, 5)]
         [InlineData(-3, 3)]
         [InlineData(250, 250)]
