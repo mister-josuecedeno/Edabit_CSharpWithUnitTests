@@ -3,4 +3,4 @@ The goal of this repository is to continue to develop my C# sharp skills along w
 
 ## Very Easy
 2022-08-04 - NthEven, ConcatName, IsEvenOrOdd\
-2022-08-03 - area, ReturnNegative, Comp, IsOdd, absolute\
+2022-08-03 - area, ReturnNegative, Comp, IsOdd, absolute
