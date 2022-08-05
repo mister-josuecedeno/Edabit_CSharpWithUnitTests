@@ -11,6 +11,44 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("Aiden", true)]
+        [InlineData("Roxy", false)]
+        [InlineData("Bert", false)]
+        [InlineData("Dean", true)]
+        [InlineData("Ian", true)]
+        [InlineData("Brian", true)]
+        [InlineData("Daniel", false)]
+        public void isLastCharacterN_ChecksIfLastCharacterIsN(string word, bool expected)
+        {
+            // Arrange
+
+            // Act
+            bool actual = Very_Easy.isLastCharacterN(word);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+
+        [Theory]
+        [InlineData("apples", true)]
+        [InlineData("banana", true)]
+        [InlineData("cherry", true)]
+        [InlineData("mango", false)]
+        [InlineData("peach", false)]
+        [InlineData("pears", false)]
+        public void oddOrEven_ReturnEvenOrOddBasedOnLength(string word, bool expected)
+        {
+            // Arrange
+
+            // Act
+            bool actual = Very_Easy.oddOrEven(word);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+        
+        [Theory]
         [InlineData(3, "odd")]
         [InlineData(0, "even")]
         [InlineData(7, "odd")]

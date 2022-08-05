@@ -8,6 +8,16 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static bool isLastCharacterN(string word)
+        {
+            return word.EndsWith("n");
+        }
+
+        public static bool oddOrEven(string word)
+        {
+            return word.Length % 2 == 0;
+        }
+
         public static string IsEvenOrOdd(int num)
         {
             return num % 2 == 0 ? "even" : "odd";
