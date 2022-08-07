@@ -11,6 +11,25 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(1, 1)]
+        [InlineData(2, 4)]
+        [InlineData(0, 0)]
+        [InlineData(5, 25)]
+        [InlineData(27, 729)]
+        [InlineData(196, 38416)]
+        [InlineData(512, 262144)]
+        public void StackBoxes_ReturnTheSquareOfN (int n, int expected)
+        {
+            // Arrange
+
+            // Act 
+            int actual = Very_Easy.StackBoxes(n);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+        
+        [Theory]
         [InlineData("Aiden", true)]
         [InlineData("Roxy", false)]
         [InlineData("Bert", false)]

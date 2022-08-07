@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int StackBoxes(int n)
+        {
+            return n * n; ;
+        }
+
         public static bool isLastCharacterN(string word)
         {
             return word.EndsWith("n");
