@@ -14,6 +14,8 @@ namespace Edabit.Tests
         [MemberData(nameof(PrintArrayData))]
         public void PrintArray_ReturnArrayNumbered1ToN (int n, int[] expected)
         {
+            // https://andrewlock.net/creating-parameterised-tests-in-xunit-with-inlinedata-classdata-and-memberdata/
+
             // Arrange
 
             // Act
