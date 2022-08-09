@@ -11,6 +11,27 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [MemberData(nameof(PrintArrayData))]
+        public void PrintArray_ReturnArrayNumbered1ToN (int n, int[] expected)
+        {
+            // Arrange
+
+            // Act
+            List<int> actual = Very_Easy.PrintArray(n);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        public static IEnumerable<object[]> PrintArrayData =>
+        new List<object[]>
+        {
+            new object[] { 1, new int[] { 1 } },
+            new object[] { 3, new int[] { 1, 2, 3 } },
+            new object[] { 6, new int[] { 1, 2, 3, 4, 5, 6 } },
+        };
+
+        [Theory]
         [InlineData(1, 1)]
         [InlineData(2, 4)]
         [InlineData(0, 0)]
@@ -74,15 +95,12 @@ namespace Edabit.Tests
         [InlineData(12, "even")]
         [InlineData(6474, "even")]
         [InlineData(563, "odd")]
-        [InlineData(3, "odd")]
         [InlineData(301, "odd")]
         [InlineData(-3, "odd")]
-        [InlineData(-0, "even")]
         [InlineData(-7, "odd")]
         [InlineData(-12, "even")]
         [InlineData(-563, "odd")]
         [InlineData(-6474, "even")]
-        [InlineData(-3, "odd")]
         [InlineData(-301, "odd")]
         public void IsEvenOrOdd_ReturnEvenOrOddAsString(int num, string expected)
         {

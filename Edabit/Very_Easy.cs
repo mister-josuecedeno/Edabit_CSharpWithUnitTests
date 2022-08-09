@@ -8,6 +8,18 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static List<int> PrintArray(int number)
+        {
+            List<int> array = new List<int>();
+
+            for (int counter = 1; counter <= number; counter++)
+            {
+                array.Add(counter);
+            }
+
+            return array;
+        }
+
         public static int StackBoxes(int n)
         {
             return n * n; ;
