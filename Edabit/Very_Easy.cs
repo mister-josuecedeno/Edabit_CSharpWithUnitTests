@@ -8,6 +8,21 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int Diff(int[] arr)
+        {
+            return arr.Max() - arr.Min();
+        }
+
+        public static bool isEmpty(string str)
+        {
+            return String.IsNullOrEmpty(str);
+        }
+
+        public static int TotalCups(int n)
+        {
+            return n + (n / 6);
+        }
+
         public static List<int> PrintArray(int number)
         {
             List<int> array = new List<int>();

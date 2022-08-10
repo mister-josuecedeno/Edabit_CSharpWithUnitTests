@@ -11,6 +11,63 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(new int[] { -9, -8, 6, -9, 15, 6 }, 24)]
+        [InlineData(new int[] { -5, 6, 18, 4, 16, -2 }, 23)]
+        [InlineData(new int[] { -2, 20, -9, -9, -2, -7 }, 29)]
+        [InlineData(new int[] { 4, -2, 11, -9, 15, 2 }, 24)]
+        [InlineData(new int[] { 15, 10, 3, -6, 6, 19 }, 25)]
+        [InlineData(new int[] { 1, 7, 18, -1, -2, 9 }, 20)]
+        [InlineData(new int[] { 5, 1, -9, 7, -8, -10 }, 17)]
+        [InlineData(new int[] { 5, 1, -9, 7, -8, -10 }, 17)]
+        [InlineData(new int[] { 4, 17, 12, 2, 10, 2 }, 15)]
+        public void Diff(int[] arr, int expected)
+        {
+            // Arrange
+
+            // Act
+            int actual = Very_Easy.Diff(arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
+        [InlineData("", true)]
+        [InlineData(" ", false)]
+        [InlineData("            ", false)]
+        [InlineData("38215", false)]
+        [InlineData("afjabsdf", false)]
+        [InlineData("!?@&", false)]
+        public void isEmpty(string str, bool expected)
+        {
+            // Arrange
+
+            // Act
+            bool actual = Very_Easy.isEmpty(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+
+        [Theory]
+        [InlineData(6, 7)]
+        [InlineData(3, 3)]
+        [InlineData(7, 8)]
+        [InlineData(12, 14)]
+        [InlineData(213, 248)]
+        [InlineData(16, 18)]
+        public void TotalCups(int n, int expected)
+        {
+            // Arrange
+
+            // Act
+            int actual = Very_Easy.TotalCups(n);
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+        
+        [Theory]
         [MemberData(nameof(PrintArrayData))]
         public void PrintArray_ReturnArrayNumbered1ToN (int n, int[] expected)
         {
