@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static bool ShouldServeDrinks(int age, bool on_break)
+        {
+            return age >= 18 && !on_break;
+        }
+
         public static int Diff(int[] arr)
         {
             return arr.Max() - arr.Min();

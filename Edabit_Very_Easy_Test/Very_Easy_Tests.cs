@@ -10,6 +10,26 @@ namespace Edabit.Tests
 {
     public class Very_Easy_Tests
     {
+
+        [Theory]
+        [InlineData(17, true, false)]
+        [InlineData(30, true, false)]
+        [InlineData(24, false, true)]
+        [InlineData(18, false, true)]
+        [InlineData(16, false, false)]
+        [InlineData(18, true, false)]
+        [InlineData(17, false, false)]
+        public void ShouldServeDrinks_ReturnIfShouldServeDrinks(int age, bool on_break, bool expected)
+        {
+            // Arrange
+
+            // Act
+            bool actual = Very_Easy.ShouldServeDrinks(age, on_break);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
         [Theory]
         [InlineData(new int[] { -9, -8, 6, -9, 15, 6 }, 24)]
         [InlineData(new int[] { -5, 6, 18, 4, 16, -2 }, 23)]
