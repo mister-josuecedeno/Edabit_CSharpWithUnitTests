@@ -10,6 +10,22 @@ namespace Edabit.Tests
 {
     public class Very_Easy_Tests
     {
+        [Theory]
+        [InlineData("####", true)]
+        [InlineData("## ####", false)]
+        [InlineData("#", true)]
+        [InlineData("# #", false)]
+        public void IsSafeBridge_ValidateIfBridgeIsSafe(string str, bool expected)
+        {
+            // Arrange
+
+            // Act
+            bool actual = Very_Easy.IsSafeBridge(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
 
         [Theory]
         [InlineData(17, true, false)]
