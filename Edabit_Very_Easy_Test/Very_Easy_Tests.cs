@@ -11,6 +11,22 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("6", 6)]
+        [InlineData("2", 2)]
+        [InlineData("10", 10)]
+        [InlineData("666", 666)]
+        public void StringInt_TakesAStringAndReturnsAnInteger(string txt, int expected)
+        {
+            // Arrange
+
+            // Act
+            int actual = Very_Easy.StringInt(txt);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("####", true)]
         [InlineData("## ####", false)]
         [InlineData("#", true)]
