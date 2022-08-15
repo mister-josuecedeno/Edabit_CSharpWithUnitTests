@@ -11,6 +11,26 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("Foo", false)]
+        [InlineData("Foo bar", true)]
+        [InlineData("Foo ", true)]
+        [InlineData(" Foo", true)]
+        [InlineData(" ", true)]
+        [InlineData("", false)]
+        [InlineData(",./;'[]-=", false)]
+        public void HasSpaces_ReturnTrueIfContainsSpaces(string str, bool expected)
+        {
+            // Arrange
+
+            // Act
+            bool actual = Very_Easy.HasSpaces(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+
+        }
+
+        [Theory]
         [InlineData("6", 6)]
         [InlineData("2", 2)]
         [InlineData("10", 10)]
