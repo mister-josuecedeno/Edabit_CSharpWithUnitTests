@@ -8,6 +8,12 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int Length(string str)
+        {
+            if (str == "") return 0;
+            return 1 + Length(str.Substring(1));
+        }
+
         public static bool HasSpaces(string str)
         {
             return str.Contains(" ");

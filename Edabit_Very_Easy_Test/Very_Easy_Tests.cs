@@ -11,6 +11,22 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("apple", 5)]
+        [InlineData("make", 4)]
+        [InlineData("a", 1)]
+        [InlineData("", 0)]
+        public void Length_ReturnLengthOfString (string str, int expected)
+        {
+            // Arrange
+
+            // Act
+            int actual = Very_Easy.Length(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("Foo", false)]
         [InlineData("Foo bar", true)]
         [InlineData("Foo ", true)]
