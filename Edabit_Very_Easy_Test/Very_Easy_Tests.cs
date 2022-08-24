@@ -11,6 +11,27 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(6, 2, true)]
+        [InlineData(-6, -9, true)]
+        [InlineData(6, -2, false)]
+        [InlineData(0, 0, true)]
+        [InlineData(100, 1, true)]
+        [InlineData(-80, -5000, true)]
+        [InlineData(6, -999, false)]
+        [InlineData(-1, 2, false)]
+        [InlineData(0, 2, false)]
+        public void BothShouldReturnTrueIfBothMatchCriteria (int n1, int n2, bool expected)
+        {
+            // Arrange
+
+            // Act
+            bool actual = Very_Easy.Both(n1, n2);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+        
+        [Theory]
         [InlineData("apple", 5)]
         [InlineData("make", 4)]
         [InlineData("a", 1)]
@@ -105,7 +126,6 @@ namespace Edabit.Tests
         [InlineData(new int[] { 4, -2, 11, -9, 15, 2 }, 24)]
         [InlineData(new int[] { 15, 10, 3, -6, 6, 19 }, 25)]
         [InlineData(new int[] { 1, 7, 18, -1, -2, 9 }, 20)]
-        [InlineData(new int[] { 5, 1, -9, 7, -8, -10 }, 17)]
         [InlineData(new int[] { 5, 1, -9, 7, -8, -10 }, 17)]
         [InlineData(new int[] { 4, 17, 12, 2, 10, 2 }, 15)]
         public void Diff(int[] arr, int expected)

@@ -8,6 +8,14 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static bool Both(int n1, int n2)
+        {
+            if (n1 < 0 && n2 < 0) return true;
+            if (n1 > 0 && n2 > 0) return true;
+            if (n1 == 0 && n2 == 0) return true;
+            return false;
+        }
+
         public static int Length(string str)
         {
             if (str == "") return 0;
