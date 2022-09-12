@@ -8,8 +8,24 @@ using Edabit;
 
 namespace Edabit.Tests
 {
+    
     public class Very_Easy_Tests
     {
+        [Theory]
+        [InlineData(12, 2)]
+        [InlineData(6000, 4)]
+        [InlineData(314, 3)]
+        public void ReturnNumberLength (int n, int expected)
+        {
+            // Arrange
+
+            // Act
+            int actual = Very_Easy.Length (n);  
+
+            // Assert
+            Assert.Equal (expected, actual);
+        }
+        
         [Theory]
         [InlineData(6, 2, true)]
         [InlineData(-6, -9, true)]
