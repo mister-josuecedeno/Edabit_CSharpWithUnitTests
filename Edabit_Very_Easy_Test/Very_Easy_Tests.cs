@@ -12,6 +12,28 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData('E', 69)]
+        [InlineData('d', 100)]
+        [InlineData('a', 97)]
+        [InlineData('b', 98)]
+        [InlineData('i', 105)]
+        [InlineData('t', 116)]
+        [InlineData('.', 46)]
+        [InlineData(' ', 32)]
+        [InlineData('1', 49)]
+        public void ReturnCharToASCII (char ch, int expected)
+        {
+            // Arrange
+
+            // Act
+            int actual = Very_Easy.CharToASCII(ch);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+
+        [Theory]
         [InlineData(12, 2)]
         [InlineData(6000, 4)]
         [InlineData(314, 3)]

@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int CharToASCII(char ch)
+        {
+            return (int)ch;
+        }
+
         public static int Length(int n)
         {
             return $"{n}".Length;
