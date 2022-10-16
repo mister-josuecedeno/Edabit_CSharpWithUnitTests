@@ -12,6 +12,25 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(8, 3, 2, true)]
+        [InlineData(8, 3, 3, false)]
+        [InlineData(24, 12, 2, true)]
+        [InlineData(5, 6, 1, false)]
+        [InlineData(5, 0, 100, true)]
+        [InlineData(15, 2, 7, true)]
+        [InlineData(15, 2, 8, false)]
+        public void ReturnEqualSlices (int total, int people, int each, bool expected)
+        {
+            // Arrange
+
+            // Act
+            bool actual = Very_Easy.EqualSlices(total, people, each);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+        
+        [Theory]
         [InlineData('E', 69)]
         [InlineData('d', 100)]
         [InlineData('a', 97)]

@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static bool EqualSlices(int total, int people, int each)
+        {
+            return people == 0 ? true : (total / people) == each;
+        }
+
         public static int CharToASCII(char ch)
         {
             return (int)ch;
