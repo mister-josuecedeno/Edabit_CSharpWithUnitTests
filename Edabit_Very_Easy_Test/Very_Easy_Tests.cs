@@ -12,6 +12,30 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(new object[] { "Cat", "Dog", "Duck" }, "Duck")]
+        [InlineData(new object[] { 1, 2, 3 }, 3)]
+        [InlineData(new object[] { null }, null)]
+        [InlineData(new object[] { true, false, false, true }, true)]
+        [InlineData(new object[] { 7, "String", false, null, null }, null)]
+        [InlineData(new object[] { null }, null)]
+        [InlineData(new object[] { false }, false)]
+        [InlineData(new object[] { null, null, null }, null)]
+        [InlineData(new object[] { 1, 2, 3, 56, 87, 23, 65, 45 }, 45)]
+        [InlineData(new object[] { "Apple", "Orange", null }, null)]
+        [InlineData(new object[] { true, false, "Apple" }, "Apple")]
+        [InlineData(new object[] { 1 }, 1)]
+        public void ReturnLastItem (object[] arr, object expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Very_Easy.GetLastItem(arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(8, 3, 2, true)]
         [InlineData(8, 3, 3, false)]
         [InlineData(24, 12, 2, true)]

@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static object GetLastItem(object[] arr)
+        {
+            return arr.Last();
+        }
+        
         public static bool EqualSlices(int total, int people, int each)
         {
             return people == 0 ? true : (total / people) == each;
