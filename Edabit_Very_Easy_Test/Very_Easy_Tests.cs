@@ -12,6 +12,29 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("dudes", true)]
+        [InlineData("flowers", true)]
+        [InlineData("checks", true)]
+        [InlineData("varies", true)]
+        [InlineData("efforts", true)]
+        [InlineData("mood", false)]
+        [InlineData("whiteboard", false)]
+        [InlineData("cow", false)]
+        [InlineData("word", false)]
+        [InlineData("love", false)]
+        public void ReturnIsPlural (string word, bool expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Very_Easy.IsPlural(word);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+        
+        
+        [Theory]
         [InlineData(new object[] { "Cat", "Dog", "Duck" }, "Duck")]
         [InlineData(new object[] { 1, 2, 3 }, 3)]
         [InlineData(new object[] { null }, null)]

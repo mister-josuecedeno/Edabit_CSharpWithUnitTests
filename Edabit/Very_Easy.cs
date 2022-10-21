@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static bool IsPlural(string word)
+        {
+            return word.Last() == 's';
+        }
+
         public static object GetLastItem(object[] arr)
         {
             return arr.Last();
