@@ -8,6 +8,15 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string Operation(int num1, int num2)
+        {
+            if (num1 + num2 == 24) return "added";
+            if (num1 - num2 == 24) return "subtracted";
+            if (num1 / num2 == 24) return "divided";
+            if (num1 * num2 == 24) return "multiplied";
+            return "none";
+        }
+
         public static bool IsPlural(string word)
         {
             return word.Last() == 's';

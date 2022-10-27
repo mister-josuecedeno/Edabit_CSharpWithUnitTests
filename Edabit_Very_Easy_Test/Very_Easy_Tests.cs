@@ -12,6 +12,23 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(12, 12, "added")]
+        [InlineData(100, 76, "subtracted")]
+        [InlineData(6, 4, "multiplied")]
+        [InlineData(528, 22, "divided")]
+        [InlineData(10, 12, "none")]
+        public void ReturnOperation(int num1, int num2, string expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Very_Easy.Operation(num1, num2);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("dudes", true)]
         [InlineData("flowers", true)]
         [InlineData("checks", true)]
