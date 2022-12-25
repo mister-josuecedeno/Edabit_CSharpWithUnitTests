@@ -12,6 +12,37 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("37", 37)]
+        [InlineData("113", 113)]
+        [InlineData("5", 5)]
+        [InlineData("5231", 5231)]
+        public void ReturnToInt(string str, int expected) { 
+            // Arrange
+
+            // Act
+            var actual = Very_Easy.toInt(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
+        [InlineData(37, "37")]
+        [InlineData(113, "113")]
+        [InlineData(5, "5")]
+        [InlineData(5231, "5231")]
+        public void ReturnToStr(int num, string expected) { 
+            // Arrange
+
+            // Act
+            var actual = Very_Easy.toStr(num);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+        
+        
+        [Theory]
         [InlineData(12, 12, "added")]
         [InlineData(100, 76, "subtracted")]
         [InlineData(6, 4, "multiplied")]

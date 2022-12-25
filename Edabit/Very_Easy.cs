@@ -8,6 +8,15 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int toInt(string str)
+        {
+            return Int32.Parse(str);
+        }
+        public static string toStr(int num)
+        {
+            return num.ToString();
+        }
+
         public static string Operation(int num1, int num2)
         {
             if (num1 + num2 == 24) return "added";
