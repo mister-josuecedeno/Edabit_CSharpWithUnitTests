@@ -8,15 +8,37 @@ using Edabit;
 
 namespace Edabit.Tests
 {
-    
     public class Very_Easy_Tests
     {
+        [Theory]
+        [InlineData(new double[] { 34, 15, 88, 2 }, 2)]
+        [InlineData(new double[] { 34, -345, -1, 100 }, -345)]
+        [InlineData(new double[] { -76, 1.345, 1, 0 }, -76)]
+        [InlineData(new double[] { 0.4356, 0.8795, 0.5435, -0.9999 }, -0.9999)]
+        [InlineData(new double[] { 7, 7, 7 }, 7)]
+        [InlineData(new double[] { 4, 6, 1, 3, 4, 5, 5, 1 }, 1)]
+        [InlineData(new double[] { -4, -6, -8, -1 }, -8)]
+        [InlineData(new double[] { 54, 76, 23, 54 }, 23)]
+        [InlineData(new double[] { 100 }, 100)]
+        [InlineData(new double[] { 0, 1, 2, 3, 4, 5 }, 0)]
+        public void ReturnFindSmallestNum(double[] arr, double expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.FindSmallestNum(arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
         [Theory]
         [InlineData("37", 37)]
         [InlineData("113", 113)]
         [InlineData("5", 5)]
         [InlineData("5231", 5231)]
-        public void ReturnToInt(string str, int expected) { 
+        public void ReturnToInt(string str, int expected)
+        {
             // Arrange
 
             // Act
@@ -31,7 +53,8 @@ namespace Edabit.Tests
         [InlineData(113, "113")]
         [InlineData(5, "5")]
         [InlineData(5231, "5231")]
-        public void ReturnToStr(int num, string expected) { 
+        public void ReturnToStr(int num, string expected)
+        {
             // Arrange
 
             // Act
@@ -40,8 +63,7 @@ namespace Edabit.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
-        
-        
+
         [Theory]
         [InlineData(12, 12, "added")]
         [InlineData(100, 76, "subtracted")]
@@ -70,7 +92,7 @@ namespace Edabit.Tests
         [InlineData("cow", false)]
         [InlineData("word", false)]
         [InlineData("love", false)]
-        public void ReturnIsPlural (string word, bool expected)
+        public void ReturnIsPlural(string word, bool expected)
         {
             // Arrange
 
@@ -80,8 +102,7 @@ namespace Edabit.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
-        
-        
+
         [Theory]
         [InlineData(new object[] { "Cat", "Dog", "Duck" }, "Duck")]
         [InlineData(new object[] { 1, 2, 3 }, 3)]
@@ -95,7 +116,7 @@ namespace Edabit.Tests
         [InlineData(new object[] { "Apple", "Orange", null }, null)]
         [InlineData(new object[] { true, false, "Apple" }, "Apple")]
         [InlineData(new object[] { 1 }, 1)]
-        public void ReturnLastItem (object[] arr, object expected)
+        public void ReturnLastItem(object[] arr, object expected)
         {
             // Arrange
 
@@ -114,7 +135,7 @@ namespace Edabit.Tests
         [InlineData(5, 0, 100, true)]
         [InlineData(15, 2, 7, true)]
         [InlineData(15, 2, 8, false)]
-        public void ReturnEqualSlices (int total, int people, int each, bool expected)
+        public void ReturnEqualSlices(int total, int people, int each, bool expected)
         {
             // Arrange
 
@@ -124,7 +145,7 @@ namespace Edabit.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
-        
+
         [Theory]
         [InlineData('E', 69)]
         [InlineData('d', 100)]
@@ -135,7 +156,7 @@ namespace Edabit.Tests
         [InlineData('.', 46)]
         [InlineData(' ', 32)]
         [InlineData('1', 49)]
-        public void ReturnCharToASCII (char ch, int expected)
+        public void ReturnCharToASCII(char ch, int expected)
         {
             // Arrange
 
@@ -146,22 +167,21 @@ namespace Edabit.Tests
             Assert.Equal(expected, actual);
         }
 
-
         [Theory]
         [InlineData(12, 2)]
         [InlineData(6000, 4)]
         [InlineData(314, 3)]
-        public void ReturnNumberLength (int n, int expected)
+        public void ReturnNumberLength(int n, int expected)
         {
             // Arrange
 
             // Act
-            int actual = Very_Easy.Length (n);  
+            int actual = Very_Easy.Length(n);
 
             // Assert
-            Assert.Equal (expected, actual);
+            Assert.Equal(expected, actual);
         }
-        
+
         [Theory]
         [InlineData(6, 2, true)]
         [InlineData(-6, -9, true)]
@@ -172,7 +192,7 @@ namespace Edabit.Tests
         [InlineData(6, -999, false)]
         [InlineData(-1, 2, false)]
         [InlineData(0, 2, false)]
-        public void BothShouldReturnTrueIfBothMatchCriteria (int n1, int n2, bool expected)
+        public void BothShouldReturnTrueIfBothMatchCriteria(int n1, int n2, bool expected)
         {
             // Arrange
 
@@ -182,13 +202,13 @@ namespace Edabit.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
-        
+
         [Theory]
         [InlineData("apple", 5)]
         [InlineData("make", 4)]
         [InlineData("a", 1)]
         [InlineData("", 0)]
-        public void Length_ReturnLengthOfString (string str, int expected)
+        public void Length_ReturnLengthOfString(string str, int expected)
         {
             // Arrange
 
@@ -216,7 +236,6 @@ namespace Edabit.Tests
 
             // Assert
             Assert.Equal(expected, actual);
-
         }
 
         [Theory]
@@ -251,7 +270,6 @@ namespace Edabit.Tests
             Assert.Equal(expected, actual);
         }
 
-
         [Theory]
         [InlineData(17, true, false)]
         [InlineData(30, true, false)]
@@ -260,7 +278,11 @@ namespace Edabit.Tests
         [InlineData(16, false, false)]
         [InlineData(18, true, false)]
         [InlineData(17, false, false)]
-        public void ShouldServeDrinks_ReturnIfShouldServeDrinks(int age, bool on_break, bool expected)
+        public void ShouldServeDrinks_ReturnIfShouldServeDrinks(
+            int age,
+            bool on_break,
+            bool expected
+        )
         {
             // Arrange
 
@@ -309,7 +331,6 @@ namespace Edabit.Tests
             Assert.Equal(expected, actual);
         }
 
-
         [Theory]
         [InlineData(6, 7)]
         [InlineData(3, 3)]
@@ -326,10 +347,10 @@ namespace Edabit.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
-        
+
         [Theory]
         [MemberData(nameof(PrintArrayData))]
-        public void PrintArray_ReturnArrayNumbered1ToN (int n, int[] expected)
+        public void PrintArray_ReturnArrayNumbered1ToN(int n, int[] expected)
         {
             // https://andrewlock.net/creating-parameterised-tests-in-xunit-with-inlinedata-classdata-and-memberdata/
 
@@ -343,12 +364,12 @@ namespace Edabit.Tests
         }
 
         public static IEnumerable<object[]> PrintArrayData =>
-        new List<object[]>
-        {
-            new object[] { 1, new int[] { 1 } },
-            new object[] { 3, new int[] { 1, 2, 3 } },
-            new object[] { 6, new int[] { 1, 2, 3, 4, 5, 6 } },
-        };
+            new List<object[]>
+            {
+                new object[] { 1, new int[] { 1 } },
+                new object[] { 3, new int[] { 1, 2, 3 } },
+                new object[] { 6, new int[] { 1, 2, 3, 4, 5, 6 } },
+            };
 
         [Theory]
         [InlineData(1, 1)]
@@ -358,17 +379,17 @@ namespace Edabit.Tests
         [InlineData(27, 729)]
         [InlineData(196, 38416)]
         [InlineData(512, 262144)]
-        public void StackBoxes_ReturnTheSquareOfN (int n, int expected)
+        public void StackBoxes_ReturnTheSquareOfN(int n, int expected)
         {
             // Arrange
 
-            // Act 
+            // Act
             int actual = Very_Easy.StackBoxes(n);
 
             // Assert
             Assert.Equal(expected, actual);
         }
-        
+
         [Theory]
         [InlineData("Aiden", true)]
         [InlineData("Roxy", false)]
@@ -388,7 +409,6 @@ namespace Edabit.Tests
             Assert.Equal(expected, actual);
         }
 
-
         [Theory]
         [InlineData("apples", true)]
         [InlineData("banana", true)]
@@ -406,7 +426,7 @@ namespace Edabit.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
-        
+
         [Theory]
         [InlineData(3, "odd")]
         [InlineData(0, "even")]
@@ -437,7 +457,11 @@ namespace Edabit.Tests
         [InlineData("First", "Last", "Last, First")]
         [InlineData("A", "B", "B, A")]
         [InlineData(",", ",", ",, ,")]
-        public void ConcatName_ReturnStringsConcatenated(string firstName, string lastName, string expected)
+        public void ConcatName_ReturnStringsConcatenated(
+            string firstName,
+            string lastName,
+            string expected
+        )
         {
             // Arrange
 
@@ -447,8 +471,7 @@ namespace Edabit.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
-        
-        
+
         [Theory]
         [InlineData(1, 0)]
         [InlineData(2, 2)]
@@ -465,7 +488,7 @@ namespace Edabit.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
-        
+
         [Theory]
         [InlineData(-5, 5)]
         [InlineData(-3, 3)]
@@ -483,7 +506,7 @@ namespace Edabit.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
-        
+
         [Theory]
         [InlineData(-5, true)]
         [InlineData(-50, false)]
@@ -493,7 +516,7 @@ namespace Edabit.Tests
         [InlineData(12, false)]
         [InlineData(23, true)]
         [InlineData(-71, true)]
-        public void IsOdd_ReturnTrueIfNumberIsOdd (int num, bool expected)
+        public void IsOdd_ReturnTrueIfNumberIsOdd(int num, bool expected)
         {
             // Arrange
 
@@ -503,7 +526,7 @@ namespace Edabit.Tests
             // Asert
             Assert.Equal(expected, actual);
         }
-        
+
         [Theory]
         [InlineData("AB", "CD", true)]
         [InlineData("ABC", "DE", false)]
@@ -512,7 +535,7 @@ namespace Edabit.Tests
         [InlineData("jrnvjrnnt", "cvjknfjvmfvnfjn", false)]
         [InlineData("jkvnjrt", "krnf", false)]
         [InlineData("Facebook", "Snapchat", true)]
-        public void Comp_ReturnTrueIfLengthsMatch (string str1, string str2, bool expected)
+        public void Comp_ReturnTrueIfLengthsMatch(string str1, string str2, bool expected)
         {
             // Arrange
 
@@ -522,8 +545,7 @@ namespace Edabit.Tests
             // Asert
             Assert.Equal(expected, actual);
         }
-        
-        
+
         [Theory]
         [InlineData(-4, -4)]
         [InlineData(212, -212)]
@@ -539,8 +561,7 @@ namespace Edabit.Tests
             // Assert
             Assert.Equal(expected, actual);
         }
-        
-        
+
         [Theory]
         [InlineData(5, 3, 15)]
         [InlineData(8, 5, 40)]

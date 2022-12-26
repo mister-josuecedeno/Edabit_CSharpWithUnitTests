@@ -8,10 +8,16 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static double FindSmallestNum(double[] arr)
+        {
+            return arr.Min();
+        }
+
         public static int toInt(string str)
         {
             return Int32.Parse(str);
         }
+
         public static string toStr(int num)
         {
             return num.ToString();
@@ -19,10 +25,14 @@ namespace Edabit
 
         public static string Operation(int num1, int num2)
         {
-            if (num1 + num2 == 24) return "added";
-            if (num1 - num2 == 24) return "subtracted";
-            if (num1 / num2 == 24) return "divided";
-            if (num1 * num2 == 24) return "multiplied";
+            if (num1 + num2 == 24)
+                return "added";
+            if (num1 - num2 == 24)
+                return "subtracted";
+            if (num1 / num2 == 24)
+                return "divided";
+            if (num1 * num2 == 24)
+                return "multiplied";
             return "none";
         }
 
@@ -35,7 +45,7 @@ namespace Edabit
         {
             return arr.Last();
         }
-        
+
         public static bool EqualSlices(int total, int people, int each)
         {
             return people == 0 ? true : (total / people) == each;
@@ -53,15 +63,19 @@ namespace Edabit
 
         public static bool Both(int n1, int n2)
         {
-            if (n1 < 0 && n2 < 0) return true;
-            if (n1 > 0 && n2 > 0) return true;
-            if (n1 == 0 && n2 == 0) return true;
+            if (n1 < 0 && n2 < 0)
+                return true;
+            if (n1 > 0 && n2 > 0)
+                return true;
+            if (n1 == 0 && n2 == 0)
+                return true;
             return false;
         }
 
         public static int Length(string str)
         {
-            if (str == "") return 0;
+            if (str == "")
+                return 0;
             return 1 + Length(str.Substring(1));
         }
 
@@ -114,7 +128,8 @@ namespace Edabit
 
         public static int StackBoxes(int n)
         {
-            return n * n; ;
+            return n * n;
+            ;
         }
 
         public static bool isLastCharacterN(string word)
@@ -164,7 +179,8 @@ namespace Edabit
 
         public static int area(int h, int w)
         {
-            if (h <= 0 || w <= 0) return -1;
+            if (h <= 0 || w <= 0)
+                return -1;
             return h * w;
         }
     }
