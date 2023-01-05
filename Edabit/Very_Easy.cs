@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int Mod(int a, int b)
+        {
+            return a - (b * Convert.ToInt32(a / b));
+        }
+
         public static int FindLargestNum(int[] arr)
         {
             return arr.Max();

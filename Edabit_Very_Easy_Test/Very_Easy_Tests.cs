@@ -11,6 +11,23 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(0, 3, 0)]
+        [InlineData(1, 3, 1)]
+        [InlineData(5, 3, 2)]
+        [InlineData(4, 5, 4)]
+        [InlineData(218, 5, 3)]
+        public void ReturnMod(int a, int b, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.Mod(a, b);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 4, 5, 1, 3 }, 5)]
         [InlineData(new int[] { 13, 27, 18, 26 }, 27)]
         [InlineData(new int[] { 32, 35, 37, 39 }, 39)]
