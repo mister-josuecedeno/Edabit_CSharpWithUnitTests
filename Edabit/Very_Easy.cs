@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int FindLargestNum(int[] arr)
+        {
+            return arr.Max();
+        }
+
         public static double FindSmallestNum(double[] arr)
         {
             return arr.Min();

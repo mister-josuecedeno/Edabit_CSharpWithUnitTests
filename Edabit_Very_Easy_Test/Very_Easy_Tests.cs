@@ -11,6 +11,25 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(new int[] { 4, 5, 1, 3 }, 5)]
+        [InlineData(new int[] { 13, 27, 18, 26 }, 27)]
+        [InlineData(new int[] { 32, 35, 37, 39 }, 39)]
+        [InlineData(new int[] { 1000, 1001, 857, 1 }, 1001)]
+        [InlineData(new int[] { 27364, 837363, 736736, 73635 }, 837363)]
+        [InlineData(new int[] { 30, 2, 40, 3 }, 40)]
+        [InlineData(new int[] { 0, 1, 0, 0, 1 }, 1)]
+        public void ReturnFindLargestNum(int[] arr, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.FindLargestNum(arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new double[] { 34, 15, 88, 2 }, 2)]
         [InlineData(new double[] { 34, -345, -1, 100 }, -345)]
         [InlineData(new double[] { -76, 1.345, 1, 0 }, -76)]
