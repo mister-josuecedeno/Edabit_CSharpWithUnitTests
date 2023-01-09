@@ -8,6 +8,25 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int Calculate(int num1, int num2, string operation)
+        {
+            switch (operation)
+            {
+                case "+":
+                    return num1 + num2;
+                case "-":
+                    return num1 - num2;
+                case "*":
+                    return num1 * num2;
+                case "/":
+                    return num1 / num2;
+                case "%":
+                    return num1 % num2;
+                default:
+                    return 0;
+            }
+        }
+
         public static int Mod(int a, int b)
         {
             return a - (b * Convert.ToInt32(a / b));
