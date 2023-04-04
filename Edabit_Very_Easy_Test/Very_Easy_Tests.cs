@@ -11,6 +11,28 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("hello", "hELLo", true)]
+        [InlineData("hey", "hey", true)]
+        [InlineData("venom", "VENOM", true)]
+        [InlineData("maGIciAN", "magician", true)]
+        [InlineData("stupIFy", "stupifY", true)]
+        [InlineData("bald", "blad", false)]
+        [InlineData("motive", "emotive", false)]
+        [InlineData("mask", "mAskinG", false)]
+        [InlineData("skim", "skimp", false)]
+        [InlineData("EXCEl", "exceLs", false)]
+        public void ReturnIsMatch(string s1, string s2, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.match(s1, s2);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(24, 100, "-", -76)]
         [InlineData(-20, -30, "+", -50)]
         [InlineData(38, 3, "*", 114)]

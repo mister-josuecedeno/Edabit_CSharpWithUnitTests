@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static bool match(string s1, string s2)
+        {
+            return false;
+        }
+
         public static int Calculate(int num1, int num2, string operation)
         {
             switch (operation)
