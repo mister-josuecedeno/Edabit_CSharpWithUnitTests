@@ -10,7 +10,7 @@ namespace Edabit
     {
         public static bool match(string s1, string s2)
         {
-            return false;
+            return s1.Equals(s2, StringComparison.OrdinalIgnoreCase);
         }
 
         public static int Calculate(int num1, int num2, string operation)
