@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int differenceMaxMin(int[] arr)
+        {
+            return arr.Max() - arr.Min();
+        }
+
         public static bool match(string s1, string s2)
         {
             return s1.Equals(s2, StringComparison.OrdinalIgnoreCase);

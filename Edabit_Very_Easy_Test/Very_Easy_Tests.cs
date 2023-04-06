@@ -11,6 +11,20 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(new int[] { 10, 4, 1, 2, 8, 91 }, 90)]
+        [InlineData(new int[] { -70, 43, 34, 54, 22 }, 124)]
+        public void ReturnDifferenceMaxMin(int[] arr, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.differenceMaxMin(arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("hello", "hELLo", true)]
         [InlineData("hey", "hey", true)]
         [InlineData("venom", "VENOM", true)]
