@@ -8,6 +8,13 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string FirstLast(string str)
+        {
+            var first = str[0];
+            var last = str[str.Length - 1];
+            return first.ToString() + last.ToString();
+        }
+
         public static int differenceMaxMin(int[] arr)
         {
             return arr.Max() - arr.Min();

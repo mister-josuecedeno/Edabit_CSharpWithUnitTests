@@ -11,6 +11,24 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("forza", "fa")]
+        [InlineData("kali", "ki")]
+        [InlineData("always", "as")]
+        [InlineData("love", "le")]
+        [InlineData("supernatural", "sl")]
+        [InlineData("edabit", "et")]
+        public void ReturnFirstLast(string str, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.FirstLast(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 10, 4, 1, 2, 8, 91 }, 90)]
         [InlineData(new int[] { -70, 43, 34, 54, 22 }, 124)]
         public void ReturnDifferenceMaxMin(int[] arr, int expected)
