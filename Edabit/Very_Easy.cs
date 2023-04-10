@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static bool CheckEnding(string str1, string str2)
+        {
+            return str1.EndsWith(str2);
+        }
+
         public static string FirstLast(string str)
         {
             var first = str[0];

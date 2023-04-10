@@ -11,6 +11,28 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("abc", "bc", true)]
+        [InlineData("abc", "d", false)]
+        [InlineData("samurai", "zi", false)]
+        [InlineData("feminine", "nine", true)]
+        [InlineData("convention", "tio", false)]
+        [InlineData("cooperative", "ooper", false)]
+        [InlineData("extraterrestrial", "xtraterrestrial", true)]
+        [InlineData("access", "ss", true)]
+        [InlineData("motorist", "is", false)]
+        [InlineData("landowner", "landowner", true)]
+        public void ReturnCheckEnding(string str1, string str2, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.CheckEnding(str1, str2);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("forza", "fa")]
         [InlineData("kali", "ki")]
         [InlineData("always", "as")]
