@@ -11,6 +11,29 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(5, 32)]
+        [InlineData(4, 16)]
+        [InlineData(3, 8)]
+        [InlineData(2, 4)]
+        [InlineData(1, 2)]
+        [InlineData(6, 64)]
+        [InlineData(7, 128)]
+        [InlineData(8, 256)]
+        [InlineData(9, 512)]
+        [InlineData(10, 1024)]
+        [InlineData(25, 33554432)]
+        public void ReturnPosCom(int n, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.PosCom(n);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("abc", "bc", true)]
         [InlineData("abc", "d", false)]
         [InlineData("samurai", "zi", false)]

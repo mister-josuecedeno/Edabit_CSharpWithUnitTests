@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int PosCom(int n)
+        {
+            return (int)Math.Pow(2, n);
+        }
+
         public static bool CheckEnding(string str1, string str2)
         {
             return str1.EndsWith(str2);
