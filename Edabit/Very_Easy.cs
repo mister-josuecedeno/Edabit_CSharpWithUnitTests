@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int Search(int[] arr, int item)
+        {
+            return Array.IndexOf(arr, item);
+        }
+
         public static int PosCom(int n)
         {
             return (int)Math.Pow(2, n);

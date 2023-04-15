@@ -11,6 +11,22 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(new int[] { 1, 5, 3 }, 5, 1)]
+        [InlineData(new int[] { 9, 8, 3 }, 3, 2)]
+        [InlineData(new int[] { 1, 2, 3 }, 4, -1)]
+        [InlineData(new int[] { 1, 5, 3, 10, 17, 20, -6 }, 20, 5)]
+        public void ReturnSearch(int[] arr, int item, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.Search(arr, item);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(5, 32)]
         [InlineData(4, 16)]
         [InlineData(3, 8)]
