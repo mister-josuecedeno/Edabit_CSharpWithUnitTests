@@ -11,6 +11,24 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(new int[] { 1, 2, 3, 4 }, new int[] { 4, 3, 2, 1 })]
+        [InlineData(new int[] { 5, 6, 7 }, new int[] { 7, 6, 5 })]
+        [InlineData(new int[] { 9, 9, 2, 3, 4 }, new int[] { 4, 3, 2, 9, 9 })]
+        [InlineData(new int[] { 3, 3 }, new[] { 3, 3 })]
+        [InlineData(new int[] { -1, -1, -1 }, new int[] { -1, -1, -1 })]
+        [InlineData(new int[] { }, new int[] { })]
+        public void ReturnReverse(int[] arr, int[] expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.Reverse(arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 1, 5, 3 }, 5, 1)]
         [InlineData(new int[] { 9, 8, 3 }, 3, 2)]
         [InlineData(new int[] { 1, 2, 3 }, 4, -1)]

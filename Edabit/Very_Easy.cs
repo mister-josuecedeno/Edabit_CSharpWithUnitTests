@@ -8,6 +8,12 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int[] Reverse(int[] arr)
+        {
+            Array.Reverse(arr);
+            return arr;
+        }
+
         public static int Search(int[] arr, int item)
         {
             return Array.IndexOf(arr, item);
