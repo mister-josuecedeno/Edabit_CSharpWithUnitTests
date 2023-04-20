@@ -10,7 +10,12 @@ namespace Edabit
     {
         public static string AmazingEdabit(string str)
         {
-            return "tbd";
+            if (str.Contains("edabit"))
+            {
+                return str;
+            }
+
+            return str.Replace("amazing", "not amazing");
         }
 
         public static int[] Reverse(int[] arr)
