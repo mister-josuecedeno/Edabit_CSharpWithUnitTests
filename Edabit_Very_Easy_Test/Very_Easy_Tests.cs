@@ -11,6 +11,38 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("edabit is amazing.", "edabit is amazing.")]
+        [InlineData("Mubashir is amazing.", "Mubashir is not amazing.")]
+        [InlineData("Trump is amazing.", "Trump is not amazing.")]
+        [InlineData("Infinity is amazing.", "Infinity is not amazing.")]
+        [InlineData("Mubashir and edabit are amazing.", "Mubashir and edabit are amazing.")]
+        [InlineData("Matt is amazing.", "Matt is not amazing.")]
+        [InlineData("Helen is amazing.", "Helen is not amazing.")]
+        [InlineData("Python and edabit are amazing.", "Python and edabit are amazing.")]
+        [InlineData("C++ is amazing.", "C++ is not amazing.")]
+        [InlineData("javascript is amazing.", "javascript is not amazing.")]
+        [InlineData("java is amazing.", "java is not amazing.")]
+        [InlineData("ruby is amazing.", "ruby is not amazing.")]
+        [InlineData("SQL is amazing.", "SQL is not amazing.")]
+        [InlineData("CSS is amazing.", "CSS is not amazing.")]
+        [InlineData("Pakistan is amazing. edabit", "Pakistan is amazing. edabit")]
+        [InlineData("You and edabit are amazing.", "You and edabit are amazing.")]
+        [InlineData("Matt and edabit are amazing.", "Matt and edabit are amazing.")]
+        [InlineData("Helen and edabit are amazing.", "Helen and edabit are amazing.")]
+        [InlineData("Everyone is amazing.", "Everyone is not amazing.")]
+        [InlineData("Swift and edabit are amazing.", "Swift and edabit are amazing.")]
+        public void ReturnAmazingEdabit(string str, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.AmazingEdabit(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 1, 2, 3, 4 }, new int[] { 4, 3, 2, 1 })]
         [InlineData(new int[] { 5, 6, 7 }, new int[] { 7, 6, 5 })]
         [InlineData(new int[] { 9, 9, 2, 3, 4 }, new int[] { 4, 3, 2, 9, 9 })]

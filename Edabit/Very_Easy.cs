@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string AmazingEdabit(string str)
+        {
+            return "tbd";
+        }
+
         public static int[] Reverse(int[] arr)
         {
             Array.Reverse(arr);
