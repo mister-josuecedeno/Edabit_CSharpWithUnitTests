@@ -11,6 +11,43 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(
+            new string[] { "clever", "meek", "hurried", "nice" },
+            "ly",
+            new string[] { "cleverly", "meekly", "hurriedly", "nicely" }
+        )]
+        [InlineData(
+            new string[] { "new", "pander", "scoop" },
+            "er",
+            new string[] { "newer", "panderer", "scooper" }
+        )]
+        [InlineData(
+            new string[] { "bend", "sharpen", "mean" },
+            "ing",
+            new string[] { "bending", "sharpening", "meaning" }
+        )]
+        [InlineData(
+            new string[] { "bend", "tooth", "mint" },
+            "y",
+            new string[] { "bendy", "toothy", "minty" }
+        )]
+        [InlineData(
+            new string[] { "bend", "tooth", "mint" },
+            "ier",
+            new string[] { "bendier", "toothier", "mintier" }
+        )]
+        public void ReturnAddEnding(string[] arr, string ending, string[] expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.AddEnding(arr, ending);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("edabit is amazing.", "edabit is amazing.")]
         [InlineData("Mubashir is amazing.", "Mubashir is not amazing.")]
         [InlineData("Trump is amazing.", "Trump is not amazing.")]

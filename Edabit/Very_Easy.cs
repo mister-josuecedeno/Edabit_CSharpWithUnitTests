@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string[] AddEnding(string[] arr, string ending)
+        {
+            return arr.Select(x => x + ending).ToArray();
+        }
+
         public static string AmazingEdabit(string str)
         {
             if (str.Contains("edabit"))
