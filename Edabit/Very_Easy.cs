@@ -8,6 +8,13 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string SeriesResistance(double[] arr)
+        {
+            var total = arr.Sum();
+            var suffix = total <= 1 ? " ohm" : " ohms";
+            return total + suffix;
+        }
+
         public static string[] AddEnding(string[] arr, string ending)
         {
             return arr.Select(x => x + ending).ToArray();

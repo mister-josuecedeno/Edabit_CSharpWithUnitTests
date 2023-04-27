@@ -11,6 +11,27 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(new double[] { 1, 5, 6, 3 }, "15 ohms")]
+        [InlineData(new double[] { 0.2, 0.3, 0.4 }, "0.9 ohm")]
+        [InlineData(new double[] { 10, 12, 1, 10 }, "33 ohms")]
+        [InlineData(new double[] { 10, 13, 3.8, 20, 10 }, "56.8 ohms")]
+        [InlineData(new double[] { 0.5, 0.5 }, "1 ohm")]
+        [InlineData(new double[] { 16, 30, 22.8, 4 }, "72.8 ohms")]
+        [InlineData(new double[] { 20, 15, 32.5, 2 }, "69.5 ohms")]
+        [InlineData(new double[] { 52, 22, 20, 30 }, "124 ohms")]
+        [InlineData(new double[] { 10, 12, 32, 4.9, 5, 6, 71 }, "140.9 ohms")]
+        public void ReturnSeriesResistance(double[] arr, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.SeriesResistance(arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(
             new string[] { "clever", "meek", "hurried", "nice" },
             "ly",
