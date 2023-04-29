@@ -11,6 +11,24 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(1, 1)]
+        [InlineData(67, 2)]
+        [InlineData(123, 3)]
+        [InlineData(55551, 5)]
+        [InlineData(96456431, 8)]
+        [InlineData(0, 1)]
+        public void ReturnFindDigitAmount(int num, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.FindDigitAmount(num);
+
+            // Asseert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new double[] { 1, 5, 6, 3 }, "15 ohms")]
         [InlineData(new double[] { 0.2, 0.3, 0.4 }, "0.9 ohm")]
         [InlineData(new double[] { 10, 12, 1, 10 }, "33 ohms")]

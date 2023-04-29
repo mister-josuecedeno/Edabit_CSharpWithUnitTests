@@ -8,6 +8,12 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int FindDigitAmount(int num)
+        {
+            var str = num.ToString();
+            return str.Length;
+        }
+
         public static string SeriesResistance(double[] arr)
         {
             var total = arr.Sum();
