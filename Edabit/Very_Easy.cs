@@ -8,6 +8,18 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string MissingAngle(int angle1, int angle2)
+        {
+            int angle3 = 180 - (angle1 + angle2);
+            if (angle3 < 90)
+                return "acute";
+            if (angle3 > 90)
+                return "obtuse";
+            if (angle3 == 90)
+                return "right";
+            return "error";
+        }
+
         public static int FindDigitAmount(int num)
         {
             var str = num.ToString();

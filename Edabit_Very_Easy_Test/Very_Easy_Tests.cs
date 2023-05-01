@@ -11,6 +11,24 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(27, 59, "obtuse")]
+        [InlineData(135, 11, "acute")]
+        [InlineData(45, 45, "right")]
+        [InlineData(45, 15, "obtuse")]
+        [InlineData(31, 100, "acute")]
+        [InlineData(35, 55, "right")]
+        public void ReturnMissingAngle(int angle1, int angle2, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.MissingAngle(angle1, angle2);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(1, 1)]
         [InlineData(67, 2)]
         [InlineData(123, 3)]
