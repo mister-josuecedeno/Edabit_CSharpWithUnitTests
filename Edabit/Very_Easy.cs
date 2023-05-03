@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static bool Check(int[] arr, int el)
+        {
+            return arr.Contains(el);
+        }
+
         public static string MissingAngle(int angle1, int angle2)
         {
             int angle3 = 180 - (angle1 + angle2);
