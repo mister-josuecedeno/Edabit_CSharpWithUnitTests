@@ -8,6 +8,12 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static object[] FirstLast(object[] values)
+        {
+            // https://edabit.com/challenge/ee83ZNHoopsbEHidP
+            return null;
+        }
+
         public static bool Check(int[] arr, int el)
         {
             return arr.Contains(el);
