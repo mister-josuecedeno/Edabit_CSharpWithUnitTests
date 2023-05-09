@@ -8,10 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
-        public static object[] FirstLast(object[] values)
+        public static object[] FirstLastAgain(object[] values)
         {
-            // https://edabit.com/challenge/ee83ZNHoopsbEHidP
-            return null;
+            var first = values[0];
+            var last = values[values.Length - 1];
+            return new object[] { first, last };
         }
 
         public static bool Check(int[] arr, int el)

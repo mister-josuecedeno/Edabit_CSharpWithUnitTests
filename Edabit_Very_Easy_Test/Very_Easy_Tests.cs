@@ -5,11 +5,49 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 using Edabit;
+using Microsoft.VisualStudio.TestPlatform.TestHost;
 
 namespace Edabit.Tests
 {
     public class Very_Easy_Tests
     {
+        [Fact]
+        public void ReturnFirstLastAgain()
+        {
+            // Arrange
+
+            // Actual
+
+            // Assert
+            Assert.Equal(
+                new object[] { 5, 25 },
+                Very_Easy.FirstLastAgain(new object[] { 5, 10, 15, 20, 25 })
+            );
+            Assert.Equal(
+                new object[] { "edabit", true },
+                Very_Easy.FirstLastAgain(new object[] { "edabit", 13, null, false, true })
+            );
+            Assert.Equal(
+                new object[] { "", null },
+                Very_Easy.FirstLastAgain(new object[] { "", 4, "6", "hello", null })
+            );
+            Assert.Equal(
+                new object[] { "hello", "com" },
+                Very_Easy.FirstLastAgain(new object[] { "hello", "edabit", "dot", "com" })
+            );
+            Assert.Equal(new object[] { 3, 1 }, Very_Easy.FirstLastAgain(new object[] { 3, 2, 1 }));
+            Assert.Equal(
+                new object[] { "one", "two" },
+                Very_Easy.FirstLastAgain(new object[] { "one", "two" })
+            );
+            Assert.Equal(
+                new object[] { false, false },
+                Very_Easy.FirstLastAgain(
+                    new object[] { false, false, true, false, false, true, false }
+                )
+            );
+        }
+
         [Theory]
         [InlineData(new int[] { 1, 2, 3, 4, 5 }, 3, true)]
         [InlineData(new int[] { 1, 1, 2, 1, 1 }, 3, false)]
