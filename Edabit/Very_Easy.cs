@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string Wumbo(string words)
+        {
+            return words.Replace("M", "W");
+        }
+
         public static object[] FirstLastAgain(object[] values)
         {
             var first = values[0];

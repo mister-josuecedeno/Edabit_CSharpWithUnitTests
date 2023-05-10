@@ -11,6 +11,21 @@ namespace Edabit.Tests
 {
     public class Very_Easy_Tests
     {
+        [Theory]
+        [InlineData("WHAT DO YOU MEAN WE'RE OUT OF MONEY", "WHAT DO YOU WEAN WE'RE OUT OF WONEY")]
+        [InlineData("ABCDEFGHIJKLMNOPQRSTUVWXYZ", "ABCDEFGHIJKLWNOPQRSTUVWXYZ")]
+        [InlineData("1 WUMBO 2 WUMBO 3 WUMBO 4", "1 WUWBO 2 WUWBO 3 WUWBO 4")]
+        public void ReturnWumbo(string words, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.Wumbo(words);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
         [Fact]
         public void ReturnFirstLastAgain()
         {
@@ -477,7 +492,6 @@ namespace Edabit.Tests
         [InlineData(new object[] { null }, null)]
         [InlineData(new object[] { true, false, false, true }, true)]
         [InlineData(new object[] { 7, "String", false, null, null }, null)]
-        [InlineData(new object[] { null }, null)]
         [InlineData(new object[] { false }, false)]
         [InlineData(new object[] { null, null, null }, null)]
         [InlineData(new object[] { 1, 2, 3, 56, 87, 23, 65, 45 }, 45)]
