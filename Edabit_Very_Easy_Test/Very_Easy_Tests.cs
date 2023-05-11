@@ -6,11 +6,26 @@ using System.Threading.Tasks;
 using Xunit;
 using Edabit;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
+using Xunit.Sdk;
 
 namespace Edabit.Tests
 {
     public class Very_Easy_Tests
     {
+        [Theory]
+        [InlineData(0, 1)]
+        [InlineData(1, 0)]
+        public void ReturnFlip(int y, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.Flip(y);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
         [Theory]
         [InlineData("WHAT DO YOU MEAN WE'RE OUT OF MONEY", "WHAT DO YOU WEAN WE'RE OUT OF WONEY")]
         [InlineData("ABCDEFGHIJKLMNOPQRSTUVWXYZ", "ABCDEFGHIJKLWNOPQRSTUVWXYZ")]

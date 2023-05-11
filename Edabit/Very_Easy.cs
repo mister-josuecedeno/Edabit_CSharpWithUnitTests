@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int Flip(int y)
+        {
+            return Convert.ToInt32(y == 0);
+        }
+
         public static string Wumbo(string words)
         {
             return words.Replace("M", "W");
