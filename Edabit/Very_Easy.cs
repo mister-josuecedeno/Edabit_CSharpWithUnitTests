@@ -8,6 +8,18 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int AddUp(int num)
+        {
+            var total = 0;
+
+            for (var i = 1; i <= num; i++)
+            {
+                total += i;
+            }
+
+            return total;
+        }
+
         public static int Flip(int y)
         {
             return Convert.ToInt32(y == 0);

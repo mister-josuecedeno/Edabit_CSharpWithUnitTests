@@ -13,6 +13,33 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(4, 10)]
+        [InlineData(13, 91)]
+        [InlineData(600, 180300)]
+        [InlineData(392, 77028)]
+        [InlineData(53, 1431)]
+        [InlineData(897, 402753)]
+        [InlineData(23, 276)]
+        [InlineData(1000, 500500)]
+        [InlineData(738, 272691)]
+        [InlineData(100, 5050)]
+        [InlineData(925, 428275)]
+        [InlineData(1, 1)]
+        [InlineData(999, 499500)]
+        [InlineData(175, 15400)]
+        [InlineData(111, 6216)]
+        public void ReturnAddUp(int num, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.AddUp(num);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(0, 1)]
         [InlineData(1, 0)]
         public void ReturnFlip(int y, int expected)
