@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static double SmashFactor(double ballSpeed, double clubSpeed)
+        {
+            return Math.Round(ballSpeed / clubSpeed, 2);
+        }
+
         public static int AddUp(int num)
         {
             var total = 0;

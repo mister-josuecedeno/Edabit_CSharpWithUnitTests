@@ -13,6 +13,26 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(139.4, 93.8, 1.49)]
+        [InlineData(181.2, 124.5, 1.46)]
+        [InlineData(154.7, 104.3, 1.48)]
+        [InlineData(218.1, 278.3, 0.78)]
+        [InlineData(171.4, 171.6, 1.0)]
+        [InlineData(218.0, 162.2, 1.34)]
+        [InlineData(263.2, 272.7, 0.97)]
+        [InlineData(199.4, 166.0, 1.2)]
+        public void SmashFactor(double a, double b, double expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.SmashFactor(a, b);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(4, 10)]
         [InlineData(13, 91)]
         [InlineData(600, 180300)]
