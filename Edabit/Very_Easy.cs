@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string Edaabit(int n)
+        {
+            return "TBD";
+        }
+
         public static double SmashFactor(double ballSpeed, double clubSpeed)
         {
             return Math.Round(ballSpeed / clubSpeed, 2);

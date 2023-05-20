@@ -13,6 +13,27 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(5, "Edaaaaabit")]
+        [InlineData(15, "Edaaaaaaaaaaaaaaabit")]
+        [InlineData(-4, "")]
+        [InlineData(10, "Edaaaaaaaaaabit")]
+        [InlineData(23, "Edaaaaaaaaaaaaaaaaaaaaaaabit")]
+        [InlineData(1, "Edabit")]
+        [InlineData(0, "Edbit")]
+        [InlineData(-3, "")]
+        [InlineData(-8, "")]
+        public void ReturnEdaabit(int n, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.Edaabit(n);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(139.4, 93.8, 1.49)]
         [InlineData(181.2, 124.5, 1.46)]
         [InlineData(154.7, 104.3, 1.48)]
