@@ -10,7 +10,13 @@ namespace Edabit
     {
         public static string Edaabit(int n)
         {
-            return "TBD";
+            if (n < 0)
+            {
+                return "";
+            }
+
+            var repeat = new string('a', n);
+            return $"Ed{repeat}bit";
         }
 
         public static double SmashFactor(double ballSpeed, double clubSpeed)
