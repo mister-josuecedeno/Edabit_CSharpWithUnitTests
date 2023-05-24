@@ -13,6 +13,29 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(new int[] { 1, 3, 5 }, new int[] { 2, 6, 8 }, new int[] { 1, 3, 5, 2, 6, 8 })]
+        [InlineData(
+            new int[] { 7, 8 },
+            new int[] { 10, 9, 1, 1, 2 },
+            new int[] { 7, 8, 10, 9, 1, 1, 2 }
+        )]
+        [InlineData(
+            new int[] { 4, 5, 1 },
+            new int[] { 3, 3, 3, 3, 3 },
+            new int[] { 4, 5, 1, 3, 3, 3, 3, 3 }
+        )]
+        public void ConcatArrays(int[] arr1, int[] arr2, int[] expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.ConcatArrays(arr1, arr2);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(5, "Edaaaaabit")]
         [InlineData(15, "Edaaaaaaaaaaaaaaabit")]
         [InlineData(-4, "")]

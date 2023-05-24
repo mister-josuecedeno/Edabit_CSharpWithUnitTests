@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int[] ConcatArrays(int[] arr1, int[] arr2)
+        {
+            return arr1.Concat(arr2).ToArray();
+        }
+
         public static string Edaabit(int n)
         {
             if (n < 0)
