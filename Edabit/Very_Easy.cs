@@ -10,7 +10,14 @@ namespace Edabit
     {
         public static int CubesSum(int[] nums_arr)
         {
-            return -1;
+            var total = 0;
+
+            for (int i = 0; i < nums_arr.Length; i++)
+            {
+                total += Convert.ToInt32(Math.Pow(nums_arr[i], 3));
+            }
+
+            return total;
         }
 
         public static int[] ConcatArrays(int[] arr1, int[] arr2)
