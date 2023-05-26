@@ -13,6 +13,22 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(new int[] { 1, 5, 9 }, 855)]
+        [InlineData(new int[] { 3, 4, 5 }, 216)]
+        [InlineData(new int[] { 1, 1, 1 }, 3)]
+        [InlineData(new int[] { 32 }, 32768)]
+        public void ReturnCubesSum(int[] nums_arr, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.CubesSum(nums_arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 1, 3, 5 }, new int[] { 2, 6, 8 }, new int[] { 1, 3, 5, 2, 6, 8 })]
         [InlineData(
             new int[] { 7, 8 },
