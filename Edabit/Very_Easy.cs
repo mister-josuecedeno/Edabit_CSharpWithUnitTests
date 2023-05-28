@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int CountTrue(bool[] arr)
+        {
+            return arr.Where(b => b).Count();
+        }
+
         public static int CubesSum(int[] nums_arr)
         {
             var total = 0;
