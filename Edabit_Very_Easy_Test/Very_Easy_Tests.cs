@@ -13,6 +13,22 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(1, 0.01)]
+        [InlineData(500, 4.65)]
+        [InlineData(649, 6.04)]
+        [InlineData(1000, 9.3)]
+        public void ReturnYenToUsd(int yen, double expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.YenToUsd(yen);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new bool[] { true, false, false, true, false }, 2)]
         [InlineData(new bool[] { false, false, false, false }, 0)]
         [InlineData(new bool[] { }, 0)]

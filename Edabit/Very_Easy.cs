@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static double YenToUsd(int yen)
+        {
+            return Math.Round(yen / 107.5, 2);
+        }
+
         public static int CountTrue(bool[] arr)
         {
             return arr.Where(b => b).Count();
