@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int NumArgs(params object[] p)
+        {
+            return p.Length;
+        }
+
         public static double YenToUsd(int yen)
         {
             return Math.Round(yen / 107.5, 2);

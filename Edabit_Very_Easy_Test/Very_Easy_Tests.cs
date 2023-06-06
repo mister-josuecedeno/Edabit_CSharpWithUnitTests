@@ -7,11 +7,29 @@ using Xunit;
 using Edabit;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 using Xunit.Sdk;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 
 namespace Edabit.Tests
 {
     public class Very_Easy_Tests
     {
+        [Theory]
+        [InlineData(1, new object[] { "tt" })]
+        [InlineData(4, new object[] { "lama", "tiger", 6, 3 })]
+        [InlineData(1, new object[] { "love" })]
+        [InlineData(4, new object[] { 1, 3, 3, 3 })]
+        [InlineData(4, new object[] { new int[] { 1 }, 3, "ygg", 3 })]
+        public void ReturnNumArgs(int expected, params object[] p)
+        {
+            // Arrange
+
+            // Act
+            var actual = Very_Easy.NumArgs(p);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
         [Theory]
         [InlineData(1, 0.01)]
         [InlineData(500, 4.65)]
