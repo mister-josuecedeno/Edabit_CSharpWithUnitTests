@@ -14,6 +14,24 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("whisper...", "lower")]
+        [InlineData("SHOUT!", "upper")]
+        [InlineData("Indoor Voice", "mixed")]
+        [InlineData("324324Indoor66453546Voice434", "mixed")]
+        [InlineData("!!!!SHOUT!!!!", "upper")]
+        [InlineData("......313whisper2131232...", "lower")]
+        public void ReturnGetCase(string str, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.GetCase(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(1, new object[] { "tt" })]
         [InlineData(4, new object[] { "lama", "tiger", 6, 3 })]
         [InlineData(1, new object[] { "love" })]

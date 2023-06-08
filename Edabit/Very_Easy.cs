@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string GetCase(string str)
+        {
+            return "TBD";
+        }
+
         public static int NumArgs(params object[] p)
         {
             return p.Length;
