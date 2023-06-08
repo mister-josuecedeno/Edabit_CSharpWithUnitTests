@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Edabit
@@ -10,7 +11,21 @@ namespace Edabit
     {
         public static string GetCase(string str)
         {
-            return "TBD";
+            string letters = Regex.Replace(str, @"[^a-zA-Z]+", "");
+            bool allUpper = letters.All(c => char.IsUpper(c));
+            bool allLower = letters.All(c => char.IsLower(c));
+
+            if (allUpper)
+            {
+                return "upper";
+            }
+
+            if (allLower)
+            {
+                return "lower";
+            }
+
+            return "mixed";
         }
 
         public static int NumArgs(params object[] p)
