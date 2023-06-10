@@ -9,6 +9,18 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string Go(int num)
+        {
+            StringBuilder sb = new StringBuilder(num);
+
+            for (int i = 0; i < num; i++)
+            {
+                sb.Append('-');
+            }
+
+            return sb.ToString();
+        }
+
         public static string GetCase(string str)
         {
             string letters = Regex.Replace(str, @"[^a-zA-Z]+", "");

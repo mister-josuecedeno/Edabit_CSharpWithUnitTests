@@ -14,6 +14,23 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(1, "-")]
+        [InlineData(2, "--")]
+        [InlineData(3, "---")]
+        [InlineData(4, "----")]
+        [InlineData(5, "-----")]
+        public void ReturnGo(int num, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.Go(num);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("whisper...", "lower")]
         [InlineData("SHOUT!", "upper")]
         [InlineData("Indoor Voice", "mixed")]
