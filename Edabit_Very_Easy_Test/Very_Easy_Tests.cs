@@ -14,6 +14,25 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(new string[] { "abc", "ghj", "banana", "grape" }, "grape", 3)]
+        [InlineData(new string[] { "a", "b", "c", "d", "e", "f" }, "f", 5)]
+        [InlineData(
+            new string[] { "hi", "edabit.com", "testcase", "validstring" },
+            "edabit.com",
+            1
+        )]
+        public void ReturnFindIndex(string[] arr, string str, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.FindIndex(arr, str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(1, "-")]
         [InlineData(2, "--")]
         [InlineData(3, "---")]

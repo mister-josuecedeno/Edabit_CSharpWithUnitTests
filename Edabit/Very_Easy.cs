@@ -9,6 +9,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int FindIndex(string[] arr, string str)
+        {
+            return -1;
+        }
+
         public static string Go(int num)
         {
             StringBuilder sb = new StringBuilder(num);
