@@ -11,6 +11,17 @@ namespace Edabit
     {
         public static int FindIndex(string[] arr, string str)
         {
+            // Alternative
+            // return Array.IndexOf(arr, str);
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i].Contains(str))
+                {
+                    return i;
+                }
+            }
+
             return -1;
         }
 
