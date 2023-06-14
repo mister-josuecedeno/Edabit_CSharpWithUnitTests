@@ -14,6 +14,24 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("It's high noon", 3)]
+        [InlineData("Is this easy mode", 4)]
+        [InlineData("What an easy task, right", 5)]
+        [InlineData("This is a test", 4)]
+        [InlineData("Just an example here move along", 6)]
+        [InlineData("How are you today?", 4)]
+        public void ReturnCountWords(string str, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.CountWords(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new string[] { "abc", "ghj", "banana", "grape" }, "grape", 3)]
         [InlineData(new string[] { "a", "b", "c", "d", "e", "f" }, "f", 5)]
         [InlineData(

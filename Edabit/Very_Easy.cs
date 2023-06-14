@@ -9,6 +9,13 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int CountWords(string str)
+        {
+            string pattern = @"[\w']+";
+            MatchCollection matches = Regex.Matches(str, pattern);
+            return matches.Count;
+        }
+
         public static int FindIndex(string[] arr, string str)
         {
             // Alternative
