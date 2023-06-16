@@ -9,6 +9,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int Days(int month, int year)
+        {
+            return DateTime.DaysInMonth(year, month);
+        }
+
         public static int CountWords(string str)
         {
             string pattern = @"[\w']+";

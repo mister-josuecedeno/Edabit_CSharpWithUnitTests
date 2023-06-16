@@ -14,6 +14,24 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(1, 2018, 31)]
+        [InlineData(2, 2018, 28)]
+        [InlineData(3, 2018, 31)]
+        [InlineData(4, 2018, 30)]
+        [InlineData(5, 2018, 31)]
+        [InlineData(6, 2018, 30)]
+        public void ReturnDays(int month, int year, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.Days(month, year);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("It's high noon", 3)]
         [InlineData("Is this easy mode", 4)]
         [InlineData("What an easy task, right", 5)]
