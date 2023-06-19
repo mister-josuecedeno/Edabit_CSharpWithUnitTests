@@ -14,6 +14,26 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("buf-fet", 2)]
+        [InlineData("beau-ti-ful", 3)]
+        [InlineData("mon-u-men-tal", 4)]
+        [InlineData("on-o-mat-o-poe-ia", 6)]
+        [InlineData("o-ver-ly", 3)]
+        [InlineData("pas-try", 2)]
+        [InlineData("flu-id", 2)]
+        [InlineData("syl-la-ble", 3)]
+        public void ReturnNumberSyllables(string word, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.NumberSyllables(word);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(1, 2018, 31)]
         [InlineData(2, 2018, 28)]
         [InlineData(3, 2018, 31)]

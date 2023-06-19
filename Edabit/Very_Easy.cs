@@ -9,6 +9,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int NumberSyllables(string word)
+        {
+            return word.Split("-").Length;
+        }
+
         public static int Days(int month, int year)
         {
             return DateTime.DaysInMonth(year, month);
