@@ -11,7 +11,7 @@ namespace Edabit
     {
         public static int NumberSyllables(string word)
         {
-            return word.Split("-").Length;
+            return word.Split('-').Length;
         }
 
         public static int Days(int month, int year)
