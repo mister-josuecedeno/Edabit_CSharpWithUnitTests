@@ -14,6 +14,23 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("NNNN", false)]
+        [InlineData("NENESSWW", true)]
+        [InlineData("NEESSW", false)]
+        [InlineData("EEWE", false)]
+        [InlineData("NNSSEEEWWWEW", true)]
+        public void ReturnBackToHome(string d, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.BackToHome(d);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("buf-fet", 2)]
         [InlineData("beau-ti-ful", 3)]
         [InlineData("mon-u-men-tal", 4)]

@@ -9,6 +9,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static bool BackToHome(string d)
+        {
+            return false;
+        }
+
         public static int NumberSyllables(string word)
         {
             return word.Split('-').Length;
