@@ -11,7 +11,20 @@ namespace Edabit
     {
         public static bool BackToHome(string d)
         {
-            return false;
+            Dictionary<char, int> direction = new Dictionary<char, int>();
+            direction['N'] = 2;
+            direction['S'] = -2;
+            direction['W'] = 1;
+            direction['E'] = -1;
+
+            var total = 0;
+
+            foreach (var letter in d)
+            {
+                total += direction[letter];
+            }
+
+            return total == 0;
         }
 
         public static int NumberSyllables(string word)
