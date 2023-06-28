@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Edabit
 {
     public static class Very_Easy
     {
+        public static bool HurdleJump(int[] hurdles, int jumpHeight)
+        {
+            return false;
+        }
+
         public static bool BackToHome(string d)
         {
             Dictionary<char, int> direction = new Dictionary<char, int>();

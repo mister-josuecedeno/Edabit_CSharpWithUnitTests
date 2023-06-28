@@ -1,18 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xunit;
-using Edabit;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
-using Xunit.Sdk;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel;
-
-namespace Edabit.Tests
+﻿namespace Edabit.Tests
 {
     public class Very_Easy_Tests
     {
+        [Theory]
+        [InlineData(new int[] { 1, 2, 3, 4, 5 }, 5, true)]
+        [InlineData(new int[] { 5, 5, 3, 4, 5 }, 3, false)]
+        [InlineData(new int[] { 5, 4, 5, 6 }, 10, true)]
+        [InlineData(new int[] { 1, 2, 1 }, 1, false)]
+        [InlineData(new int[] { 3, 3, 3 }, 4, true)]
+        [InlineData(new int[] { 4, 4 }, 3, false)]
+        [InlineData(new int[] { }, 4, true)]
+        public void ReturnHurdleJump(int[] hurdles, int jumpHeight, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.HurdleJump(hurdles, jumpHeight);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
         [Theory]
         [InlineData("NNNN", false)]
         [InlineData("NENESSWW", true)]
