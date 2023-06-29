@@ -7,7 +7,7 @@ namespace Edabit
     {
         public static bool HurdleJump(int[] hurdles, int jumpHeight)
         {
-            return false;
+            return hurdles.All(h => h <= jumpHeight);
         }
 
         public static bool BackToHome(string d)
