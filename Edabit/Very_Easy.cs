@@ -5,6 +5,13 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int CountClaps(string txt)
+        {
+            Regex regex = new Regex("C");
+            var matches = regex.Matches(txt);
+            return matches.Count;
+        }
+
         public static bool HurdleJump(int[] hurdles, int jumpHeight)
         {
             return hurdles.All(h => h <= jumpHeight);

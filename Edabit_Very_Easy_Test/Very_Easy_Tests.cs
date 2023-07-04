@@ -3,6 +3,29 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("ClaClaClaClap!", 4)]
+        [InlineData("ClClClaClaClaClap!", 6)]
+        [InlineData("CCClaClClap!Clap!ClClClap!", 9)]
+        [InlineData(
+            "ClCCClaClaClaClCClap!CClaClap!Clap!ClClClClaClaClap!Clap!ClClCClap!Clap!ClClap!ClaCClClap!ClClap!Clap!CClClaClaClaCClaCClaClClaCCCClaClap!Clap!ClaClaClap!ClaClap!CClap!Clap!ClClap!",
+            61
+        )]
+        [InlineData(
+            "Clap!ClClaClap!ClaClap!CClap!ClClClap!CClaClap!CClap!ClClap!ClaClaClClap!ClaClap!ClClCClaClaCClaCCCCClClCClap!ClaCClaClCClap!Clap!ClaClaClaCClaClap!",
+            52
+        )]
+        public void ReturnCountClaps(string txt, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.CountClaps(txt);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 1, 2, 3, 4, 5 }, 5, true)]
         [InlineData(new int[] { 5, 5, 3, 4, 5 }, 3, false)]
         [InlineData(new int[] { 5, 4, 5, 6 }, 10, true)]
