@@ -3,6 +3,25 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(3, "Burrrp")]
+        [InlineData(5, "Burrrrrp")]
+        [InlineData(9, "Burrrrrrrrrp")]
+        [InlineData(10, "Burrrrrrrrrrp")]
+        [InlineData(13, "Burrrrrrrrrrrrrp")]
+        [InlineData(18, "Burrrrrrrrrrrrrrrrrrp")]
+        [InlineData(1, "Burp")]
+        public void ReturnLongBurp(int b, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.LongBurp(b);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("ClaClaClaClap!", 4)]
         [InlineData("ClClClaClaClaClap!", 6)]
         [InlineData("CCClaClClap!Clap!ClClClap!", 9)]

@@ -5,6 +5,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string LongBurp(int b)
+        {
+            return "Burp";
+        }
+
         public static int CountClaps(string txt)
         {
             Regex regex = new Regex("C");
