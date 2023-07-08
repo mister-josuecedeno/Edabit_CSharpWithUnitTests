@@ -7,8 +7,8 @@ namespace Edabit
     {
         public static string LongBurp(int b)
         {
-            var r = "r";
-            return @"Bu{r}p";
+            var repeat = new string('r', n);
+            return $"Bu{repeat}p";
         }
 
         public static int CountClaps(string txt)
