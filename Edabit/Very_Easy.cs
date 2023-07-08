@@ -7,7 +7,7 @@ namespace Edabit
     {
         public static string LongBurp(int b)
         {
-            var repeat = new string('r', n);
+            var repeat = new string('r', b);
             return $"Bu{repeat}p";
         }
 
