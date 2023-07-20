@@ -5,6 +5,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int CountDs(string str)
+        {
+            return -1;
+        }
+
         public static string LongBurp(int b)
         {
             var repeat = new string('r', b);

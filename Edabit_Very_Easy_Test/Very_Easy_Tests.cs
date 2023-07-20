@@ -3,6 +3,22 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("My friend Dylan got distracted at school", 4)]
+        [InlineData("Debris was scattered all over the place.", 2)]
+        [InlineData("The rodents hibernated in their den.", 3)]
+        public void ReturnCountDs(string str, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.CountDs(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+
+        [Theory]
         [InlineData(3, "Burrrp")]
         [InlineData(5, "Burrrrrp")]
         [InlineData(9, "Burrrrrrrrrp")]
