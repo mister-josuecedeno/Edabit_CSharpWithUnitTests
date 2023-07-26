@@ -7,7 +7,9 @@ namespace Edabit
     {
         public static int CountDs(string str)
         {
-            return -1;
+            Regex regex = new Regex("d", RegexOptions.IgnoreCase);
+            var matches = regex.Matches(str);
+            return matches.Count;
         }
 
         public static string LongBurp(int b)
