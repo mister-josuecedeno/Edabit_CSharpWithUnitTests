@@ -5,6 +5,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int Sum(int n)
+        {
+            return 0;
+        }
+
         public static int CountDs(string str)
         {
             Regex regex = new Regex("d", RegexOptions.IgnoreCase);

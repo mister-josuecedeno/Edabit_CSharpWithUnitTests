@@ -3,6 +3,19 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(5, 15)]
+        [InlineData(1, 1)]
+        [InlineData(12, 78)]
+        public void ReturnSum(int n, int expected)
+        {
+            // Arrange
+
+            // Actual
+
+            // Assert
+        }
+
+        [Theory]
         [InlineData("My friend Dylan got distracted at school", 4)]
         [InlineData("Debris was scattered all over the place.", 2)]
         [InlineData("The rodents hibernated in their den.", 3)]
@@ -16,7 +29,6 @@
             // Assert
             Assert.Equal(expected, actual);
         }
-
 
         [Theory]
         [InlineData(3, "Burrrp")]
