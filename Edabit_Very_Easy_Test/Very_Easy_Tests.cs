@@ -11,8 +11,10 @@
             // Arrange
 
             // Actual
+            var actual = Very_Easy.Sum(n);
 
             // Assert
+            Assert.Equal(expected, actual);
         }
 
         [Theory]

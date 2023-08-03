@@ -7,7 +7,15 @@ namespace Edabit
     {
         public static int Sum(int n)
         {
-            return 0;
+            string str = n.ToString();
+
+            // Split the string into individual characters and parse them back to integers
+            int[] numbers = str.Select(c => int.Parse(c.ToString())).ToArray();
+
+            // Calculate the sum of all elements using Aggregate
+            int result = numbers.Aggregate((acc, x) => acc + x);
+
+            return result;
         }
 
         public static int CountDs(string str)
