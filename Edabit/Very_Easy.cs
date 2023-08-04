@@ -7,13 +7,12 @@ namespace Edabit
     {
         public static int Sum(int n)
         {
-            string str = n.ToString();
+            int result = 0;
 
-            // Split the string into individual characters and parse them back to integers
-            int[] numbers = str.Select(c => int.Parse(c.ToString())).ToArray();
-
-            // Calculate the sum of all elements using Aggregate
-            int result = numbers.Aggregate((acc, x) => acc + x);
+            for (int i = 1; i <= n; i++)
+            {
+                result += i;
+            }
 
             return result;
         }
