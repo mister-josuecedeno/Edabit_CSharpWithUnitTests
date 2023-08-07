@@ -5,6 +5,17 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string Repetition(string txt, int n)
+        {
+            if (n <= 0)
+                return string.Empty;
+
+            if (n == 1)
+                return txt;
+
+            return txt + Repetition(txt, n - 1);
+        }
+
         public static int Sum(int n)
         {
             int result = 0;

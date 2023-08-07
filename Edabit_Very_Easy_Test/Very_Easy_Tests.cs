@@ -3,6 +3,24 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("soccer", 2, "soccersoccer")]
+        [InlineData("ab", 3, "ababab")]
+        [InlineData("this", 1, "this")]
+        [InlineData("ciao", 4, "ciaociaociaociao")]
+        [InlineData("charon", 5, "charoncharoncharoncharoncharon")]
+        [InlineData("sa", 10, "sasasasasasasasasasa")]
+        public void ReturnRepetition(string txt, int n, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.Repetition(txt, n);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(5, 15)]
         [InlineData(1, 1)]
         [InlineData(12, 78)]
