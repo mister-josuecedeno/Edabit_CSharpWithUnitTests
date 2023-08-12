@@ -5,6 +5,16 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string RemoveFirstLast(string str)
+        {
+            if (str.Length < 3)
+            {
+                return str;
+            }
+
+            return str.Substring(1, str.Length - 2);
+        }
+
         public static string Repetition(string txt, int n)
         {
             if (n <= 0)

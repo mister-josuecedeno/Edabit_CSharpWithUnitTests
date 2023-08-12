@@ -3,6 +3,25 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("hello", "ell")]
+        [InlineData("benefit", "enefi")]
+        [InlineData("wordy", "ord")]
+        [InlineData("maybe", "ayb")]
+        [InlineData("to", "to")]
+        [InlineData("a", "a")]
+        [InlineData("", "")]
+        public void ReturnRemoveFirstLast(string str, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.RemoveFirstLast(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("soccer", 2, "soccersoccer")]
         [InlineData("ab", 3, "ababab")]
         [InlineData("this", 1, "this")]
@@ -188,7 +207,7 @@
         [InlineData(new string[] { "abc", "ghj", "banana", "grape" }, "grape", 3)]
         [InlineData(new string[] { "a", "b", "c", "d", "e", "f" }, "f", 5)]
         [InlineData(
-            new string[] { "hi", "edabit.com", "testcase", "validstring" },
+            new string[] { "hi", "edabit.com", "tistcase", "validstring" },
             "edabit.com",
             1
         )]
