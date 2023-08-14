@@ -5,6 +5,12 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string Stutter(string word)
+        {
+            var firstTwo = word.Substring(0, 2);
+            return $"{firstTwo}... {firstTwo}... {word}?";
+        }
+
         public static string RemoveFirstLast(string str)
         {
             if (str.Length < 3)

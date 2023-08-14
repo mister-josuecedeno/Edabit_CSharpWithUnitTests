@@ -3,6 +3,28 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("increasing", "in... in... increasing?")]
+        [InlineData("adventures", "ad... ad... adventures?")]
+        [InlineData("enticing", "en... en... enticing?")]
+        [InlineData("unacceptable", "un... un... unacceptable?")]
+        [InlineData("accountable", "ac... ac... accountable?")]
+        [InlineData("incredible", "in... in... incredible?")]
+        [InlineData("exquisite", "ex... ex... exquisite?")]
+        [InlineData("am", "am... am... am?")]
+        [InlineData("enduring", "en... en... enduring?")]
+        [InlineData("outstanding", "ou... ou... outstanding?")]
+        public void ReturnStutter(string word, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.Stutter(word);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("hello", "ell")]
         [InlineData("benefit", "enefi")]
         [InlineData("wordy", "ord")]
