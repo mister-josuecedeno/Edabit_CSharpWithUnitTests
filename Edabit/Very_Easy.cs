@@ -5,6 +5,14 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string FormatDate(string date)
+        {
+            DateTime parsedDate;
+            DateTime.TryParse(date, out parsedDate);
+            var formattedDate = parsedDate.ToString("yyyyddMM");
+            return formattedDate;
+        }
+
         public static string Stutter(string word)
         {
             var firstTwo = word.Substring(0, 2);

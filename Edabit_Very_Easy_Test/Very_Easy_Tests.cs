@@ -3,6 +3,21 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("11/12/2019", "20191211")]
+        [InlineData("12/31/2019", "20193112")]
+        [InlineData("01/15/2019", "20191501")]
+        public void ReturnFormatDate(string date, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.FormatDate(date);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("increasing", "in... in... increasing?")]
         [InlineData("adventures", "ad... ad... adventures?")]
         [InlineData("enticing", "en... en... enticing?")]
