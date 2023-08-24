@@ -3,6 +3,24 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(17, 8, 24)]
+        [InlineData(98, 3, 99)]
+        [InlineData(14, 11, 22)]
+        [InlineData(11, 8, 16)]
+        [InlineData(450, 36, 468)]
+        [InlineData(1019, 13, 1027)]
+        public void ReturnDivisibleByB(int a, int b, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.DivisibleByB(a, b);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("11/12/2019", "20191211")]
         [InlineData("12/31/2019", "20193112")]
         [InlineData("01/15/2019", "20191501")]

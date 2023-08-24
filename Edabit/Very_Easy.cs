@@ -5,6 +5,16 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int DivisibleByB(int a, int b)
+        {
+            while (a % b != 0)
+            {
+                a++;
+            }
+
+            return a;
+        }
+
         public static string FormatDate(string date)
         {
             DateTime parsedDate;
