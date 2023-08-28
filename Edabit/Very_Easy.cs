@@ -5,6 +5,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string GetFilename(string path)
+        {
+            return string.Empty;
+        }
+
         public static int DivisibleByB(int a, int b)
         {
             while (a % b != 0)
