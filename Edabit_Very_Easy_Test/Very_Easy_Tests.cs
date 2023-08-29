@@ -3,6 +3,24 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("C:/Projects/pil_tests/ascii/edabit.txt", "edabit.txt")]
+        [InlineData("C:/Users/johnsmith/Music/Beethoven_5.mp3", "Beethoven_5.mp3")]
+        [InlineData("ffprobe.exe", "ffprobe.exe")]
+        [InlineData("Music/Drafts/unfinished2.midi", "unfinished2.midi")]
+        [InlineData("C:/Users/chad/OneDrive/Desktop/Atom.lnk", "Atom.lnk")]
+        [InlineData("senoron/OneDrive/Desktop/DDLC-1.1.1-pc/lib/windows-i686/DDLC.exe", "DDLC.exe")]
+        public void ReturnGetFilename(string path, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.GetFilename(path);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(17, 8, 24)]
         [InlineData(98, 3, 99)]
         [InlineData(14, 11, 22)]
