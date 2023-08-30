@@ -7,7 +7,7 @@ namespace Edabit
     {
         public static string GetFilename(string path)
         {
-            return string.Empty;
+            return Path.GetFileName(path);
         }
 
         public static int DivisibleByB(int a, int b)
