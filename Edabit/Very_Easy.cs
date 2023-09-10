@@ -7,7 +7,13 @@ namespace Edabit
     {
         public static string DoubleChar(string str)
         {
-            return string.Empty;
+            StringBuilder sb = new StringBuilder();
+            foreach (char c in str)
+            {
+                sb.Append($"{c}{c}");
+            }
+
+            return sb.ToString();
         }
 
         public static string GetFilename(string path)
