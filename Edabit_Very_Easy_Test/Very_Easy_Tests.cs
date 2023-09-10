@@ -3,6 +3,28 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("String", "SSttrriinngg")]
+        [InlineData("Hello World!", "HHeelllloo  WWoorrlldd!!")]
+        [InlineData("1234!_ ", "11223344!!__  ")]
+        [InlineData("##^&%%*&%%$#@@!", "####^^&&%%%%**&&%%%%$$##@@@@!!")]
+        [InlineData("scandal", "ssccaannddaall")]
+        [InlineData("economics", "eeccoonnoommiiccss")]
+        [InlineData(" ", "  ")]
+        [InlineData("_______", "______________")]
+        [InlineData("equip gallon read", "eeqquuiipp  ggaalllloonn  rreeaadd")]
+        [InlineData("baby increase", "bbaabbyy  iinnccrreeaassee")]
+        public void ReturnDoubleChar(string str, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.DoubleChar(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("C:/Projects/pil_tests/ascii/edabit.txt", "edabit.txt")]
         [InlineData("C:/Users/johnsmith/Music/Beethoven_5.mp3", "Beethoven_5.mp3")]
         [InlineData("ffprobe.exe", "ffprobe.exe")]

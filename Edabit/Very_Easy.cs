@@ -5,6 +5,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string DoubleChar(string str)
+        {
+            return string.Empty;
+        }
+
         public static string GetFilename(string path)
         {
             return Path.GetFileName(path);
