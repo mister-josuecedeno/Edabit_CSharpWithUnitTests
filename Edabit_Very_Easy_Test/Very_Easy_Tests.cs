@@ -3,6 +3,22 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("maga", "zine", "Magazine")]
+        [InlineData("reli", "able", "Reliable")]
+        [InlineData("impl", "icit", "Implicit")]
+        [InlineData("docu", "ment", "Document")]
+        [InlineData("oppo", "site", "Opposite")]
+        [InlineData("offi", "cial", "Official")]
+        public void ReturnGetWord(string left, string right, string expected)
+        {
+            // Arrange
+
+            // Actual
+
+            // Assert
+        }
+
+        [Theory]
         [InlineData("String", "SSttrriinngg")]
         [InlineData("Hello World!", "HHeelllloo  WWoorrlldd!!")]
         [InlineData("1234!_ ", "11223344!!__  ")]

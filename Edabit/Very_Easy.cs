@@ -5,6 +5,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string GetWord(string left, string right)
+        {
+            return string.Empty;
+        }
+
         public static string DoubleChar(string str)
         {
             StringBuilder sb = new StringBuilder();
