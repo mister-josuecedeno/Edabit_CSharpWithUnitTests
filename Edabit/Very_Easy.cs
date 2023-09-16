@@ -1,5 +1,7 @@
-﻿using System.Text;
+﻿using System.Globalization;
+using System.Text;
 using System.Text.RegularExpressions;
+using System.Xml.Linq;
 
 namespace Edabit
 {
@@ -7,7 +9,10 @@ namespace Edabit
     {
         public static string GetWord(string left, string right)
         {
-            return string.Empty;
+            string combined = String.Concat(left, right);
+            TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
+            string properCase = myTI.ToTitleCase(combined);
+            return properCase;
         }
 
         public static string DoubleChar(string str)

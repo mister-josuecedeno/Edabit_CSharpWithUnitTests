@@ -14,8 +14,10 @@
             // Arrange
 
             // Actual
+            var actual = Very_Easy.GetWord(left, right);
 
             // Assert
+            Assert.Equal(expected, actual);
         }
 
         [Theory]
