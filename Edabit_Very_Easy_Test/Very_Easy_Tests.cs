@@ -3,6 +3,24 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("loop", true)]
+        [InlineData("meeting", true)]
+        [InlineData("yummy", true)]
+        [InlineData("toodles", true)]
+        [InlineData("droop", true)]
+        [InlineData("loot", true)]
+        public void ReturnDoubleLetters(string word, Boolean expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.DoubleLetters(word);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("maga", "zine", "Magazine")]
         [InlineData("reli", "able", "Reliable")]
         [InlineData("impl", "icit", "Implicit")]

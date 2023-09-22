@@ -7,6 +7,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static bool DoubleLetters(string word)
+        {
+            return Regex.IsMatch(word, @"(\w)\1");
+        }
+
         public static string GetWord(string left, string right)
         {
             string combined = String.Concat(left, right);
