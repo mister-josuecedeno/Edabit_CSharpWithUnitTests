@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
@@ -7,6 +8,13 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string ModifyLast(string str, int n)
+        {
+            char lastChar = str[str.Length - 1];
+            string repeatedString = new string(lastChar, n - 1);
+            return str + repeatedString;
+        }
+
         public static bool DoubleLetters(string word)
         {
             return Regex.IsMatch(word, @"(\w)\1");

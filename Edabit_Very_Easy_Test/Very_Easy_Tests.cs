@@ -3,6 +3,26 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("Hello", 3, "Hellooo")]
+        [InlineData("hey", 6, "heyyyyyy")]
+        [InlineData("plsssss!1!", 5, "plsssss!1!!!!!")]
+        [InlineData("gr", 2, "grr")]
+        [InlineData("excuse me what?", 5, "excuse me what?????")]
+        [InlineData("123", 5, "1233333")]
+        [InlineData("a", 3, "aaa")]
+        [InlineData("STOP", 3, "STOPPP")]
+        public void ReturnModifyLast(string str, int n, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.ModifyLast(str, n);
+
+            // Arrange
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("loop", true)]
         [InlineData("meeting", true)]
         [InlineData("yummy", true)]
