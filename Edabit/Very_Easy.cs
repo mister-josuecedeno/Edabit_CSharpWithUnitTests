@@ -8,6 +8,13 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string ReverseString(string str)
+        {
+            char[] charArray = str.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
+        }
+
         public static string ModifyLast(string str, int n)
         {
             char lastChar = str[str.Length - 1];

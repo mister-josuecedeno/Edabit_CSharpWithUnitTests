@@ -3,6 +3,31 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("Think different.", ".tnereffid knihT")]
+        [InlineData(
+            "It doesn’t make sense to hire smart people and tell them what to do; we hire smart people so they can tell us what to do.",
+            ".od ot tahw su llet nac yeht os elpoep trams erih ew ;od ot tahw meht llet dna elpoep trams erih ot esnes ekam t’nseod tI"
+        )]
+        [InlineData(
+            "Innovation is the ability to see change as an opportunity - not a threat",
+            "taerht a ton - ytinutroppo na sa egnahc ees ot ytiliba eht si noitavonnI"
+        )]
+        [InlineData(
+            "Everything is based on a simple rule: Quality is the best business plan.",
+            ".nalp ssenisub tseb eht si ytilauQ :elur elpmis a no desab si gnihtyrevE"
+        )]
+        public void ReturnReverseString(string str, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.ReverseString(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("Hello", 3, "Hellooo")]
         [InlineData("hey", 6, "heyyyyyy")]
         [InlineData("plsssss!1!", 5, "plsssss!1!!!!!")]
