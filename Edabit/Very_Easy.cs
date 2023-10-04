@@ -3,11 +3,17 @@ using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
+using System.Linq;
 
 namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int[] NoOdds(int[] arr)
+        {
+            return (int[])arr.Where(n => n % 2 == 0);
+        }
+
         public static string ReverseString(string str)
         {
             char[] charArray = str.ToCharArray();

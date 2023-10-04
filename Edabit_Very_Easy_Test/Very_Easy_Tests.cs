@@ -3,6 +3,17 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        // Add inline data
+        public void ReturnNoOdds(int[] arr, int[] expected)
+        {
+            // Arrange
+
+            // Actual
+
+            // Assert
+        }
+
+        [Theory]
         [InlineData("Think different.", ".tnereffid knihT")]
         [InlineData(
             "It doesn’t make sense to hire smart people and tell them what to do; we hire smart people so they can tell us what to do.",
