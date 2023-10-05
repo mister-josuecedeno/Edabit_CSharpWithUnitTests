@@ -3,14 +3,16 @@
     public class Very_Easy_Tests
     {
         [Theory]
-        // Add inline data
+        [InlineData(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 }, new int[] { 2, 4, 6, 8 })]
         public void ReturnNoOdds(int[] arr, int[] expected)
         {
             // Arrange
 
             // Actual
+            var actual = Very_Easy.NoOdds(arr);
 
             // Assert
+            Assert.Equal(expected, actual);
         }
 
         [Theory]

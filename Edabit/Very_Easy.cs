@@ -2,8 +2,6 @@
 using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Xml.Linq;
-using System.Linq;
 
 namespace Edabit
 {
@@ -11,7 +9,7 @@ namespace Edabit
     {
         public static int[] NoOdds(int[] arr)
         {
-            return (int[])arr.Where(n => n % 2 == 0);
+            return arr.Where(n => n % 2 == 0).ToArray();
         }
 
         public static string ReverseString(string str)
