@@ -7,6 +7,13 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string ReverseCapitalize(string str)
+        {
+            char[] charArray = str.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray).ToUpper();
+        }
+
         public static int[] NoOdds(int[] arr)
         {
             return arr.Where(n => n % 2 == 0).ToArray();

@@ -3,6 +3,23 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("edabit", "TIBADE")]
+        [InlineData("abc", "CBA")]
+        [InlineData("hellothere", "EREHTOLLEH")]
+        [InlineData("input", "TUPNI")]
+        [InlineData("indubitably", "YLBATIBUDNI")]
+        public void ReturnReverseCapitalize(string str, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.ReverseCapitalize(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 1, 2, 3, 4, 5, 6, 7, 8 }, new int[] { 2, 4, 6, 8 })]
         public void ReturnNoOdds(int[] arr, int[] expected)
         {
