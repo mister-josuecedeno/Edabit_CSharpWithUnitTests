@@ -7,6 +7,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string FormatPhoneNumber(int[] numbers)
+        {
+            return string.Empty;
+        }
+
         public static string ReverseCapitalize(string str)
         {
             char[] charArray = str.ToCharArray();

@@ -3,6 +3,22 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }, "(123) 456-7890")]
+        [InlineData(new int[] { 5, 1, 9, 5, 5, 5, 4, 4, 6, 8 }, "(519) 555-4468")]
+        [InlineData(new int[] { 3, 4, 5, 5, 0, 1, 2, 5, 2, 7 }, "(345) 501-2527")]
+        [InlineData(new int[] { 6, 6, 2, 5, 8, 8, 7, 0, 4, 3 }, "(662) 588-7043")]
+        public void ReturnFormatPhoneNumber(int[] numbers, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.FormatPhoneNumber(numbers);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("edabit", "TIBADE")]
         [InlineData("abc", "CBA")]
         [InlineData("hellothere", "EREHTOLLEH")]
