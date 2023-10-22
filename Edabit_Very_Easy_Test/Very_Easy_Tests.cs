@@ -3,6 +3,22 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("mice", 5, "mmmmmiiiiiccccceeeee")]
+        [InlineData("hello", 3, "hhheeellllllooo")]
+        [InlineData("stop", 1, "stop")]
+        [InlineData("tomato", 2, "ttoommaattoo")]
+        public void ReturnRepeat(string str, int num, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.Repeat(str, num);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }, "(123) 456-7890")]
         [InlineData(new int[] { 5, 1, 9, 5, 5, 5, 4, 4, 6, 8 }, "(519) 555-4468")]
         [InlineData(new int[] { 3, 4, 5, 5, 0, 1, 2, 5, 2, 7 }, "(345) 501-2527")]

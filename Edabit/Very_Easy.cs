@@ -7,6 +7,19 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string Repeat(string str, int num)
+        {
+            char[] charArray = str.ToCharArray();
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < charArray.Length; i++)
+            {
+                sb.Append(new string(charArray[i], num));
+            }
+
+            return sb.ToString();
+        }
+
         public static string FormatPhoneNumber(int[] n)
         {
             return $"({n[0]}{n[1]}{n[2]}) {n[3]}{n[4]}{n[5]}-{n[6]}{n[7]}{n[8]}{n[9]}";
