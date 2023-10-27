@@ -3,6 +3,22 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(new int[] { 3, 5, 9 }, false)]
+        [InlineData(new int[] { 1, 1, 1, 1 }, true)]
+        [InlineData(new int[] { 1, 2, 3, 4, 5 }, true)]
+        [InlineData(new int[] { 5, 2, 4 }, false)]
+        public void ReturnIsAvgWhole(int[] arr, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.IsAvgWhole(arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("mice", 5, "mmmmmiiiiiccccceeeee")]
         [InlineData("hello", 3, "hhheeellllllooo")]
         [InlineData("stop", 1, "stop")]

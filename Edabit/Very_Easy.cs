@@ -7,6 +7,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static bool IsAvgWhole(int[] arr)
+        {
+            return false;
+        }
+
         public static string Repeat(string str, int num)
         {
             char[] charArray = str.ToCharArray();
