@@ -9,7 +9,8 @@ namespace Edabit
     {
         public static bool IsAvgWhole(int[] arr)
         {
-            return false;
+            var average = arr.Average();
+            return average % 1 == 0;
         }
 
         public static string Repeat(string str, int num)
