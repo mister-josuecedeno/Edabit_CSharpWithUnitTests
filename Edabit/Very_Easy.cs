@@ -7,6 +7,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static double Mean(int[] arr)
+        {
+            return Math.Round(arr.Average(), 2);
+        }
+
         public static bool IsAvgWhole(int[] arr)
         {
             var average = arr.Average();

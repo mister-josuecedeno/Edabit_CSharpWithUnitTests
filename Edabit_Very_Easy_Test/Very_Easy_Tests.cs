@@ -3,6 +3,22 @@
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(new int[] { 1, 0, 4, 5, 2, 4, 1, 2, 3, 3, 3 }, 2.55)]
+        [InlineData(new int[] { 324, 543, 654, 9876 }, 2849.25)]
+        [InlineData(new int[] { 0, 0, 0, 0 }, 0.0)]
+        [InlineData(new int[] { 30, 40, 20, 100, 30 }, 44.0)]
+        public void ReturnMean(int[] arr, double expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.Mean(arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 3, 5, 9 }, false)]
         [InlineData(new int[] { 1, 1, 1, 1 }, true)]
         [InlineData(new int[] { 1, 2, 3, 4, 5 }, true)]
