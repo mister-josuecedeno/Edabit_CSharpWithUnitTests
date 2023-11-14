@@ -7,6 +7,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string[] IsFourLetters(string[] arr)
+        {
+            return new string[0];
+        }
+
         public static double Mean(int[] arr)
         {
             return Math.Round(arr.Average(), 2);

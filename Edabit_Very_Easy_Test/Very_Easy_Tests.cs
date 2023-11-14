@@ -1,7 +1,27 @@
-﻿namespace Edabit.Tests
+﻿using Microsoft.VisualStudio.TestPlatform.TestHost;
+
+namespace Edabit.Tests
 {
     public class Very_Easy_Tests
     {
+        [Theory]
+        [InlineData(
+            new string[] { "Ryan", "Kieran", "Jason", "Matt" },
+            new string[] { "Ryan", "Matt" }
+        )]
+        [InlineData(new string[] { "Tomato", "Potato", "Pair" }, new string[] { "Pair" })]
+        [InlineData(new string[] { "Kangaroo", "Bear", "Fox" }, new string[] { "Bear" })]
+        public void ReturnIsFourLetters(string[] arr, string[] expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.IsFourLetters(arr);
+
+            // Actual
+            Assert.Equal(expected, actual);
+        }
+
         [Theory]
         [InlineData(new int[] { 1, 0, 4, 5, 2, 4, 1, 2, 3, 3, 3 }, 2.55)]
         [InlineData(new int[] { 324, 543, 654, 9876 }, 2849.25)]
