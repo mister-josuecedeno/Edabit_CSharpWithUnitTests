@@ -1,5 +1,4 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -9,7 +8,7 @@ namespace Edabit
     {
         public static string[] IsFourLetters(string[] arr)
         {
-            return new string[0];
+            return arr.Where(w => w.Length == 4).ToArray();
         }
 
         public static double Mean(int[] arr)
