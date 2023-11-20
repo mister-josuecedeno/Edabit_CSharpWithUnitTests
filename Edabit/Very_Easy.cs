@@ -6,6 +6,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static bool XO(string str)
+        {
+            return false;
+        }
+
         public static string[] IsFourLetters(string[] arr)
         {
             return arr.Where(w => w.Length == 4).ToArray();

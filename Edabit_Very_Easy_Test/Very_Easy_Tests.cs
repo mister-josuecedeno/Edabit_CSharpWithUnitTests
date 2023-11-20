@@ -5,6 +5,23 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("ooxx", true)]
+        [InlineData("xooxx", false)]
+        [InlineData("ooxXm", true)]
+        [InlineData("zpzpzpp", true)]
+        [InlineData("zzoo", false)]
+        public void ReturnXO(string str, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.XO(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(
             new string[] { "Ryan", "Kieran", "Jason", "Matt" },
             new string[] { "Ryan", "Matt" }
