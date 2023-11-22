@@ -8,7 +8,9 @@ namespace Edabit
     {
         public static bool XO(string str)
         {
-            return false;
+            int numOfX = str.Count(x => char.ToUpper(x) == 'X');
+            int numOfY = str.Count(o => char.ToUpper(o) == 'O');
+            return numOfX == numOfY;
         }
 
         public static string[] IsFourLetters(string[] arr)
