@@ -6,6 +6,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string AlphabetSoup(string str)
+        {
+            return string.Empty;
+        }
+
         public static bool XO(string str)
         {
             int numOfX = str.Count(x => char.ToUpper(x) == 'X');

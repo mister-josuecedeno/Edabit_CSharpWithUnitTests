@@ -1,9 +1,27 @@
 ﻿using Microsoft.VisualStudio.TestPlatform.TestHost;
+using System.ComponentModel.DataAnnotations;
 
 namespace Edabit.Tests
 {
     public class Very_Easy_Tests
     {
+        [Theory]
+        [InlineData("hello", "ehllo")]
+        [InlineData("edabit", "abdeit")]
+        [InlineData("hacker", "acehkr")]
+        [InlineData("geek", "eegk")]
+        [InlineData("javascript", "aacijprstv")]
+        public void ReturnAlphabetSoup(string str, string expected)
+        {
+            // Arrange
+
+            // Actual
+            string actual = Very_Easy.AlphabetSoup(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
         [Theory]
         [InlineData("ooxx", true)]
         [InlineData("xooxx", false)]
