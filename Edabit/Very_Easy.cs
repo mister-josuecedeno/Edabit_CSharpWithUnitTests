@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System.Collections.Immutable;
+using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -8,7 +9,9 @@ namespace Edabit
     {
         public static string AlphabetSoup(string str)
         {
-            return string.Empty;
+            char[] chars = str.ToCharArray();
+            Array.Sort(chars);
+            return new string(chars);
         }
 
         public static bool XO(string str)
