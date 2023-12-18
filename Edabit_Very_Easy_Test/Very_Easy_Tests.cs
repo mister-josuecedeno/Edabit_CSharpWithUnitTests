@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("https://www.reddit.com/r/relationships/", "relationships")]
+        [InlineData("https://www.reddit.com/r/mildlyinteresting/", "mildlyinteresting")]
+        [InlineData("https://www.reddit.com/r/funny/", "funny")]
+        [InlineData("https://www.reddit.com/r/CrappyDesign/", "CrappyDesign")]
+        [InlineData("https://www.reddit.com/r/confession/", "confession")]
+        public void ReturnSubReddit(string link, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.SubReddit(link);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("hello", "ehllo")]
         [InlineData("edabit", "abdeit")]
         [InlineData("hacker", "acehkr")]

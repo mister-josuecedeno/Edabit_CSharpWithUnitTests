@@ -7,6 +7,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string SubReddit(string link)
+        {
+            return string.Empty;
+        }
+
         public static string AlphabetSoup(string str)
         {
             char[] chars = str.ToCharArray();
