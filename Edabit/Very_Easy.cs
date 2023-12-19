@@ -1,4 +1,5 @@
-﻿using System.Collections.Immutable;
+﻿using System;
+using System.Collections.Immutable;
 using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -9,7 +10,17 @@ namespace Edabit
     {
         public static string SubReddit(string link)
         {
-            return string.Empty;
+            Regex regex = new Regex(@"reddit\.com/r/(\w+)/");
+            Match match = regex.Match(link);
+
+            if (match.Success)
+            {
+                return match.Groups[1].Value;
+            }
+            else
+            {
+                return "Invalid URL";
+            }
         }
 
         public static string AlphabetSoup(string str)
