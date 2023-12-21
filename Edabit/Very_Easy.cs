@@ -8,6 +8,12 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string ImposterFormula(int imposters, int players)
+        {
+            double imposterChance = 100.0 * imposters / players;
+            return $"{Math.Round(imposterChance)}%";
+        }
+
         public static string SubReddit(string link)
         {
             Regex regex = new Regex(@"reddit\.com/r/(\w+)/");

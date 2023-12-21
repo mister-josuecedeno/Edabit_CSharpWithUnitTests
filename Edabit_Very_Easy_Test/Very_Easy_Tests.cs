@@ -6,6 +6,21 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(1, 9, "11%")]
+        [InlineData(2, 10, "20%")]
+        [InlineData(3, 7, "43%")]
+        public void ReturnImposterFormula(int i, int p, string expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Very_Easy.ImposterFormula(i, p);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("https://www.reddit.com/r/relationships/", "relationships")]
         [InlineData("https://www.reddit.com/r/mildlyinteresting/", "mildlyinteresting")]
         [InlineData("https://www.reddit.com/r/funny/", "funny")]
