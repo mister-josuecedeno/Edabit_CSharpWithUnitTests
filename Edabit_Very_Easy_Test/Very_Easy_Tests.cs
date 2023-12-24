@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(1, 1, 1, true)]
+        [InlineData(12, 15, 10, true)]
+        [InlineData(15228, 9209, 72162, true)]
+        [InlineData(15, 1, 1, false)]
+        [InlineData(123, 15, 10, false)]
+        public void ReturnLastDig(int a, int b, int c, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.LastDig(a, b, c);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(1, 9, "11%")]
         [InlineData(2, 10, "20%")]
         [InlineData(3, 7, "43%")]

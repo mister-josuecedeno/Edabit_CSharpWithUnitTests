@@ -8,6 +8,15 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static bool LastDig(int a, int b, int c)
+        {
+            int lastDigA = a % 10;
+            int lastDigB = b % 10;
+            int lastDigC = c % 10;
+            int lastDig = (lastDigA * lastDigB) % 10;
+            return lastDig == lastDigC;
+        }
+
         public static string ImposterFormula(int imposters, int players)
         {
             double imposterChance = 100.0 * imposters / players;
