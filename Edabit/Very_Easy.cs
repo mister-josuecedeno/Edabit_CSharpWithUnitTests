@@ -10,7 +10,23 @@ namespace Edabit
     {
         public static int[] HashPlusCount(string s)
         {
-            return new int[] { 0, 0 };
+            int hashCount = 0;
+            int plusCount = 0;
+
+            foreach (char c in s)
+            {
+                if (c == '#')
+                {
+                    hashCount++;
+                }
+
+                if (c == '+')
+                {
+                    plusCount++;
+                }
+            }
+
+            return new int[] { hashCount, plusCount };
         }
 
         public static bool LastDig(int a, int b, int c)
