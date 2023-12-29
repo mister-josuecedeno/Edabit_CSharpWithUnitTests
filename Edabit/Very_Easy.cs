@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int[] HashPlusCount(string s)
+        {
+            return new int[] { 0, 0 };
+        }
+
         public static bool LastDig(int a, int b, int c)
         {
             int lastDigA = a % 10;

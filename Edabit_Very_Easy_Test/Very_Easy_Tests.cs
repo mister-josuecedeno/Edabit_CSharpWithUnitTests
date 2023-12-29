@@ -6,6 +6,21 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("#", new int[] { 1, 0 })]
+        [InlineData("+++++++", new int[] { 0, 7 })]
+        [InlineData("++", new int[] { 0, 2 })]
+        public void ReturnHashPlusCount(string s, int[] expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.HashPlusCount(s);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(1, 1, 1, true)]
         [InlineData(12, 15, 10, true)]
         [InlineData(15228, 9209, 72162, true)]
