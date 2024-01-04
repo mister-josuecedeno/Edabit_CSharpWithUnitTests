@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static object[] RemoveDups(object[] str)
+        {
+            return new object[] { };
+        }
+
         public static int[] HashPlusCount(string s)
         {
             int hashCount = 0;

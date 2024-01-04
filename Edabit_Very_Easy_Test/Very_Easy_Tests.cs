@@ -6,6 +6,27 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(new object[] { "John", "Taylor" }, new object[] { "John", "Taylor", "John" })]
+        [InlineData(
+            new object[] { "John", "Taylor", "john" },
+            new object[] { "John", "Taylor", "John", "john" }
+        )]
+        [InlineData(
+            new object[] { "javascript", "python", "ruby", "c" },
+            new object[] { "javascript", "python", "python", "ruby", "javascript", "c", "ruby" }
+        )]
+        public void ReturnRemoveDups(object[] str, object[] expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.RemoveDups(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("#", new int[] { 1, 0 })]
         [InlineData("+++++++", new int[] { 0, 7 })]
         [InlineData("++", new int[] { 0, 2 })]
