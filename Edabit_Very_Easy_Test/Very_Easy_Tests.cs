@@ -15,12 +15,12 @@ namespace Edabit.Tests
             new object[] { "javascript", "python", "ruby", "c" },
             new object[] { "javascript", "python", "python", "ruby", "javascript", "c", "ruby" }
         )]
-        public void ReturnRemoveDups(object[] str, object[] expected)
+        public void ReturnRemoveDups(object[] expected, object[] input)
         {
             // Arrange
 
-            // Actual
-            var actual = Very_Easy.RemoveDups(str);
+            // Act
+            var actual = Very_Easy.RemoveDups(input);
 
             // Assert
             Assert.Equal(expected, actual);

@@ -10,7 +10,18 @@ namespace Edabit
     {
         public static object[] RemoveDups(object[] str)
         {
-            return new object[] { };
+            HashSet<object> seen = new HashSet<object>();
+            List<object> result = new List<object>();
+
+            foreach (var item in str)
+            {
+                if (seen.Add(item))
+                {
+                    result.Add(item);
+                }
+            }
+
+            return result.ToArray();
         }
 
         public static int[] HashPlusCount(string s)
