@@ -6,6 +6,22 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(1, 0, -1, 2)]
+        [InlineData(1, 0, 0, 1)]
+        [InlineData(1, 0, 1, 0)]
+        [InlineData(200, 420, 800, 0)]
+        public void ReturnSolutions(int a, int b, int c, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.Solutions(a, b, c);
+
+            // Assert
+            Assert.Equal(actual, expected);
+        }
+
+        [Theory]
         [InlineData(new object[] { "John", "Taylor" }, new object[] { "John", "Taylor", "John" })]
         [InlineData(
             new object[] { "John", "Taylor", "john" },

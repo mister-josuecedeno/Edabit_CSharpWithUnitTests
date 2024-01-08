@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int Solutions(int a, int b, int c)
+        {
+            return 0;
+        }
+
         public static object[] RemoveDups(object[] str)
         {
             HashSet<object> seen = new HashSet<object>();
