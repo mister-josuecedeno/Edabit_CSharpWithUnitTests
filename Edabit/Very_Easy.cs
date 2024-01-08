@@ -10,7 +10,11 @@ namespace Edabit
     {
         public static int Solutions(int a, int b, int c)
         {
-            return 0;
+            // refactor
+            int solA = a != 0 ? 1 : 0;
+            int solB = b != 0 ? 1 : 0;
+            int solC = c != 0 ? 1 : 0;
+            return solA + solB + solC;
         }
 
         public static object[] RemoveDups(object[] str)
