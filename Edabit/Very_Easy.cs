@@ -10,11 +10,31 @@ namespace Edabit
     {
         public static int Solutions(int a, int b, int c)
         {
-            // refactor
-            int solA = a != 0 ? 1 : 0;
-            int solB = b != 0 ? 1 : 0;
-            int solC = c != 0 ? 1 : 0;
-            return solA + solB + solC;
+            // Wrong solution: I misunderstood the question
+            // More math knowledge than coding
+            //HashSet<int> numbers = new HashSet<int>();
+            //numbers.Add(a);
+            //numbers.Add(b);
+            //numbers.Add(c);
+
+            //int result = 0;
+
+            //foreach (int num in numbers)
+            //{
+            //    if (num != 0)
+            //    {
+            //        result++;
+            //    }
+            //}
+
+            //return result;
+
+            int x = b * b - 4 * a * c;
+            return x > 0
+                ? 2
+                : x < 0
+                    ? 0
+                    : 1;
         }
 
         public static object[] RemoveDups(object[] str)
