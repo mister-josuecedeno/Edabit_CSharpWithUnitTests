@@ -6,6 +6,21 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("the aardvark", "#", "th# ##rdv#rk")]
+        [InlineData("minnie mouse", "?", "m?nn?? m??s?")]
+        [InlineData("shakespeare", "*", "sh*k*sp**r*")]
+        public void ReturnReplaceVowels(string str, string ch, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.ReplaceVowels(str, ch);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(1, 0, -1, 2)]
         [InlineData(1, 0, 0, 1)]
         [InlineData(1, 0, 1, 0)]

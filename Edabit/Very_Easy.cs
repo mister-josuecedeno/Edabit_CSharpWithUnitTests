@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string ReplaceVowels(string str, string ch)
+        {
+            return string.Empty;
+        }
+
         public static int Solutions(int a, int b, int c)
         {
             // Wrong solution: I misunderstood the question
