@@ -10,7 +10,8 @@ namespace Edabit
     {
         public static string ReplaceVowels(string str, string ch)
         {
-            return string.Empty;
+            var pattern = "[aeiou]";
+            return Regex.Replace(str, pattern, ch);
         }
 
         public static int Solutions(int a, int b, int c)
