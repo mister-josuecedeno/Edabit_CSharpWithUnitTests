@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static bool IsBetween(string first, string last, string word)
+        {
+            return false;
+        }
+
         public static string ReplaceVowels(string str, string ch)
         {
             var pattern = "[aeiou]";

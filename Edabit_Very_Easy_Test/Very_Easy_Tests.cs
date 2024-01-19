@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("apple", "banana", "azure", true)]
+        [InlineData("bookcase", "zebra", "squid", true)]
+        [InlineData("shrapnel", "tapenade", "tally", true)]
+        [InlineData("ostracize", "ostrich", "open", false)]
+        [InlineData("bookend", "boolean", "boost", false)]
+        public void ReturnIsBetween(string first, string last, string word, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.IsBetween(first, last, word);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("the aardvark", "#", "th# ##rdv#rk")]
         [InlineData("minnie mouse", "?", "m?nn?? m??s?")]
         [InlineData("shakespeare", "*", "sh*k*sp**r*")]
