@@ -10,7 +10,9 @@ namespace Edabit
     {
         public static bool IsBetween(string first, string last, string word)
         {
-            return false;
+            int compareFirst = String.Compare(first, word, StringComparison.OrdinalIgnoreCase);
+            int compareLast = String.Compare(word, last, StringComparison.OrdinalIgnoreCase);
+            return compareFirst < 0 && compareLast < 0;
         }
 
         public static string ReplaceVowels(string str, string ch)
