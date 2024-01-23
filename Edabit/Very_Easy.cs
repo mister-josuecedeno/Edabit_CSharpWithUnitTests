@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int Factorial(int num)
+        {
+            return -1;
+        }
+
         public static bool IsBetween(string first, string last, string word)
         {
             int compareFirst = String.Compare(first, word, StringComparison.OrdinalIgnoreCase);

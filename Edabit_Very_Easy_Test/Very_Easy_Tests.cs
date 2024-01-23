@@ -6,6 +6,22 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(7, 5040)]
+        [InlineData(1, 1)]
+        [InlineData(9, 362880)]
+        [InlineData(2, 2)]
+        public void ReturnFactorial(int num, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.Factorial(num);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("apple", "banana", "azure", true)]
         [InlineData("bookcase", "zebra", "squid", true)]
         [InlineData("shrapnel", "tapenade", "tally", true)]
