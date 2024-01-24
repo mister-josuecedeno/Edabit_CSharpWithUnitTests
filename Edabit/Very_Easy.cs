@@ -10,7 +10,14 @@ namespace Edabit
     {
         public static int Factorial(int num)
         {
-            return -1;
+            if (num <= 1)
+            {
+                return 1;
+            }
+            else
+            {
+                return num * Factorial(num - 1);
+            }
         }
 
         public static bool IsBetween(string first, string last, string word)
