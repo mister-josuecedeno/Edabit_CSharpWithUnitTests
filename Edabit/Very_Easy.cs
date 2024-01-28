@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int Equal(int a, int b, int c)
+        {
+            return -1;
+        }
+
         public static int Factorial(int num)
         {
             if (num <= 1)
