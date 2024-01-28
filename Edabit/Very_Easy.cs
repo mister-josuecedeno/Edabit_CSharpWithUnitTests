@@ -10,7 +10,20 @@ namespace Edabit
     {
         public static int Equal(int a, int b, int c)
         {
-            return -1;
+            int[] numbers = new int[] { a, b, c };
+            int uniqueCount = numbers.Distinct().Count();
+
+            switch (uniqueCount)
+            {
+                case 1:
+                    return 3; // All three numbers are equal
+                case 2:
+                    return 2; // Two numbers are equal
+                case 3:
+                    return 0; // All numbers are unique
+                default:
+                    return -1; // Default case (though logically unreachable)
+            }
         }
 
         public static int Factorial(int num)
