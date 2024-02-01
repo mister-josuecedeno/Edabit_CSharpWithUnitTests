@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static string SpaceMeOut(string str)
+        {
+            return string.Empty;
+        }
+
         public static int Equal(int a, int b, int c)
         {
             int[] numbers = new int[] { a, b, c };

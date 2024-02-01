@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData("space", "s p a c e")]
+        [InlineData("far out", "f a r   o u t")]
+        [InlineData("elongated musk", "e l o n g a t e d   m u s k")]
+        [InlineData("long", "l o n g")]
+        [InlineData("123", "1 2 3")]
+        public void ReturnSpaceMeOut(string str, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.SpaceMeOut(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(2, 3, 4, 0)]
         [InlineData(7, 3, 7, 2)]
         [InlineData(4, 4, 4, 3)]
