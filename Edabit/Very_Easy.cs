@@ -10,7 +10,7 @@ namespace Edabit
     {
         public static string SpaceMeOut(string str)
         {
-            return string.Empty;
+            return String.Join(" ", str.ToCharArray());
         }
 
         public static int Equal(int a, int b, int c)
