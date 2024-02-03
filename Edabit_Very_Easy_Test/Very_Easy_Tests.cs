@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(new int[] { 1, 2, 3, 4, 6, 7, 8, 9, 10 }, 5)]
+        [InlineData(new int[] { 7, 2, 3, 6, 5, 9, 1, 4, 8 }, 10)]
+        [InlineData(new int[] { 7, 2, 3, 9, 4, 5, 6, 8, 10 }, 1)]
+        [InlineData(new int[] { 10, 5, 1, 2, 4, 6, 8, 3, 9 }, 7)]
+        [InlineData(new int[] { 1, 7, 2, 4, 8, 10, 5, 6, 9 }, 3)]
+        public void ReturnMissingNum(int[] arr, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.MissingNum(arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("space", "s p a c e")]
         [InlineData("far out", "f a r   o u t")]
         [InlineData("elongated musk", "e l o n g a t e d   m u s k")]

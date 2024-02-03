@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int MissingNum(int[] arr)
+        {
+            return -1;
+        }
+
         public static string SpaceMeOut(string str)
         {
             return String.Join(" ", str.ToCharArray());
