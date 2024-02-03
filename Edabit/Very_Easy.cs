@@ -10,7 +10,8 @@ namespace Edabit
     {
         public static int MissingNum(int[] arr)
         {
-            return -1;
+            int sum = arr.Sum(x => x);
+            return 55 - sum;
         }
 
         public static string SpaceMeOut(string str)
