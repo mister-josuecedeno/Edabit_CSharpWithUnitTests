@@ -8,6 +8,11 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        public static int Search2(int[] arr, int item)
+        {
+            return -1;
+        }
+
         public static int MissingNum(int[] arr)
         {
             int sum = arr.Sum(x => x);
