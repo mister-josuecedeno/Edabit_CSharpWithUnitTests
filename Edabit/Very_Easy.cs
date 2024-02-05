@@ -8,6 +8,7 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        // https://edabit.com/challenge/HfMTT2WGoWxSrF52r
         public static int Search2(int[] arr, int item)
         {
             return -1;
