@@ -11,7 +11,17 @@ namespace Edabit
         // https://edabit.com/challenge/HfMTT2WGoWxSrF52r
         public static int Search2(int[] arr, int item)
         {
-            return -1;
+            int result = -1;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == item)
+                {
+                    result = i;
+                }
+            }
+
+            return result;
         }
 
         public static int MissingNum(int[] arr)
