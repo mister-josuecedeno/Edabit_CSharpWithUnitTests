@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(27, false)]
+        [InlineData(43, true)]
+        [InlineData(14, false)]
+        [InlineData(53, true)]
+        [InlineData(99, true)]
+        public void ReturnLargestSwap(int num, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.LargestSwap(num);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 1, 2, 3, 4 }, 3, 2)]
         [InlineData(new int[] { 2, 4, 6, 8, 10 }, 8, 3)]
         [InlineData(new int[] { 1, 3, 5, 7, 9 }, 11, -1)]

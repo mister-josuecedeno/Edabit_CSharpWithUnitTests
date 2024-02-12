@@ -8,6 +8,15 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        // https://edabit.com/challenge/6k7ndtuxRPeSwNF93
+        public static bool LargestSwap(int num)
+        {
+            int first = num / 10;
+            int second = num % 10;
+            int swap = (second * 10) + first;
+            return num >= swap;
+        }
+
         // https://edabit.com/challenge/HfMTT2WGoWxSrF52r
         public static int Search2(int[] arr, int item)
         {
