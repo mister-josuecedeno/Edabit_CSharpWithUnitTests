@@ -8,6 +8,14 @@ namespace Edabit
 {
     public static class Very_Easy
     {
+        // https://edabit.com/challenge/HXsSRtx83xj7K94dW
+        public static string RemoveVowels(string str)
+        {
+            string pattern = @"[aeiou]";
+            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+            return regex.Replace(str, "");
+        }
+
         // https://edabit.com/challenge/6k7ndtuxRPeSwNF93
         public static bool LargestSwap(int num)
         {

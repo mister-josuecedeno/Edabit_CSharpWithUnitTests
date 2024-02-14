@@ -6,6 +6,34 @@ namespace Edabit.Tests
     public class Very_Easy_Tests
     {
         [Theory]
+        [InlineData(
+            "If Obama resigns from office NOW, thereby doing a great service to the country—I will give him free lifetime golf at any one of my courses!",
+            "f bm rsgns frm ffc NW, thrby dng  grt srvc t th cntry— wll gv hm fr lftm glf t ny n f my crss!"
+        )]
+        [InlineData(
+            "This election is a total sham and a travesty. We are not a democracy!",
+            "Ths lctn s  ttl shm nd  trvsty. W r nt  dmcrcy!"
+        )]
+        [InlineData(
+            "I have never seen a thin person drinking Diet Coke.",
+            " hv nvr sn  thn prsn drnkng Dt Ck."
+        )]
+        [InlineData(
+            "Everybody wants me to talk about Robert Pattinson and not Brian Williams—I guess people just don’t care about Brian!",
+            "vrybdy wnts m t tlk bt Rbrt Pttnsn nd nt Brn Wllms— gss ppl jst dn’t cr bt Brn!"
+        )]
+        public void ReturnRemoveVowels(string str, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Very_Easy.RemoveVowels(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(27, false)]
         [InlineData(43, true)]
         [InlineData(14, false)]
