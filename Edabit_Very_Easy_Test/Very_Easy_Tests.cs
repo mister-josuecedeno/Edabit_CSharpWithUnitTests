@@ -1157,12 +1157,12 @@ namespace Edabit.Tests
                 Very_Easy.FirstLastAgain(new object[] { 5, 10, 15, 20, 25 })
             );
             Assert.Equal(
-                new object[] { "edabit", true },
-                Very_Easy.FirstLastAgain(new object[] { "edabit", 13, null, false, true })
+                new object?[] { "edabit", true },
+                Very_Easy.FirstLastAgain(new object?[] { "edabit", 13, null, false, true })
             );
             Assert.Equal(
-                new object[] { "", null },
-                Very_Easy.FirstLastAgain(new object[] { "", 4, "6", "hello", null })
+                new object?[] { "", null },
+                Very_Easy.FirstLastAgain(new object?[] { "", 4, "6", "hello", null })
             );
             Assert.Equal(
                 new object[] { "hello", "com" },
@@ -1607,13 +1607,13 @@ namespace Edabit.Tests
         [Theory]
         [InlineData(new object[] { "Cat", "Dog", "Duck" }, "Duck")]
         [InlineData(new object[] { 1, 2, 3 }, 3)]
-        [InlineData(new object[] { null }, null)]
+        [InlineData(new object?[] { null }, null)]
         [InlineData(new object[] { true, false, false, true }, true)]
-        [InlineData(new object[] { 7, "String", false, null, null }, null)]
+        [InlineData(new object?[] { 7, "String", false, null, null }, null)]
         [InlineData(new object[] { false }, false)]
-        [InlineData(new object[] { null, null, null }, null)]
+        [InlineData(new object?[] { null, null, null }, null)]
         [InlineData(new object[] { 1, 2, 3, 56, 87, 23, 65, 45 }, 45)]
-        [InlineData(new object[] { "Apple", "Orange", null }, null)]
+        [InlineData(new object?[] { "Apple", "Orange", null }, null)]
         [InlineData(new object[] { true, false, "Apple" }, "Apple")]
         [InlineData(new object[] { 1 }, 1)]
         public void ReturnLastItem(object[] arr, object expected)

@@ -528,11 +528,11 @@ namespace Edabit
             return words.Replace("M", "W");
         }
 
-        public static object[] FirstLastAgain(object[] values)
+        public static object?[] FirstLastAgain(object?[] values)
         {
             var first = values[0];
             var last = values[values.Length - 1];
-            return new object[] { first, last };
+            return new object?[] { first, last };
         }
 
         public static bool Check(int[] arr, int el)
