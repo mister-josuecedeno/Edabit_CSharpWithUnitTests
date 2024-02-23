@@ -7,13 +7,13 @@ namespace Edabit.Tests
     {
         [Theory]
         [InlineData(
-            new double[] { 1, 2, 3, 4, 5, 8, 10 },
-            new double[] { 1, 5, 8, 2, 3, 4, 4, 4, 10 }
+            new double[] { 1, 5, 8, 2, 3, 4, 4, 4, 10 },
+            new double[] { 1, 2, 3, 4, 5, 8, 10 }
         )]
-        [InlineData(new double[] { 1, 2, 4, 5, 7 }, new double[] { 1, 2, 5, 4, 7, 7, 7 })]
+        [InlineData(new double[] { 1, 2, 5, 4, 7, 7, 7 }, new double[] { 1, 2, 4, 5, 7 })]
         [InlineData(
-            new double[] { 0, 1, 2, 3, 4, 5, 6, 7 },
-            new double[] { 7, 6, 5, 4, 3, 2, 1, 0, 1 }
+            new double[] { 7, 6, 5, 4, 3, 2, 1, 0, 1 },
+            new double[] { 0, 1, 2, 3, 4, 5, 6, 7 }
         )]
         public void ReturnUniqueSort(double[] arr, double[] expected)
         {

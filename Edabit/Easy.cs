@@ -12,7 +12,7 @@ namespace Edabit
         // https://edabit.com/challenge/9Emx6unF8evWiXnJA
         public static double[] UniqueSort(double[] arr)
         {
-            return new double[0];
+            return arr.Distinct().OrderBy(n => n).ToArray();
         }
 
         // https://edabit.com/challenge/xvSXDZh2GHE6F28SA
