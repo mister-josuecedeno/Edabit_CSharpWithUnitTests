@@ -10,7 +10,7 @@ namespace Edabit.Tests
         [InlineData("^U)6$22>8p).", "Up")]
         [InlineData("I5n!449+c@e*}@@1]p{2@`,~t:i0o%n<3%8", "Inception")]
         [InlineData("!)\"P[s9)\"69}yc3+?1]+33>3ho", "Psycho")]
-        public void LettersOnly(string str, string expected)
+        public void ReturnLettersOnly(string str, string expected)
         {
             // Arrange
 
