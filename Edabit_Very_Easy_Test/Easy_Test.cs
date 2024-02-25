@@ -6,6 +6,22 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(",1|2)\")A^1<[_)?^\"]l[a`3+%!d@8-0_0d.*}i@&n?=", "Aladdin")]
+        [InlineData("^U)6$22>8p).", "Up")]
+        [InlineData("I5n!449+c@e*}@@1]p{2@`,~t:i0o%n<3%8", "Inception")]
+        [InlineData("!)\"P[s9)\"69}yc3+?1]+33>3ho", "Psycho")]
+        public void LettersOnly(string str, string expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Easy.LettersOnly(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(
             new double[] { 1, 5, 8, 2, 3, 4, 4, 4, 10 },
             new double[] { 1, 2, 3, 4, 5, 8, 10 }

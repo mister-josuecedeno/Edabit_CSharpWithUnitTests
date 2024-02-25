@@ -9,6 +9,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/moqcQ563NukBBbKDL
+        public static string LettersOnly(string str)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/9Emx6unF8evWiXnJA
         public static double[] UniqueSort(double[] arr)
         {
