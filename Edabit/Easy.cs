@@ -12,7 +12,8 @@ namespace Edabit
         // https://edabit.com/challenge/moqcQ563NukBBbKDL
         public static string LettersOnly(string str)
         {
-            return string.Empty;
+            string pattern = @"[^a-zA-Z]";
+            return Regex.Replace(str, pattern, "");
         }
 
         // https://edabit.com/challenge/9Emx6unF8evWiXnJA
