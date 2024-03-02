@@ -12,7 +12,10 @@ namespace Edabit
         // https://edabit.com/challenge/DYNxn8fpWHutWZxEZ
         public static double Magnitude(int[] arr)
         {
-            return 0.0;
+            if (arr == null || arr.Length == 0)
+                return 0;
+
+            return Math.Sqrt(arr.Select(n => n * n).Sum());
         }
 
         // https://edabit.com/challenge/moqcQ563NukBBbKDL
