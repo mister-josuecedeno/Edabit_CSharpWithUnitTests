@@ -6,6 +6,24 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(new int[] { 3, 4 }, 5)]
+        [InlineData(new int[] { 0, 0, -10 }, 10)]
+        [InlineData(new int[] { }, 0)]
+        [InlineData(new int[] { 2, 3, 6, 1, 8 }, 10.677078252031311)]
+        [InlineData(new int[] { 9, -9, 3 }, 13.076696830622021)]
+        [InlineData(new int[] { -24, 94, 4, 0, 10 }, 97.61147473529944)]
+        public void Magnitude(int[] arr, double expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Easy.Magnitude(arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(",1|2)\")A^1<[_)?^\"]l[a`3+%!d@8-0_0d.*}i@&n?=", "Aladdin")]
         [InlineData("^U)6$22>8p).", "Up")]
         [InlineData("I5n!449+c@e*}@@1]p{2@`,~t:i0o%n<3%8", "Inception")]

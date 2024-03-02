@@ -9,6 +9,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/DYNxn8fpWHutWZxEZ
+        public static double Magnitude(int[] arr)
+        {
+            return 0.0;
+        }
+
         // https://edabit.com/challenge/moqcQ563NukBBbKDL
         public static string LettersOnly(string str)
         {
