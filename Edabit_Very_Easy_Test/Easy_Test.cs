@@ -6,6 +6,21 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(new double[] { 1, 2, 3 }, new double[] { 1, 3, 6 })]
+        [InlineData(new double[] { -1, -2, -3 }, new double[] { -1, -3, -6 })]
+        [InlineData(new double[] { 1, -2, 3 }, new double[] { 1, -1, 2 })]
+        public void CumulativeSum(double[] arr, double[] expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Easy.CumulativeSum(arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 3, 4 }, 5)]
         [InlineData(new int[] { 0, 0, -10 }, 10)]
         [InlineData(new int[] { }, 0)]

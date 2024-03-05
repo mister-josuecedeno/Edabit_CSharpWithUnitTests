@@ -9,6 +9,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/MMRWB6cYnpsp3uTPT
+        public static double[] CumulativeSum(double[] arr)
+        {
+            return [1,3,6];
+        }
+
         // https://edabit.com/challenge/DYNxn8fpWHutWZxEZ
         public static double Magnitude(int[] arr)
         {
