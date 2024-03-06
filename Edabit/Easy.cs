@@ -12,7 +12,16 @@ namespace Edabit
         // https://edabit.com/challenge/MMRWB6cYnpsp3uTPT
         public static double[] CumulativeSum(double[] arr)
         {
-            return [1,3,6];
+            double sum = 0;
+            double[] cumulativeSum = new double[arr.Length];
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+                cumulativeSum[i] = sum;
+            }
+
+            return cumulativeSum;
         }
 
         // https://edabit.com/challenge/DYNxn8fpWHutWZxEZ
