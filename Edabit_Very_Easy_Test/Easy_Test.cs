@@ -6,6 +6,22 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData("eDaBiT", new int[] { 1, 3, 5 })]
+        [InlineData("eQuINoX", new int[] { 1, 3, 4, 6 })]
+        [InlineData("determine", new int[] { })]
+        [InlineData("STRIKE", new int[] { 0, 1, 2, 3, 4, 5 })]
+        public void ReturnIndexOfCapitals(string str, int[] expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Easy.IndexOfCapitals(str);
+
+            // Assert
+            Assert.Equal(actual, expected);
+        }
+
+        [Theory]
         [InlineData(new double[] { 1, 2, 3 }, new double[] { 1, 3, 6 })]
         [InlineData(new double[] { -1, -2, -3 }, new double[] { -1, -3, -6 })]
         [InlineData(new double[] { 1, -2, 3 }, new double[] { 1, -1, 2 })]

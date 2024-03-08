@@ -9,6 +9,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/6qFnpAhd3kdmYcNG2
+        public static int[] IndexOfCapitals(string str)
+        {
+            return [0];
+        }
+
         // https://edabit.com/challenge/MMRWB6cYnpsp3uTPT
         public static double[] CumulativeSum(double[] arr)
         {
