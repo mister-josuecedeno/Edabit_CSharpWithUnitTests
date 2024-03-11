@@ -13,7 +13,25 @@ namespace Edabit
         // https://edabit.com/challenge/6qFnpAhd3kdmYcNG2
         public static int[] IndexOfCapitals(string str)
         {
-            return [0];
+            List<int> list = new List<int>();
+            int index = 0;
+            foreach (char c in str)
+            {
+                if (char.IsUpper(c))
+                {
+                    list.Add(index);
+                }
+                index++;
+            }
+
+            return list.ToArray();
+
+            // Alternative
+            //return str
+            //    .Select((c, i) => (c, i))
+            //    .Where(t => char.IsUpper(t.c))
+            //    .Select(t => t.i)
+            //    .ToArray();
         }
 
         // https://edabit.com/challenge/MMRWB6cYnpsp3uTPT
