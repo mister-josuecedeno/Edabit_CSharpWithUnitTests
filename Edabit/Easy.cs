@@ -10,6 +10,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/ZSvj2W3J6QRydkyh2
+        public static string ount_all(string txt)
+        {
+            return String.Empty;
+        }
+
         // https://edabit.com/challenge/6qFnpAhd3kdmYcNG2
         public static int[] IndexOfCapitals(string str)
         {

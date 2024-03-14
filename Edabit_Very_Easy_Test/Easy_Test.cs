@@ -6,6 +6,24 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData("Hello", "{ LETTERS = 5, DIGITS = 0 }")]
+        [InlineData("137", "{ LETTERS = 0, DIGITS = 3 }")]
+        [InlineData("H3LL0", "{ LETTERS = 3, DIGITS = 2 }")]
+        [InlineData("149990", "{ LETTERS = 0, DIGITS = 6 }")]
+        [InlineData("edabit 2018", "{ LETTERS = 6, DIGITS = 4 }")]
+        [InlineData("    ", "{ LETTERS = 0, DIGITS = 0 }")]
+        public void ReturnCount_all(string txt, string expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Easy.count_all(txt);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("eDaBiT", new int[] { 1, 3, 5 })]
         [InlineData("eQuINoX", new int[] { 1, 3, 4, 6 })]
         [InlineData("determine", new int[] { })]
