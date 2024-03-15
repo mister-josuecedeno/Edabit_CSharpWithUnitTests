@@ -19,8 +19,8 @@ namespace Edabit
             string numberPattern = @"[0-9]";
             Regex regexNumbers = new Regex(numberPattern);
 
-            int letters = regexLetters.Count(txt);
-            int digits = regexNumbers.Count(txt);
+            int letters = regexLetters.Matches(txt).Count;
+            int digits = regexNumbers.Matches(txt).Count;
 
             return $"{{ LETTERS = {letters}, DIGITS = {digits} }}";
         }
