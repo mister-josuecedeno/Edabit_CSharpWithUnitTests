@@ -13,7 +13,16 @@ namespace Edabit
         // https://edabit.com/challenge/ZSvj2W3J6QRydkyh2
         public static string ount_all(string txt)
         {
-            return String.Empty;
+            string letterPattern = @"[a-zA-Z]";
+            Regex regexLetters = new Regex(letterPattern);
+
+            string numberPattern = @"[0-9]";
+            Regex regexNumbers = new Regex(numberPattern);
+
+            int letters = regexLetters.Count(txt);
+            int digits = regexNumbers.Count(txt);
+
+            return $"{{ LETTERS = {letters}, DIGITS = {digits} }}";
         }
 
         // https://edabit.com/challenge/6qFnpAhd3kdmYcNG2

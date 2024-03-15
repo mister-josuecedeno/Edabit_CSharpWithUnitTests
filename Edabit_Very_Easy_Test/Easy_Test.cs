@@ -17,7 +17,7 @@ namespace Edabit.Tests
             // Arrange
 
             // Act
-            var actual = Easy.count_all(txt);
+            var actual = Easy.ount_all(txt);
 
             // Assert
             Assert.Equal(expected, actual);
