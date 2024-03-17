@@ -10,6 +10,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/zn3A3AAzoE7vezw7Q
+        public static int CountOnes(int i)
+        {
+            return -1;
+        }
+
         // https://edabit.com/challenge/ZSvj2W3J6QRydkyh2
         public static string ount_all(string txt)
         {

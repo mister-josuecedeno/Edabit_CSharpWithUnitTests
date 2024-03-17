@@ -6,6 +6,25 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(12, 2)]
+        [InlineData(0, 0)]
+        [InlineData(100, 3)]
+        [InlineData(101, 4)]
+        [InlineData(999, 8)]
+        [InlineData(123456789, 16)]
+        [InlineData(1234567890, 12)]
+        public void ReturnCountOnes(int i, int expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Easy.CountOnes(i);
+
+            // Arrange
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("Hello", "{ LETTERS = 5, DIGITS = 0 }")]
         [InlineData("137", "{ LETTERS = 0, DIGITS = 3 }")]
         [InlineData("H3LL0", "{ LETTERS = 3, DIGITS = 2 }")]
