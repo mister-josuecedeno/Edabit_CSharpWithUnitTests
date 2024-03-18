@@ -13,7 +13,10 @@ namespace Edabit
         // https://edabit.com/challenge/zn3A3AAzoE7vezw7Q
         public static int CountOnes(int i)
         {
-            return -1;
+            string binaryString = Convert.ToString(i, 2);
+            string numberPattern = @"[1]";
+            Regex regexNumbers = new Regex(numberPattern);
+            return regexNumbers.Matches(binaryString).Count;
         }
 
         // https://edabit.com/challenge/ZSvj2W3J6QRydkyh2
