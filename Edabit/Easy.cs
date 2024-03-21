@@ -13,7 +13,9 @@ namespace Edabit
         // https://edabit.com/challenge/SXeEZPxDM9Y5HzLvw
         public static int[] CountPosSumNeg(double[] arr)
         {
-            return [0];
+            int count = arr.Count(n => n > 0);
+            int sum = (int)arr.Where(n => n < 0).Sum();
+            return [count, sum];
         }
 
         // https://edabit.com/challenge/zn3A3AAzoE7vezw7Q
