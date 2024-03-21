@@ -6,6 +6,27 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(
+            new double[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15 },
+            new int[] { 10, -65 }
+        )]
+        [InlineData(
+            new double[] { 92, 6, 73, -77, 81, -90, 99, 8, -85, 34 },
+            new int[] { 7, -252 }
+        )]
+        [InlineData(new double[] { 91, -4, 80, -73, -28 }, new int[] { 2, -105 })]
+        public void ReturnCountPosSumNeg(double[] arr, int[] expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Easy.CountPosSumNeg(arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(12, 2)]
         [InlineData(0, 0)]
         [InlineData(100, 3)]

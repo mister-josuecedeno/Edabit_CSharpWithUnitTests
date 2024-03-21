@@ -10,6 +10,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/SXeEZPxDM9Y5HzLvw
+        public static int[] CountPosSumNeg(double[] arr)
+        {
+            return [0];
+        }
+
         // https://edabit.com/challenge/zn3A3AAzoE7vezw7Q
         public static int CountOnes(int i)
         {
