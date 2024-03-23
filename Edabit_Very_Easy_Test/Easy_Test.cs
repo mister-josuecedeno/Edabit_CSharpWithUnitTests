@@ -6,6 +6,25 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData("1234", true)]
+        [InlineData("12345", false)]
+        [InlineData("a234", false)]
+        [InlineData("", false)]
+        [InlineData("%234", false)]
+        [InlineData("`234", false)]
+        [InlineData("@234", false)]
+        public void ValidatePIN(string pin, bool expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Easy.ValidatePIN(pin);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(
             new double[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15 },
             new int[] { 10, -65 }

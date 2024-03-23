@@ -10,6 +10,13 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/gBYEFXeD9G2JMZ9dD
+        public static bool ValidatePIN(string pin)
+        {
+            string pattern = @"^\d{4}(\d{2})?$";
+            return Regex.IsMatch(pin, pattern);
+        }
+
         // https://edabit.com/challenge/SXeEZPxDM9Y5HzLvw
         public static int[] CountPosSumNeg(double[] arr)
         {
