@@ -10,6 +10,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/uCtG3Gtfx7fgNWM58
+        public static bool GreaterThanOne(string str)
+        {
+            return false;
+        }
+
         // https://edabit.com/challenge/gBYEFXeD9G2JMZ9dD
         public static bool ValidatePIN(string pin)
         {

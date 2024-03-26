@@ -6,6 +6,24 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData("1/2", false)]
+        [InlineData("7/4", true)]
+        [InlineData("10/10", false)]
+        [InlineData("12/30", false)]
+        [InlineData("28/3", true)]
+        [InlineData("35/31", true)]
+        public void ReturnGreaterThanOne(string str, bool expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Easy.GreaterThanOne(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("1234", true)]
         [InlineData("12345", false)]
         [InlineData("a234", false)]
