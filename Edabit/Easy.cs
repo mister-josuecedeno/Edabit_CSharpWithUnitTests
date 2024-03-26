@@ -13,7 +13,7 @@ namespace Edabit
         // https://edabit.com/challenge/uCtG3Gtfx7fgNWM58
         public static bool GreaterThanOne(string str)
         {
-            var numbers = str.Split('/');
+            string[] numbers = str.Split('/');
             return int.Parse(numbers[0]) > int.Parse(numbers[1]);
         }
 
