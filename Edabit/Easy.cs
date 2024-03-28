@@ -10,6 +10,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/JF25KTZEcPzXhBvpM
+        public static string GetMiddle(string str)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/uCtG3Gtfx7fgNWM58
         public static bool GreaterThanOne(string str)
         {

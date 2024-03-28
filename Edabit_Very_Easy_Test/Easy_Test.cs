@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData("test", "es")]
+        [InlineData("testing", "t")]
+        [InlineData("middle", "dd")]
+        [InlineData("A", "A")]
+        [InlineData("inhabitant", "bi")]
+        public void ReturnGetMiddle(string str, string expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Easy.GetMiddle(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("1/2", false)]
         [InlineData("7/4", true)]
         [InlineData("10/10", false)]
