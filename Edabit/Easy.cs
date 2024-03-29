@@ -13,7 +13,10 @@ namespace Edabit
         // https://edabit.com/challenge/JF25KTZEcPzXhBvpM
         public static string GetMiddle(string str)
         {
-            return string.Empty;
+            int middle = (int)str.Length / 2;
+            if(str.Length % 2 == 0) {  return str.Substring(middle - 1, 2); }
+
+            return str.Substring(middle, 1);
         }
 
         // https://edabit.com/challenge/uCtG3Gtfx7fgNWM58
