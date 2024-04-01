@@ -13,7 +13,9 @@ namespace Edabit
         // https://edabit.com/challenge/fcGARuJW6tcYyWMQw
         public static string ToScottishScreaming(string str)
         {
-            return string.Empty;
+            string pattern = @"[aiouAIOU]";
+            string replaceVowels = Regex.Replace(str, pattern, "E");
+            return replaceVowels.ToUpper();
         }
 
         // https://edabit.com/challenge/JF25KTZEcPzXhBvpM
