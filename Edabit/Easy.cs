@@ -10,6 +10,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/fcGARuJW6tcYyWMQw
+        public static string ToScottishScreaming(string str)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/JF25KTZEcPzXhBvpM
         public static string GetMiddle(string str)
         {

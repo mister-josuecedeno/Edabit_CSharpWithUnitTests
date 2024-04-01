@@ -6,6 +6,26 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData("lorem ipsum", "LEREM EPSEM")]
+        [InlineData("Leeroy jenkins!", "LEEREY JENKENS!")]
+        [InlineData(
+            "A, wonderful, day, don't, you, think?",
+            "E, WENDERFEL, DEY, DEN'T, YEE, THENK?"
+        )]
+        [InlineData("Hello world", "HELLE WERLD")]
+        [InlineData("start queueing you oafs", "STERT QEEEEENG YEE EEFS")]
+        public void ReturnToScottishScreaming(string str, string expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Easy.ToScottishScreaming(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("test", "es")]
         [InlineData("testing", "t")]
         [InlineData("middle", "dd")]
