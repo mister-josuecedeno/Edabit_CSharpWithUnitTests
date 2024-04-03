@@ -11,6 +11,11 @@ namespace Edabit
     public static class Easy
     {
         // https://edabit.com/challenge/fcGARuJW6tcYyWMQw
+        public static string Maskify(string str)
+        {
+            return string.Empty;
+        }
+
         public static string ToScottishScreaming(string str)
         {
             string pattern = @"[aiouAIOU]";

@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData("4556364607935616", "############5616")]
+        [InlineData("64607935616", "#######5616")]
+        [InlineData("1", "1")]
+        [InlineData("", "")]
+        [InlineData("tBy>L/cMe+?<j:6n;C~H", "################;C~H")]
+        public void ReturnMaskify(string str, string expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Easy.Maskify(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("lorem ipsum", "LEREM EPSEM")]
         [InlineData("Leeroy jenkins!", "LEEREY JENKENS!")]
         [InlineData(
