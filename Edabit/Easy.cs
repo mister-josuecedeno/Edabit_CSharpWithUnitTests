@@ -10,10 +10,17 @@ namespace Edabit
 {
     public static class Easy
     {
-        // https://edabit.com/challenge/fcGARuJW6tcYyWMQw
+        // https://edabit.com/challenge/RFeBL2TzSf7mRMNJi
         public static string Maskify(string str)
         {
-            return string.Empty;
+            if(str.Length <= 4)
+            {
+                return str;
+            }
+            
+            string mask = new string('#', str.Length - 4);
+            string lastFour = str.Substring(str.Length - 4);
+            return mask + lastFour;
         }
 
         public static string ToScottishScreaming(string str)
