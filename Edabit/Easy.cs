@@ -10,6 +10,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/b5HL5ju3Fpx5zjoXn
+        public static int gcd(int n1, int n2)
+        {
+            return -1;
+        }
+
         // https://edabit.com/challenge/RFeBL2TzSf7mRMNJi
         public static string Maskify(string str)
         {

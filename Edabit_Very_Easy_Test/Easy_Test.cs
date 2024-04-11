@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(32, 8, 8)]
+        [InlineData(8, 12, 4)]
+        [InlineData(17, 13, 1)]
+        [InlineData(14, 7, 7)]
+        [InlineData(32, 16, 16)]
+        public void ReturnGCD(int n1, int n2, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.gcd(n1, n2);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("4556364607935616", "############5616")]
         [InlineData("64607935616", "#######5616")]
         [InlineData("1", "1")]
