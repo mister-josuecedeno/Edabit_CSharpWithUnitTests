@@ -13,7 +13,12 @@ namespace Edabit
         // https://edabit.com/challenge/b5HL5ju3Fpx5zjoXn
         public static int gcd(int n1, int n2)
         {
-            return -1;
+            if (n2 == 0)
+            {
+                return n1;
+            }
+
+            return gcd(n2, n1 % n2);
         }
 
         // https://edabit.com/challenge/RFeBL2TzSf7mRMNJi
