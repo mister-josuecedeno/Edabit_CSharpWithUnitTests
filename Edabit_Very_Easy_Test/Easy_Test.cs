@@ -6,6 +6,26 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6", "542 -214")]
+        [InlineData("1 -1", "1 -1")]
+        [InlineData("-1 -1", "-1 -1")]
+        [InlineData("1 -1 0", "1 -1")]
+        [InlineData("1 1 0", "1 0")]
+        [InlineData("-1 -1 0", "0 -1")]
+        [InlineData("42", "42 42")]
+        [InlineData("1 1", "1 1")]
+        public void ReturnHighLow(string str, string expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Easy.HighLow(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(32, 8, 8)]
         [InlineData(8, 12, 4)]
         [InlineData(17, 13, 1)]

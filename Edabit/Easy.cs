@@ -10,6 +10,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/zcuASzWmpFHpPtrbH
+        public static string HighLow(string str)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/b5HL5ju3Fpx5zjoXn
         public static int gcd(int n1, int n2)
         {
