@@ -13,7 +13,11 @@ namespace Edabit
         // https://edabit.com/challenge/zcuASzWmpFHpPtrbH
         public static string HighLow(string str)
         {
-            return string.Empty;
+            // refactor
+            string[] arr = str.Split(' ');
+            int[] numbers = Array.ConvertAll(arr, int.Parse);
+            Array.Reverse(numbers);
+            return $"{numbers[0]} {numbers[numbers.Length - 1]}";
         }
 
         // https://edabit.com/challenge/b5HL5ju3Fpx5zjoXn
