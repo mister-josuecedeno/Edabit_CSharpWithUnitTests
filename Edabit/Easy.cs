@@ -13,11 +13,13 @@ namespace Edabit
         // https://edabit.com/challenge/zcuASzWmpFHpPtrbH
         public static string HighLow(string str)
         {
-            // refactor
+            // refactor - check the desc sort
             string[] arr = str.Split(' ');
             int[] numbers = Array.ConvertAll(arr, int.Parse);
             Array.Reverse(numbers);
-            return $"{numbers[0]} {numbers[numbers.Length - 1]}";
+            int largest = numbers[0];
+            int smallest = numbers[numbers.Length - 1];
+            return $"{largest} {smallest}";
         }
 
         // https://edabit.com/challenge/b5HL5ju3Fpx5zjoXn
