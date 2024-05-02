@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(1000, "1,000")]
+        [InlineData(1000000, "1,000,000")]
+        [InlineData(20, "20")]
+        [InlineData(0, "0")]
+        [InlineData(12948, "12,948")]
+        public void FormatNum(int num, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.FormatNum(num);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6", "542 -214")]
         [InlineData("1 -1", "1 -1")]
         [InlineData("-1 -1", "-1 -1")]

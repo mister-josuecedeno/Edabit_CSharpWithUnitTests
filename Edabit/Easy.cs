@@ -10,6 +10,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/GvGSPC9wiY4bS9AMg
+        public static string FormatNum(int num)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/zcuASzWmpFHpPtrbH
         public static string HighLow(string str)
         {
