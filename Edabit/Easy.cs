@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -13,7 +14,8 @@ namespace Edabit
         // https://edabit.com/challenge/GvGSPC9wiY4bS9AMg
         public static string FormatNum(int num)
         {
-            return string.Empty;
+            var result = num.ToString("#,#", CultureInfo.InvariantCulture);
+            return result;
         }
 
         // https://edabit.com/challenge/zcuASzWmpFHpPtrbH
