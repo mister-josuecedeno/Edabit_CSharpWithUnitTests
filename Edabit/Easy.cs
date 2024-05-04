@@ -14,7 +14,8 @@ namespace Edabit
         // https://edabit.com/challenge/GvGSPC9wiY4bS9AMg
         public static string FormatNum(int num)
         {
-            var result = num.ToString("#,#", CultureInfo.InvariantCulture);
+            if (num == 0) return "0";
+            string result = num.ToString("#,#", CultureInfo.InvariantCulture);
             return result;
         }
 
