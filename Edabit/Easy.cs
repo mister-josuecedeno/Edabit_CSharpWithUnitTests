@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/4eSei6t8emzpyMwvu
+        public static int[] FilterArray(object[] arr)
+        {
+            return new int[0];
+        }
+
         // https://edabit.com/challenge/GvGSPC9wiY4bS9AMg
         public static string FormatNum(int num)
         {

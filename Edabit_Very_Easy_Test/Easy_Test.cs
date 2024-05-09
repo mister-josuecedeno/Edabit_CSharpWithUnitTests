@@ -6,6 +6,21 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(new object[] { 1, 2, "a", "b" }, new int[] { 1, 2 })]
+        [InlineData(new object[] { 1, "a", "b", 0, 15 }, new int[] { 1, 0, 15 })]
+        [InlineData(new object[] { 1, 2, "aasf", "1", "123", 123 }, new int[] { 1, 2, 123 })]
+        public void ReturnFilterArray(object[] arr, int[] expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.FilterArray(arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(1000, "1,000")]
         [InlineData(1000000, "1,000,000")]
         [InlineData(20, "20")]
