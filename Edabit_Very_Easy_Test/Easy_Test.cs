@@ -6,6 +6,24 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(1, 1)]
+        [InlineData(2, 4)]
+        [InlineData(3, 10)]
+        [InlineData(4, 20)]
+        [InlineData(5, 35)]
+        [InlineData(9, 165)]
+        public void Tetra(int n, int expected)
+        {
+            // Arrange
+
+            // Act
+            var actual = Easy.Tetra(n);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new object[] { 1, 2, "a", "b" }, new int[] { 1, 2 })]
         [InlineData(new object[] { 1, "a", "b", 0, 15 }, new int[] { 1, 0, 15 })]
         [InlineData(new object[] { 1, 2, "aasf", "1", "123", 123 }, new int[] { 1, 2, 123 })]

@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/j34NRDnwRC2YgGPXN
+        public static int Tetra(int n)
+        {
+            return -1;
+        }
+
         // https://edabit.com/challenge/4eSei6t8emzpyMwvu
         public static int[] FilterArray(object[] arr)
         {
