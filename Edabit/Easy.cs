@@ -14,7 +14,7 @@ namespace Edabit
         // https://edabit.com/challenge/j34NRDnwRC2YgGPXN
         public static int Tetra(int n)
         {
-            return -1;
+            return (n * (n + 1) * (n + 2)) / 6;
         }
 
         // https://edabit.com/challenge/4eSei6t8emzpyMwvu
