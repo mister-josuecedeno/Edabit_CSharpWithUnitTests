@@ -6,6 +6,24 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(838, true)]
+        [InlineData(77, true)]
+        [InlineData(95159, true)]
+        [InlineData(839, false)]
+        [InlineData(4234, false)]
+        [InlineData(13, false)]
+        public void IsPalindrome(int num, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.IsPalindrome(num);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(1, 1)]
         [InlineData(2, 4)]
         [InlineData(3, 10)]

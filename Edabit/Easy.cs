@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/qrJyh8ouvr2iseZy4
+        public static bool IsPalindrome(int num)
+        {
+            return false;
+        }
+
         // https://edabit.com/challenge/j34NRDnwRC2YgGPXN
         public static int Tetra(int n)
         {
