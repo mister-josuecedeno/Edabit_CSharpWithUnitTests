@@ -14,7 +14,19 @@ namespace Edabit
         // https://edabit.com/challenge/qrJyh8ouvr2iseZy4
         public static bool IsPalindrome(int num)
         {
-            return false;
+            if (num < 0) return false; 
+
+            int original = num;
+            int reversed = 0;
+
+            while (num != 0)
+            {
+                int digit = num % 10;
+                reversed = reversed * 10 + digit;
+                num /= 10;
+            }
+
+            return original == reversed;
         }
 
         // https://edabit.com/challenge/j34NRDnwRC2YgGPXN
