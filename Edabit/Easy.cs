@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/aQWAAz6SiApZBA8A8
+        public static bool IsIsogram(string str)
+        {
+            return false;
+        }
+
         // https://edabit.com/challenge/qrJyh8ouvr2iseZy4
         public static bool IsPalindrome(int num)
         {

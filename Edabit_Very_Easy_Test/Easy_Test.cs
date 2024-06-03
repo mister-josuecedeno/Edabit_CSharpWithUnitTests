@@ -6,6 +6,20 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData("Algorism", true)]
+        [InlineData("PasSword", false)]
+        public void IsIsogram(string str, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.IsIsogram(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(838, true)]
         [InlineData(77, true)]
         [InlineData(95159, true)]
