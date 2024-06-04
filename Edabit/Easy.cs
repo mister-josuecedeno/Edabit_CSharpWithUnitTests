@@ -14,7 +14,8 @@ namespace Edabit
         // https://edabit.com/challenge/aQWAAz6SiApZBA8A8
         public static bool IsIsogram(string str)
         {
-            return false;
+            HashSet<char> set = new HashSet<char>(str.ToLower());
+            return set.Count == str.Length;
         }
 
         // https://edabit.com/challenge/qrJyh8ouvr2iseZy4
