@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Edabit
 {
@@ -14,7 +15,11 @@ namespace Edabit
         // https://edabit.com/challenge/N5G33s49LDXdhLdsT
         public static int SortDescending(int num)
         {
-            return -1;
+            string numberStr = num.ToString();
+            string sortedStr = new string(numberStr.OrderByDescending(c => c).ToArray());
+            int sortedNumber = int.Parse(sortedStr);
+
+            return sortedNumber;
         }
 
         // https://edabit.com/challenge/aQWAAz6SiApZBA8A8
