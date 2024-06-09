@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(123, 321)]
+        [InlineData(670276097, 977766200)]
+        [InlineData(2619805, 9865210)]
+        [InlineData(81294, 98421)]
+        [InlineData(0, 0)]
+        public void ReturnSortDescending(int num, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.SortDescending(num);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("Algorism", true)]
         [InlineData("PasSword", false)]
         public void IsIsogram(string str, bool expected)

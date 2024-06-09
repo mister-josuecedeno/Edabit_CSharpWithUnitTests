@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/N5G33s49LDXdhLdsT
+        public static int SortDescending(int num)
+        {
+            return -1;
+        }
+
         // https://edabit.com/challenge/aQWAAz6SiApZBA8A8
         public static bool IsIsogram(string str)
         {
