@@ -680,7 +680,7 @@ namespace Edabit
             return word.Last() == 's';
         }
 
-        public static object GetLastItem(object[] arr)
+        public static object? GetLastItem(object?[] arr)
         {
             return arr.Last();
         }

@@ -6,6 +6,22 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(3, 2020, true)]
+        [InlineData(10, 2017, true)]
+        [InlineData(1, 1985, false)]
+        [InlineData(5, 1619, false)]
+        public void ReturnHasFriday13th(int month, int year, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.HasFriday13th(month, year);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(123, 321)]
         [InlineData(670276097, 977766200)]
         [InlineData(2619805, 9865210)]

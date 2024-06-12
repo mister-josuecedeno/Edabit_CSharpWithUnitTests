@@ -6,12 +6,17 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/biJhNvddqC5zmRuKz
+        public static bool HasFriday13th(int month, int year)
+        {
+            return true | false;
+        }
+
         // https://edabit.com/challenge/N5G33s49LDXdhLdsT
         public static int SortDescending(int num)
         {
