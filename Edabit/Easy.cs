@@ -14,7 +14,8 @@ namespace Edabit
         // https://edabit.com/challenge/biJhNvddqC5zmRuKz
         public static bool HasFriday13th(int month, int year)
         {
-            return true | false;
+            DateTime today = new DateTime(year: year, month: month, day: 13); 
+            return today.DayOfWeek == DayOfWeek.Friday;
         }
 
         // https://edabit.com/challenge/N5G33s49LDXdhLdsT
