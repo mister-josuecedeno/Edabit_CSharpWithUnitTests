@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/8Sc582yHht2auBpCY
+        public static bool IsStrangePair(string str1, string str2)
+        {
+            return true | false;
+        }
+
         // https://edabit.com/challenge/biJhNvddqC5zmRuKz
         public static bool HasFriday13th(int month, int year)
         {

@@ -6,6 +6,24 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData("ratio", "orator", true)]
+        [InlineData("sparkling", "groups", true)]
+        [InlineData("mentee", "eminem", true)]
+        [InlineData("yahtzee", "easy", true)]
+        [InlineData("bush", "hubris", false)]
+        [InlineData("edit", "cheese", false)]
+        public void ReturnIsStrangePair(string str1, string str2, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.IsStrangePair(str1, str2);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(3, 2020, true)]
         [InlineData(10, 2017, true)]
         [InlineData(1, 1985, false)]
