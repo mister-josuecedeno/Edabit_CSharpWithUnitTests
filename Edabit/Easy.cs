@@ -14,7 +14,21 @@ namespace Edabit
         // https://edabit.com/challenge/8Sc582yHht2auBpCY
         public static bool IsStrangePair(string str1, string str2)
         {
-            return true | false;
+            if (string.IsNullOrEmpty(str1) && string.IsNullOrEmpty(str2))
+            {
+                return true;
+            }
+
+            if (string.IsNullOrEmpty(str1) || string.IsNullOrEmpty(str2))
+            {
+                return false;
+            }
+
+            char firstFirst = str1[0];
+            char secondLast = str2[str2.Length - 1];
+            char firstLast = str1[str1.Length - 1];
+            char secondFirst = str2[0];
+            return firstFirst == secondLast && firstLast == secondFirst;
         }
 
         // https://edabit.com/challenge/biJhNvddqC5zmRuKz

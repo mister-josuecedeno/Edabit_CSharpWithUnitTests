@@ -12,6 +12,15 @@ namespace Edabit.Tests
         [InlineData("yahtzee", "easy", true)]
         [InlineData("bush", "hubris", false)]
         [InlineData("edit", "cheese", false)]
+        [InlineData("false", "true", false)]
+        [InlineData("cupid", "dionysus", false)]
+        [InlineData("futile", "elephant", false)]
+        [InlineData("", "", true)]
+        [InlineData("", "abc", false)]
+        [InlineData("a", "a", true)]
+        [InlineData("a", "b", false)]
+        [InlineData("&!", "!&", true)]
+        [InlineData("5556", "65", true)]
         public void ReturnIsStrangePair(string str1, string str2, bool expected)
         {
             // Arrange
