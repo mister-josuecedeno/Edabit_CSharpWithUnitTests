@@ -16,6 +16,13 @@ namespace Edabit.Tests
         [InlineData(10, false)]
         public void isPrime(int x, bool expected)
         {
+            // Arrange
+
+            // Actual
+            var actual = Easy.isPrime(x);
+
+            // Assert
+            Assert.Equal(expected, actual);
         }
 
         [Theory]
