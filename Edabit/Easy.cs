@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/aoR4PFS6FfpJs6v79
+        public static bool isPrime(int x)
+        {
+            return true | false;
+        }
+
         // https://edabit.com/challenge/8Sc582yHht2auBpCY
         public static bool IsStrangePair(string str1, string str2)
         {

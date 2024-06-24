@@ -6,6 +6,19 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(31, true)]
+        [InlineData(18, false)]
+        [InlineData(11, true)]
+        [InlineData(12, false)]
+        [InlineData(1, false)]
+        [InlineData(3, true)]
+        [InlineData(48, false)]
+        [InlineData(10, false)]
+        public void isPrime(int x, bool expected)
+        {
+        }
+
+        [Theory]
         [InlineData("ratio", "orator", true)]
         [InlineData("sparkling", "groups", true)]
         [InlineData("mentee", "eminem", true)]
