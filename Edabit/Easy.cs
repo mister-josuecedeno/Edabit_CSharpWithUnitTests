@@ -14,7 +14,15 @@ namespace Edabit
         // https://edabit.com/challenge/aoR4PFS6FfpJs6v79
         public static bool isPrime(int x)
         {
-            return false;
+            for (int i = 2; i <= Math.Sqrt(x); i++)
+            {
+                if (x % i == 0)
+                {
+                    return false;
+                }
+            }
+
+            return x > 1;
         }
 
         // https://edabit.com/challenge/8Sc582yHht2auBpCY
