@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(new int[] { 19, 5, 42, 2, 77 }, 7)]
+        [InlineData(new int[] { 10, 343445353, 3453445, 345354534 }, 3453455)]
+        [InlineData(new int[] { 2, 9, 6, -1 }, 8)]
+        [InlineData(new int[] { 879, 953, 694, -847, 342, 221, -91, -723, 791, -587 }, 563)]
+        [InlineData(new int[] { 3683, 2902, 3951, -475, 1617, -2385 }, 4519)]
+        public void ReturnSumSmallest(int[] values, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.SumSmallest(values);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(31, true)]
         [InlineData(18, false)]
         [InlineData(11, true)]

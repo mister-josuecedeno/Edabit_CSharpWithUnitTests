@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/7F8ZhHpxeW7K65XRL
+        public static int SumSmallest(int[] values)
+        {
+            return -1;
+        }
+
         // https://edabit.com/challenge/aoR4PFS6FfpJs6v79
         public static bool isPrime(int x)
         {
