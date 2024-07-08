@@ -14,7 +14,8 @@ namespace Edabit
         // https://edabit.com/challenge/7F8ZhHpxeW7K65XRL
         public static int SumSmallest(int[] values)
         {
-            return -1;
+            int[] positives = values.Where(x => x > 0).OrderBy(n => n).ToArray();
+            return positives[0] + positives[1];
         }
 
         // https://edabit.com/challenge/aoR4PFS6FfpJs6v79
