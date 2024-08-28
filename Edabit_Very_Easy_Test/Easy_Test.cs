@@ -6,6 +6,24 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData("I am Ne mo Nemo !", "I found Nemo at 5!")]
+        [InlineData("N e m o is NEMO NeMo Nemo !", "I found Nemo at 8!")]
+        [InlineData("I am Nemo's dad Nemo senior .", "I found Nemo at 5!")]
+        [InlineData("Oh, hello !", "I can't find Nemo :(")]
+        [InlineData("Is it Nemos, Nemona, Nemoor or Garfield?", "I can't find Nemo :(")]
+        [InlineData("Nemo is a clown fish, he has white and orange stripes. Nemo , come back!", "I found Nemo at 1!")]
+        public void ReturnFindNemo(string sentence, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.FindNemo(sentence: sentence);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 19, 5, 42, 2, 77 }, 7)]
         [InlineData(new int[] { 10, 343445353, 3453445, 345354534 }, 3453455)]
         [InlineData(new int[] { 2, 9, 6, -1 }, 8)]

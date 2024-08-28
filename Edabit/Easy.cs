@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/ynZfn2LifKN25fP84
+        public static string FindNemo(string sentence)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/7F8ZhHpxeW7K65XRL
         public static int SumSmallest(int[] values)
         {
