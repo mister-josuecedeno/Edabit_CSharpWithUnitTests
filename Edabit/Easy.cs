@@ -14,7 +14,15 @@ namespace Edabit
         // https://edabit.com/challenge/ynZfn2LifKN25fP84
         public static string FindNemo(string sentence)
         {
-            return string.Empty;
+            string[] words = sentence.Split(' ');
+            int location = Array.IndexOf(words, "Nemo");
+
+            if (location == -1)
+            {
+                return "I can't find Nemo :(";
+            }
+
+            return $"I found Nemo at {location + 1}!";
         }
 
         // https://edabit.com/challenge/7F8ZhHpxeW7K65XRL
