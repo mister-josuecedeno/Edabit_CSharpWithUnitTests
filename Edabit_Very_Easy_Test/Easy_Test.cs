@@ -6,6 +6,24 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData("The quick brown fox!", "The quick brown fox")]
+        [InlineData("%fd76$fd(-)6GvKlO.", "fd76fd-6GvKlO")]
+        [InlineData("D0n$c sed 0di0 du1", "D0nc sed 0di0 du1")]
+        [InlineData("cat_pic.jpeg", "cat_picjpeg")]
+        [InlineData("519-555-8093", "519-555-8093")]
+        [InlineData("h-d+=rf[]_{}<>.,`~!@#$%^&*(|)", "h-drf_")]
+        public void ReturnRemoveSpecialCharacters(string str, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.RemoveSpecialCharacters(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("I am Ne mo Nemo !", "I found Nemo at 5!")]
         [InlineData("N e m o is NEMO NeMo Nemo !", "I found Nemo at 8!")]
         [InlineData("I am Nemo's dad Nemo senior .", "I found Nemo at 5!")]

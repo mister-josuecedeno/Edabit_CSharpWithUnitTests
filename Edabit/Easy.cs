@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/SfZx7qzXheYQxtQbF
+        public static string RemoveSpecialCharacters(string str)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/ynZfn2LifKN25fP84
         public static string FindNemo(string sentence)
         {
