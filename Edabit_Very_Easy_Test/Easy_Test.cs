@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(6, true)]
+        [InlineData(28, true)]
+        [InlineData(496, true)]
+        [InlineData(8128, true)]
+        [InlineData(33550336, true)]
+        public void ReturnCheckPerfect(int num, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.CheckPerfect(num);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("The quick brown fox!", "The quick brown fox")]
         [InlineData("%fd76$fd(-)6GvKlO.", "fd76fd-6GvKlO")]
         [InlineData("D0n$c sed 0di0 du1", "D0nc sed 0di0 du1")]

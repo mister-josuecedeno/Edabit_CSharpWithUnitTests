@@ -11,10 +11,27 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/5B4jvew2NvzKhfcQv
+        public static bool CheckPerfect(int num)
+        {
+            List<int> list = new List<int>();
+
+            for (int i = 1; i < num; i++) { 
+                if(num % i == 0)
+                {
+                    list.Add(i);
+                }
+            }
+
+            int sum = list.Sum();
+
+            return sum == num;
+        }
+
         // https://edabit.com/challenge/SfZx7qzXheYQxtQbF
         public static string RemoveSpecialCharacters(string str)
         {
-            return string.Empty;
+            return Regex.Replace(str, @"[^a-zA-Z0-9\s\-_]", "");
         }
 
         // https://edabit.com/challenge/ynZfn2LifKN25fP84
