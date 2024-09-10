@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(23, false)]
+        [InlineData(9562, false)]
+        [InlineData(10019, false)]
+        [InlineData(1, true)]
+        [InlineData(3223, true)]
+        public void ReturnIsSymmetrical(int num, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.IsSymmetrical(num);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(6, true)]
         [InlineData(28, true)]
         [InlineData(496, true)]

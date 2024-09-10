@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/H77JNgLtEnQcX5hcu
+        public static bool IsSymmetrical(int num)
+        {
+            return false;
+        }
+
         // https://edabit.com/challenge/5B4jvew2NvzKhfcQv
         public static bool CheckPerfect(int num)
         {
