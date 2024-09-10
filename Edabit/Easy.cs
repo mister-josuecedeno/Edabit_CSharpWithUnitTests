@@ -14,7 +14,12 @@ namespace Edabit
         // https://edabit.com/challenge/H77JNgLtEnQcX5hcu
         public static bool IsSymmetrical(int num)
         {
-            return false;
+            string number = num.ToString();
+            char[] chars = number.ToCharArray();
+            Array.Reverse(chars);
+            string reversed = new string(chars);
+            
+            return num.ToString() == reversed;
         }
 
         // https://edabit.com/challenge/5B4jvew2NvzKhfcQv
