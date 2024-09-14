@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(0, 3)]
+        [InlineData(1, 3.1)]
+        [InlineData(2, 3.14)]
+        [InlineData(3, 3.142)]
+        [InlineData(4, 3.1416)]
+        public void ReturnMyPi(int n, decimal expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.MyPi(n);
+
+            // Assert
+            Assert.Equal(actual, expected);
+        }
+
+        [Theory]
         [InlineData(23, false)]
         [InlineData(9562, false)]
         [InlineData(10019, false)]

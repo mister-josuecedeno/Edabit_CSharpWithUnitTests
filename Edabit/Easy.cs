@@ -11,6 +11,13 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/uz6HACQLjH9DE6HcP
+        public static decimal MyPi(int n)
+        {
+            decimal pi = (decimal)Math.PI;
+            return Math.Round(pi, n);
+        }
+
         // https://edabit.com/challenge/H77JNgLtEnQcX5hcu
         public static bool IsSymmetrical(int num)
         {
