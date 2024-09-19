@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/AyCKKtuhYjNo9eYwJ
+        public static int LargestGap(int[] arr)
+        {
+            return -1;
+        }
+
         // https://edabit.com/challenge/uz6HACQLjH9DE6HcP
         public static decimal MyPi(int n)
         {

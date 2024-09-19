@@ -6,6 +6,24 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(new int[] { 9, 4, 26, 26, 0, 0, 5, 20, 6, 25, 5 }, 11)]
+        [InlineData(new int[] { 14, 13, 7, 1, 4, 12, 3, 7, 7, 12, 11, 5, 7 }, 4)]
+        [InlineData(new int[] { 1, 2, 2, 3, 4, 5, 5, 6, 8, 8, 9, 10, 11, 13, 13, 14 }, 2)]
+        [InlineData(new int[] { 21, 28, 0, 5, 11, 6, 17, 25, 2, 19 }, 6)]
+        [InlineData(new int[] { 8, 11, 24, 2, 7, 4, 4, 25, 24, 14, 8, 0, 7 }, 10)]
+        [InlineData(new int[] { 26, 17, 4, 25, 29, 26, 8, 30, 4, 20, 2, 7, 29, 7, 20, 30, 23, 5 }, 9)]
+        public void ReturnLargestGap(int[] arr, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.LargestGap(arr);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(0, 3)]
         [InlineData(1, 3.1)]
         [InlineData(2, 3.14)]
