@@ -14,7 +14,11 @@ namespace Edabit
         // https://edabit.com/challenge/AyCKKtuhYjNo9eYwJ
         public static int LargestGap(int[] arr)
         {
-            return -1;
+            int[] sortedNumbers = arr.OrderBy(x => x).ToArray();
+
+            return sortedNumbers
+                .Zip(sortedNumbers.Skip(1), (current, next) => next - current)
+                .Max();
         }
 
         // https://edabit.com/challenge/uz6HACQLjH9DE6HcP
