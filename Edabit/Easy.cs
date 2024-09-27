@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/XovEQex684EnTcZqA
+        public static string Century(int year)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/AyCKKtuhYjNo9eYwJ
         public static int LargestGap(int[] arr)
         {

@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(1756, "18th century")]
+        [InlineData(1555, "16th century")]
+        [InlineData(1000, "10th century")]
+        [InlineData(1001, "11th century")]
+        [InlineData(2005, "21st century")]
+        public void ReturnCentury(int year, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.Century(year);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 9, 4, 26, 26, 0, 0, 5, 20, 6, 25, 5 }, 11)]
         [InlineData(new int[] { 14, 13, 7, 1, 4, 12, 3, 7, 7, 12, 11, 5, 7 }, 4)]
         [InlineData(new int[] { 1, 2, 2, 3, 4, 5, 5, 6, 8, 8, 9, 10, 11, 13, 13, 14 }, 2)]
