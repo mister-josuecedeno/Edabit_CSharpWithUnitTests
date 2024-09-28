@@ -14,7 +14,17 @@ namespace Edabit
         // https://edabit.com/challenge/XovEQex684EnTcZqA
         public static string Century(int year)
         {
-            return string.Empty;
+            string suffix = year > 2000 ? "st" : "th";
+            int century = 0;
+
+            if (year % 100 == 0) { 
+                century = year / 100;
+            }
+            else { 
+                century = (year / 100) + 1;
+            }
+
+            return $"{century}{suffix} century";
         }
 
         // https://edabit.com/challenge/AyCKKtuhYjNo9eYwJ
