@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/dgHXtSrgyWbJ3cXvL
+        public static int[] RemoveSmallest(int[] values)
+        {
+            return -1;
+        }
+
         // https://edabit.com/challenge/XovEQex684EnTcZqA
         public static string Century(int year)
         {

@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+    	[InlineData(new int[] {1, 2, 3, 4, 5}, new int[] {2, 3, 4, 5})]
+        [InlineData(new int[] { 5, 3, 2, 1, 4 }, new int[] { 5, 3, 2, 4 })]
+        [InlineData(new int[] { 2, 2, 1, 2, 1 }, new int[] { 2, 2, 2, 1 })]
+        [InlineData(new int[] { 3, 1, 6, 7, 3, 7, 6 }, new int[] { 3, 6, 7, 3, 7, 6 })]
+        [InlineData(new int[] { 4, 4, 4, 1 }, new int[] { 4, 4, 4 })]
+        public void ReturnRemoveSmallest(int[] values, int[] expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.RemoveSmallest(values);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(1756, "18th century")]
         [InlineData(1555, "16th century")]
         [InlineData(1000, "10th century")]
