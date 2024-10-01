@@ -14,7 +14,7 @@ namespace Edabit
         // https://edabit.com/challenge/dgHXtSrgyWbJ3cXvL
         public static int[] RemoveSmallest(int[] values)
         {
-            return -1;
+            return new int[] {-1};
         }
 
         // https://edabit.com/challenge/XovEQex684EnTcZqA
