@@ -15,11 +15,13 @@ namespace Edabit
         public static int[] RemoveSmallest(int[] values)
         {
             // Refactor
+            int min = values.Min();
+
             // Get index of first min
+            int indexToRemove = Array.IndexOf(values, min);
+
             // remove that index
-            
-            // This is incorrect
-            return values.Where(value => value > values.Min()).ToArray();
+            return values.Where((value, arrayIndex) => arrayIndex != indexToRemove).ToArray();
         }
 
         // https://edabit.com/challenge/XovEQex684EnTcZqA
