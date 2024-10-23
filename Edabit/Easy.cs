@@ -6,21 +6,24 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Edabit
 {
     public static class Easy
     {
+        // https://edabit.com/challenge/n5Q8vWopD3Kmc8ADi
+        public static bool IsValidPhoneNumber(string str)
+        {
+            string pattern = @"^\(\d{3}\)\s\d{3}-\d{4}$";
+            return Regex.IsMatch(str, pattern);
+        }
+
         // https://edabit.com/challenge/dgHXtSrgyWbJ3cXvL
         public static int[] RemoveSmallest(int[] values)
         {
-            // Refactor
             int min = values.Min();
-
-            // Get index of first min
             int indexToRemove = Array.IndexOf(values, min);
-
-            // remove that index
             return values.Where((value, arrayIndex) => arrayIndex != indexToRemove).ToArray();
         }
 

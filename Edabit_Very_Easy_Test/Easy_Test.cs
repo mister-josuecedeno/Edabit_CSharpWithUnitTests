@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData("(123) 456-7890", true)]
+        [InlineData("(1111)555 2345", false)]
+        [InlineData("(098) 123 4567", false)]
+        [InlineData("(123)456-7890", false)]
+        public void ReturnIsValidPhoneNumber(string str, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.IsValidPhoneNumber(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+
+        [Theory]
     	[InlineData(new int[] { 1, 2, 3, 4, 5}, new int[] { 2, 3, 4, 5})]
         [InlineData(new int[] { 5, 3, 2, 1, 4 }, new int[] { 5, 3, 2, 4 })]
         [InlineData(new int[] { 2, 2, 1, 2, 1 }, new int[] { 2, 2, 2, 1 })]
