@@ -6,6 +6,24 @@ namespace Edabit.Tests
     public class Easy_Test
     {
         [Theory]
+        [InlineData(1, 1)]
+        [InlineData(3, 16)]
+        [InlineData(8, 141)]
+        [InlineData(10, 226)]
+        [InlineData(15, 526)]
+        [InlineData(33, 2641)]
+        public void ReturnPentagonal(int num, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Easy.Pentagonal(num);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("(123) 456-7890", true)]
         [InlineData("(1111)555 2345", false)]
         [InlineData("(098) 123 4567", false)]
