@@ -15,7 +15,7 @@ namespace Edabit
         // https://edabit.com/challenge/G4DQHo2YgDBAxBJH8
         public static int Pentagonal(int num)
         {
-            return -1;
+            return (5 * num * num - 5 * num + 2) / 2; ;
         }
 
         // https://edabit.com/challenge/n5Q8vWopD3Kmc8ADi
