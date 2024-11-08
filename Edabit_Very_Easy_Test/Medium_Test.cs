@@ -5,6 +5,24 @@ namespace Edabit.Tests
 {
     public class Medium_Test
     {
+
+        [Theory]
+        [InlineData(152, 10)]
+        [InlineData(832, 48)]
+        [InlineData(5511, 25)]
+        [InlineData(19, 9)]
+        [InlineData(133, 9)]
+        public void ReturnMysteryFunc(int num, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.MysteryFunc(num);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
         [Theory]
         [InlineData("4", 2, true)]
         [InlineData("387420489", 9, true)]

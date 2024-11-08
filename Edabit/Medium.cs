@@ -9,6 +9,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/NRAbyiQP9ZNa4bDRT
+        public static int MysteryFunc(int num)
+        {
+            return -1;
+        }
+
         // https://edabit.com/challenge/jxQTbif5fx7J8FeTT
         public static bool KToK(string n, int k)
         {
