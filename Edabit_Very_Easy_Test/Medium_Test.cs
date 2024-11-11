@@ -7,6 +7,24 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData("What went wrong?????????", "What went wrong?")]
+        [InlineData("Oh my goodness!!!", "Oh my goodness!")]
+        [InlineData("WHAT!", "WHAT!")]
+        [InlineData("WHAT?", "WHAT?")]
+        [InlineData("Oh my goodness!", "Oh my goodness!")]
+        [InlineData("I just cannot believe it.", "I just cannot believe it.")]
+        public void NoYelling(string phrase, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.NoYelling(phrase);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(152, 10)]
         [InlineData(832, 48)]
         [InlineData(5511, 25)]

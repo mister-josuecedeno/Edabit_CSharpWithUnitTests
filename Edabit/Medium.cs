@@ -10,6 +10,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/ToMXLjWDLQqFua7Wh
+        public static string NoYelling(string phrase)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/NRAbyiQP9ZNa4bDRT
         public static int MysteryFunc(int num)
         {
