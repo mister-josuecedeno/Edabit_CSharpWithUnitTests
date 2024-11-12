@@ -13,6 +13,8 @@ namespace Edabit.Tests
         [InlineData("WHAT?", "WHAT?")]
         [InlineData("Oh my goodness!", "Oh my goodness!")]
         [InlineData("I just cannot believe it.", "I just cannot believe it.")]
+        [InlineData("I just!!! can!!! not!!! believe!!! it!!!", "I just!!! can!!! not!!! believe!!! it!")]
+        [InlineData("That's a ton!! of cheese!!!!", "That's a ton!! of cheese!")]
         public void NoYelling(string phrase, string expected)
         {
             // Arrange

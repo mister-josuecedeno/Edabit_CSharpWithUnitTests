@@ -4,6 +4,7 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Edabit
@@ -13,7 +14,9 @@ namespace Edabit
         // https://edabit.com/challenge/ToMXLjWDLQqFua7Wh
         public static string NoYelling(string phrase)
         {
-            return string.Empty;
+            string[] words = phrase.Split(' ');
+            words[words.Length - 1] = Regex.Replace(words[words.Length - 1], @"([?!])\1+", "$1");
+            return string.Join(" ", words);
         }
 
         // https://edabit.com/challenge/NRAbyiQP9ZNa4bDRT
