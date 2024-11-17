@@ -7,6 +7,25 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData("@edabit.com", false)]
+        [InlineData("@edabit", false)]
+        [InlineData("matt@edabit.com", true)]
+        [InlineData("", false)]
+        [InlineData("hello.gmail@com", false)]
+        [InlineData("bill.gates@microsoft.com", true)]
+        public void ReturnValidateEmail(string str, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.ValidateEmail(str);
+
+            // Actual
+            Assert.Equal(expected, actual);
+        }
+
+
+        [Theory]
         [InlineData("What went wrong?????????", "What went wrong?")]
         [InlineData("Oh my goodness!!!", "Oh my goodness!")]
         [InlineData("WHAT!", "WHAT!")]

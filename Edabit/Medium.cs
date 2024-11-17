@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/egy6LWExtnR6JkwBg
+        public static bool ValidateEmail(string str)
+        {
+            return false;
+        }
+
         // https://edabit.com/challenge/ToMXLjWDLQqFua7Wh
         public static string NoYelling(string phrase)
         {
