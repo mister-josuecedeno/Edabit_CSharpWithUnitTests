@@ -14,7 +14,8 @@ namespace Edabit
         // https://edabit.com/challenge/egy6LWExtnR6JkwBg
         public static bool ValidateEmail(string str)
         {
-            return false;
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(str, pattern, RegexOptions.IgnoreCase);
         }
 
         // https://edabit.com/challenge/ToMXLjWDLQqFua7Wh
