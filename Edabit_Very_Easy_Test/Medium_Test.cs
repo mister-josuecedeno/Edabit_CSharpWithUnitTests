@@ -7,6 +7,22 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData("I am a title", "I Am A Title")]
+        [InlineData("I AM A TITLE", "I AM A TITLE")]
+        [InlineData("i aM a tITLE", "I AM A TITLE")]
+        [InlineData("the first letter of every word is capitalized", "The First Letter Of Every Word Is Capitalized")]
+        public void ReturnMakeTitle(string str, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.MakeTitle(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("@edabit.com", false)]
         [InlineData("@edabit", false)]
         [InlineData("matt@edabit.com", true)]

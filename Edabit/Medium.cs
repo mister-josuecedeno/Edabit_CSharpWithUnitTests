@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/uz4r69EHHSQMosT8D
+        public static string MakeTitle(string str)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/egy6LWExtnR6JkwBg
         public static bool ValidateEmail(string str)
         {
