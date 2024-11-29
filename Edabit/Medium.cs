@@ -14,7 +14,13 @@ namespace Edabit
         // https://edabit.com/challenge/uz4r69EHHSQMosT8D
         public static string MakeTitle(string str)
         {
-            return string.Empty;
+            string[] words = str.Split(' ');
+            for (int i = 0; i < words.Length; i++)
+            {
+                    words[i] = char.ToUpper(words[i][0]) + words[i].Substring(1);
+            }
+
+            return string.Join(" ", words);
         }
 
         // https://edabit.com/challenge/egy6LWExtnR6JkwBg
