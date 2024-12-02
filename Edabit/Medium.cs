@@ -11,6 +11,20 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/dgHXtSrgyWbJ3cXvL
+        public static int[] RemoveSmallest(int[] values)
+        {
+            if(values == null || values.Length == 0)
+            {
+                return new int[] { };
+            }
+            
+            int minValue = values.Min();
+            int minIndex = Array.IndexOf(values, minValue);
+            int[] result = values.Where((val, index) => index != minIndex).ToArray();
+            return result;
+        }
+
         // https://edabit.com/challenge/uz4r69EHHSQMosT8D
         public static string MakeTitle(string str)
         {
