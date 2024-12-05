@@ -7,6 +7,23 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData("karaca", "0c0r0kaca")]
+        [InlineData("burak", "k0r3baca")]
+        [InlineData("alpaca", "0c0pl0aca")]
+        [InlineData("banana", "0n0n0baca")]
+        [InlineData("hello", "2ll1haca")]
+        public void ReturnEncrypt(string word, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.Encrypt(word);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
     	[InlineData(new int[] { 1, 2, 3, 4, 5 }, new int[] { 2, 3, 4, 5 })]
         [InlineData(new int[] { 5, 3, 2, 1, 4 }, new int[] { 5, 3, 2, 4 })]
         [InlineData(new int[] { 2, 2, 1, 2, 1 }, new int[] { 2, 2, 2, 1 })]

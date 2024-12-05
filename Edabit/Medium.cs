@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/TLWqG49uMLa7zgxPE
+        public static string Encrypt(string word)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/dgHXtSrgyWbJ3cXvL
         public static int[] RemoveSmallest(int[] values)
         {
