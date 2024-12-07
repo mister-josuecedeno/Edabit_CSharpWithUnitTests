@@ -14,7 +14,19 @@ namespace Edabit
         // https://edabit.com/challenge/TLWqG49uMLa7zgxPE
         public static string Encrypt(string word)
         {
-            return string.Empty;
+            string reversed = new string(word.ToCharArray().Reverse().ToArray());
+            Dictionary<char, int> vowelValues = new Dictionary<char, int>
+            {
+                {'a', 0},
+                {'e', 1},
+                {'i', 2},
+                {'o', 2},
+                {'u', 3}
+            };
+
+            string replaced = new string(reversed.Select(c => vowelValues.ContainsKey(char.ToLower(c)) ? char.Parse(vowelValues[char.ToLower(c)].ToString()) : c).ToArray());
+            string append = $"{replaced}aca";
+            return append;
         }
 
         // https://edabit.com/challenge/dgHXtSrgyWbJ3cXvL
