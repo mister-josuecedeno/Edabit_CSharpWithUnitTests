@@ -11,6 +11,14 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/u6HAot7ojYFTSm9aZ
+        public static int Potatoes(string potato)
+        {
+            string pattern = "potato";
+            MatchCollection matches = Regex.Matches(potato, pattern);
+            return matches.Count;
+        }
+
         // https://edabit.com/challenge/TLWqG49uMLa7zgxPE
         public static string Encrypt(string word)
         {

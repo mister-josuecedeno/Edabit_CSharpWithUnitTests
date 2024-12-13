@@ -7,6 +7,24 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData("potato", 1)]
+        [InlineData("potatopotatocherry", 2)]
+        [InlineData("potatopotatopotatoorange", 3)]
+        [InlineData("potatopotatobananapotatopotato", 4)]
+        [InlineData("potatopotatomangopotatopotatopotato", 5)]
+        [InlineData("potatocucumberpotatopotatopotatopotatopotato", 6)]
+        public void Potatoes(string potato, int expected)
+        {
+            // Arrange
+
+            // Actual 
+            var actual = Medium.Potatoes(potato);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("karaca", "0c0r0kaca")]
         [InlineData("burak", "k0r3baca")]
         [InlineData("alpaca", "0c0pl0aca")]
