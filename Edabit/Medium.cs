@@ -11,6 +11,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/djCa8yiv5kYPhvcAZ
+        public static string Accum(string str)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/u6HAot7ojYFTSm9aZ
         public static int Potatoes(string potato)
         {

@@ -7,6 +7,24 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData("abcd", "A-Bb-Ccc-Dddd")]
+        [InlineData("RqaEzty", "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy")]
+        [InlineData("cwAt", "C-Ww-Aaa-Tttt")]
+        [InlineData("VgyCdnQa", "V-Gg-Yyy-Cccc-Ddddd-Nnnnnn-Qqqqqqq-Aaaaaaaa")]
+        [InlineData("nRBSdNOsMl", "N-Rr-Bbb-Ssss-Ddddd-Nnnnnn-Ooooooo-Ssssssss-Mmmmmmmmm-Llllllllll")]
+        public void ReturnAccum(string str, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.Accum(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+
+        [Theory]
         [InlineData("potato", 1)]
         [InlineData("potatopotatocherry", 2)]
         [InlineData("potatopotatopotatoorange", 3)]
