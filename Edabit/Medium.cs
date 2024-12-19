@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Edabit
 {
@@ -14,7 +15,11 @@ namespace Edabit
         // https://edabit.com/challenge/djCa8yiv5kYPhvcAZ
         public static string Accum(string str)
         {
-            return string.Empty;
+            string result = string.Join("-", str.Select((c, index) =>
+                char.ToUpper(c) + new string(char.ToLower(c), index)
+            ));
+
+            return result;
         }
 
         // https://edabit.com/challenge/u6HAot7ojYFTSm9aZ
