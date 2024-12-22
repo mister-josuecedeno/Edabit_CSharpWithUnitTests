@@ -7,6 +7,26 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData(new int[] { 10, 10 }, 23)]
+        [InlineData(new int[] { 3, 3 }, 7)]
+        [InlineData(new int[] { -10, -9 }, 22)]
+        [InlineData(new int[] { -1, -4 }, 5)]
+        [InlineData(new int[] { -10, -2 }, 14)]
+        [InlineData(new int[] { 3, 30 }, 39)]
+        [InlineData(new int[] { 40, 1 }, 49)]
+        [InlineData(new int[] { 3, 5 }, 9)]
+        public void  NumberOfDays(int[] coordinates, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.NumberOfDays(coordinates);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("abcd", "A-Bb-Ccc-Dddd")]
         [InlineData("RqaEzty", "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy")]
         [InlineData("cwAt", "C-Ww-Aaa-Tttt")]

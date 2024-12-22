@@ -12,6 +12,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/hmt8k8oq3a83QznjJ
+        public static int NumberOfDays(int[] coordinates)
+        {
+            return -1;
+        }
+
         // https://edabit.com/challenge/djCa8yiv5kYPhvcAZ
         public static string Accum(string str)
         {
