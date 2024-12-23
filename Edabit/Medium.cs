@@ -15,7 +15,10 @@ namespace Edabit
         // https://edabit.com/challenge/hmt8k8oq3a83QznjJ
         public static int NumberOfDays(int[] coordinates)
         {
-            return -1;
+            int travelDays = Math.Abs(coordinates[0] + coordinates[1]);
+            int adjustment = travelDays % 5 == 0 ? 1 : 0;
+            int restDays = (travelDays / 5) - adjustment;
+            return travelDays + restDays;
         }
 
         // https://edabit.com/challenge/djCa8yiv5kYPhvcAZ
