@@ -7,6 +7,21 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData("A man, a plan, a cat, a ham, a yak, a yam, a hat, a canal-Panama!", true)]
+        [InlineData("Neuquen", true)]
+        [InlineData("Not a palindrome", false)]
+        public void IsPalindrome(string str, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.IsPalindrome(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 10, 10 }, 23)]
         [InlineData(new int[] { 3, 3 }, 7)]
         [InlineData(new int[] { -10, -9 }, 22)]

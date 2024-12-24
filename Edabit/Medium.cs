@@ -7,11 +7,21 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Net.Mime.MediaTypeNames;
+using System.IO;
 
 namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/5tZQKkMhYPNxQxmnG
+        public static bool IsPalindrome(string str)
+        {
+            Regex regex = new Regex("[a-z0-9]", RegexOptions.IgnoreCase);
+            string match = string.Join("", regex.Matches(str).Cast<Match>().Select(m => m.Value)).ToLower();
+
+            return match.SequenceEqual(match.Reverse());
+        }
+
         // https://edabit.com/challenge/hmt8k8oq3a83QznjJ
         public static int NumberOfDays(int[] coordinates)
         {
