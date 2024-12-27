@@ -13,6 +13,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/mxDncdiseARvSJA5E
+        public static string Reverse(string str)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/5tZQKkMhYPNxQxmnG
         public static bool IsPalindrome(string str)
         {

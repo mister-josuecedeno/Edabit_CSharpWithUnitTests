@@ -7,6 +7,23 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData("Reverse", "esreveR")]
+        [InlineData("This is a typical sentence.", "This is a lacipyt .ecnetnes")]
+        [InlineData("The dog is big.", "The dog is big.")]
+        [InlineData("Reverse the order of every word greater than or equal to five characters.", "esreveR the redro of yreve word retaerg than or lauqe to five .sretcarahc")]
+        [InlineData("Lets all be unique together until we realise we are all the same.", "Lets all be euqinu rehtegot litnu we esilaer we are all the .emas")]
+        public void ReturnReverse(string str, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.Reverse(str);
+            
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("A man, a plan, a cat, a ham, a yak, a yam, a hat, a canal-Panama!", true)]
         [InlineData("Neuquen", true)]
         [InlineData("Not a palindrome", false)]
