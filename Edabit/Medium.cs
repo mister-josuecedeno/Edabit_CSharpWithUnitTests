@@ -16,7 +16,14 @@ namespace Edabit
         // https://edabit.com/challenge/mxDncdiseARvSJA5E
         public static string Reverse(string str)
         {
-            return string.Empty;
+            string[] words = str.Split(' ');
+            var result = words.Select(word =>
+                word.Length >= 5
+                    ? new string(word.Reverse().ToArray())
+                    : word
+            );
+
+            return string.Join(" ", result);
         }
 
         // https://edabit.com/challenge/5tZQKkMhYPNxQxmnG
