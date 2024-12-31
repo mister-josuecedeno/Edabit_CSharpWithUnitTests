@@ -8,11 +8,20 @@ using System.Text.RegularExpressions;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Net.Mime.MediaTypeNames;
 using System.IO;
+using System.Data;
+using System.Linq.Expressions;
 
 namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/jJshPejQ5C44TPpSv
+        public static int Equation(string s)
+        {
+            System.Data.DataTable table = new System.Data.DataTable();
+            return Convert.ToInt32(table.Compute(s, System.String.Empty));
+        }
+
         // https://edabit.com/challenge/mxDncdiseARvSJA5E
         public static string Reverse(string str)
         {

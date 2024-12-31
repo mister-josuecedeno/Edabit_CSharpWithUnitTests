@@ -7,6 +7,21 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData("1+1", 2)]
+        [InlineData("7*4-2", 26)]
+        [InlineData("1+1+1+1+1", 5)]
+        public void  Equation(string s, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.Equation(s);
+            
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("Reverse", "esreveR")]
         [InlineData("This is a typical sentence.", "This is a lacipyt .ecnetnes")]
         [InlineData("The dog is big.", "The dog is big.")]
