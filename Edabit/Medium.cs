@@ -15,6 +15,18 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/gnmjJ9aomQJvzTR8N
+        public static int GuessSequence(int num)
+        {
+            // Coefficients determined by solving the equations
+            int A = 30;
+            int B = 60;
+            int C = 0;
+
+            // Calculate the nth term
+            return A * num * num + B * num + C;
+        }
+
         // https://edabit.com/challenge/jJshPejQ5C44TPpSv
         public static int Equation(string s)
         {

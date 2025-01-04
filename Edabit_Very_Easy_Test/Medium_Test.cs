@@ -7,6 +7,23 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData(1, 90)]
+        [InlineData(2, 240)]
+        [InlineData(3, 450)]
+        [InlineData(4, 720)]
+        [InlineData(5, 1050)]
+        public void GuessSequence(int num, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.GuessSequence(num);
+            
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("1+1", 2)]
         [InlineData("7*4-2", 26)]
         [InlineData("1+1+1+1+1", 5)]
