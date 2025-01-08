@@ -7,6 +7,25 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData(43, "Oddish")]
+        [InlineData(373, "Oddish")]
+        [InlineData(55551, "Oddish")]
+        [InlineData(694, "Oddish")]
+        [InlineData(4433, "Evenish")]
+        [InlineData(11, "Evenish")]
+        [InlineData(211112, "Evenish")]
+        public void ReturnOddishOrEvenish(int num, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.OddishOrEvenish(num);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(1, 90)]
         [InlineData(2, 240)]
         [InlineData(3, 450)]
