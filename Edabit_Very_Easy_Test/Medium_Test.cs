@@ -7,6 +7,26 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData("house", "fly", 11)]
+        [InlineData("sharp", "sharq", 1)]
+        [InlineData("abcde", "bcdef", 5)]
+        [InlineData("abcde", "a", 4)]
+        [InlineData("abcde", "e", 8)]
+        [InlineData("abcde", "Abcde", 32)]
+        [InlineData("abcde", "A", 36)]
+        [InlineData("very", "fragile", 67)]
+        public void ReturnLetterDistance(string str1, string str2, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.LetterDistance(str1, str2);
+            
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(43, "Oddish")]
         [InlineData(373, "Oddish")]
         [InlineData(55551, "Oddish")]

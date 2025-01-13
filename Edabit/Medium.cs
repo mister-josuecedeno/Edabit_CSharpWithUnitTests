@@ -15,6 +15,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/X6zTfuS9eZ4Ft6GLm
+        public static int LetterDistance(string str1, string str2)
+        {
+            return -1;
+        }
+
         // https://edabit.com/challenge/fS4Br5GgN3aT5mBxN
         public static string OddishOrEvenish(int num)
         {
