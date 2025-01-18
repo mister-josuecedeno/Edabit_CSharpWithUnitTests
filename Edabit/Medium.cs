@@ -18,7 +18,17 @@ namespace Edabit
         // https://edabit.com/challenge/X6zTfuS9eZ4Ft6GLm
         public static int LetterDistance(string str1, string str2)
         {
-            return -1;
+            int minLength = Math.Min(str1.Length, str2.Length);
+            int difference = Math.Abs(str1.Length - str2.Length);
+
+            int totalDistance = 0;
+
+            for (int i = 0; i < minLength; i++)
+            {
+                totalDistance += Math.Abs(str1[i] - str2[i]);
+            }
+
+            return totalDistance + difference;
         }
 
         // https://edabit.com/challenge/fS4Br5GgN3aT5mBxN
