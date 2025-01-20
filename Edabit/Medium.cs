@@ -15,6 +15,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/8qkRcwf4ARtXpdwEW
+        public static int MajorSum(int[] arr)
+        {
+            return -1;
+        }
+
         // https://edabit.com/challenge/X6zTfuS9eZ4Ft6GLm
         public static int LetterDistance(string str1, string str2)
         {

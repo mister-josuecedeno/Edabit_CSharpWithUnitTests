@@ -7,6 +7,27 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData(new int[] { 1, 2, 3, 4, 0, 0, -3, -2 }, 10)]
+        [InlineData(new int[] { -4, -8, -12, -3, 4, 7, 1, 3, 0, 0, 0, 0 }, -27)]
+        [InlineData(new int[] { 0, 0, 0, 0, 0, 1, 2, -3 }, 5)]
+        [InlineData(new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 11)]
+        [InlineData(new int[] { 0 }, 1)]
+        [InlineData(new int[] { 1 }, 1)]
+        [InlineData(new int[] { -1 }, -1)]
+        [InlineData(new int[] { 10, -12, 4, 0, -3, -7, -91, 45 }, -113)]
+        [InlineData(new int[] { 0, 1, 0, 1, 0, 1, 0, 1, 0 }, 5)]
+        public void ReturnMajorSum(int[] arr, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.MajorSum(arr);
+            
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("house", "fly", 11)]
         [InlineData("sharp", "sharq", 1)]
         [InlineData("abcde", "bcdef", 5)]
