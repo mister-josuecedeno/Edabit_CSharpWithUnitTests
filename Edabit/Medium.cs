@@ -18,7 +18,15 @@ namespace Edabit
         // https://edabit.com/challenge/8qkRcwf4ARtXpdwEW
         public static int MajorSum(int[] arr)
         {
-            return -1;
+            int positives = arr.Where(x => x > 0).Sum();
+            int negatives = arr.Where(x => x < 0).Sum();
+            int zeroes = arr.Count(x => x == 0);
+
+            int[] results = { positives, negatives, zeroes };
+
+            int major = results.OrderByDescending(Math.Abs).First();
+
+            return major;
         }
 
         // https://edabit.com/challenge/X6zTfuS9eZ4Ft6GLm
