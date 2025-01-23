@@ -15,6 +15,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/YxRSS8DEue6WNQqya
+        public static string WurstIsBetter(string str)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/8qkRcwf4ARtXpdwEW
         public static int MajorSum(int[] arr)
         {

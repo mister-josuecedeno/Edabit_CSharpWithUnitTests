@@ -7,6 +7,22 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData("Sausage fests are like salami fests", "Wurst fests are like Wurst fests")]
+        [InlineData("Add the kielbasa and the reserved potatoes and stir through", "Add the Wurst and the reserved potatoes and stir through")]
+        [InlineData("Salami sandwiches, salami and cheese, salami on crackers— I couldn't get enough of the salty, spicy sausage", "Wurst sandwiches, Wurst and cheese, Wurst on crackers— I couldn't get enough of the salty, spicy Wurst")]
+        [InlineData("sich die Wurst vom Brot nehmen lassen", "sich die Wurst vom Brot nehmen lassen")]
+        public void ReturnWurstIsBetter(string str, string expected)
+        {
+            // Arrange
+
+            // Actual 
+            var actual = Medium.WurstIsBetter(str);
+            
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 1, 2, 3, 4, 0, 0, -3, -2 }, 10)]
         [InlineData(new int[] { -4, -8, -12, -3, 4, 7, 1, 3, 0, 0, 0, 0 }, -27)]
         [InlineData(new int[] { 0, 0, 0, 0, 0, 1, 2, -3 }, 5)]
