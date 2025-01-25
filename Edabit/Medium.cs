@@ -18,7 +18,19 @@ namespace Edabit
         // https://edabit.com/challenge/YxRSS8DEue6WNQqya
         public static string WurstIsBetter(string str)
         {
-            return string.Empty;
+            List<string> convertToWurst = new List<string>
+            {
+                "Kielbasa", "Chorizo", "Moronga", "Salami", "Sausage", "Andouille",
+                "Naem", "Merguez", "Gurka", "Snorkers", "Pepperoni"
+            };
+
+            string replacement = "Wurst";
+
+            string pattern = "\\b(" + string.Join("|", convertToWurst) + ")\\b";
+
+            string result = Regex.Replace(str, pattern, replacement, RegexOptions.IgnoreCase);
+
+            return result;
         }
 
         // https://edabit.com/challenge/8qkRcwf4ARtXpdwEW
