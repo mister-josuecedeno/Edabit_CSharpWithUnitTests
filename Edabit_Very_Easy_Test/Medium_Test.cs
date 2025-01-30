@@ -7,6 +7,24 @@ namespace Edabit.Tests
     {
 
         [Theory]
+        [InlineData(6, true)]
+        [InlineData(16, false)]
+        [InlineData(24, true)]
+        [InlineData(36, false)]
+        [InlineData(120, true)]
+        [InlineData(721, false)]
+        public void ReturnIsFactorial(int n, bool expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.isFactorial(n);
+            
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("Sausage fests are like salami fests", "Wurst fests are like Wurst fests")]
         [InlineData("Add the kielbasa and the reserved potatoes and stir through", "Add the Wurst and the reserved potatoes and stir through")]
         [InlineData("Salami sandwiches, salami and cheese, salami on crackers— I couldn't get enough of the salty, spicy sausage", "Wurst sandwiches, Wurst and cheese, Wurst on crackers— I couldn't get enough of the salty, spicy Wurst")]

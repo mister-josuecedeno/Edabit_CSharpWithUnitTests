@@ -15,6 +15,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/ukoc8ctGq6GkxJM76
+        public static bool isFactorial(int n)
+        {
+            return false;
+        }
+
         // https://edabit.com/challenge/YxRSS8DEue6WNQqya
         public static string WurstIsBetter(string str)
         {
