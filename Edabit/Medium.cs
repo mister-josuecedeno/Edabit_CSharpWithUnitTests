@@ -16,9 +16,12 @@ namespace Edabit
     public static class Medium
     {
         // https://edabit.com/challenge/ukoc8ctGq6GkxJM76
-        public static bool isFactorial(int n)
+        public static bool isFactorial(int n, int i = 1, int product = 1)
         {
-            return false;
+            if (product == n) return true;  
+            if (product > n) return false;  
+
+            return isFactorial(n, i + 1, product * (i + 1)); 
         }
 
         // https://edabit.com/challenge/YxRSS8DEue6WNQqya
