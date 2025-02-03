@@ -5,6 +5,37 @@ namespace Edabit.Tests
 {
     public class Medium_Test
     {
+        [Theory]
+        [InlineData(3)]
+        [InlineData(5)]
+        [InlineData(1)]
+        [InlineData(0)]
+        public void TestSquarePatch(int n)
+        {
+            int[,] patch = Medium.SquarePatch(n);
+
+            // For n == 0, expect an empty array.
+            if (n == 0)
+            {
+                Assert.Equal(0, patch.GetLength(0));
+                Assert.Equal(0, patch.GetLength(1));
+            }
+            else
+            {
+                // Check that the dimensions are n x n.
+                Assert.Equal(n, patch.GetLength(0));
+                Assert.Equal(n, patch.GetLength(1));
+
+                // Check that every element equals n.
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < n; j++)
+                    {
+                        Assert.Equal(n, patch[i, j]);
+                    }
+                }
+            }
+        }
 
         [Theory]
         [InlineData(6, true)]
