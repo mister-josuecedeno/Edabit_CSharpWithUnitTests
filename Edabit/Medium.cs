@@ -15,19 +15,22 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/fi5dqwejaQ5JQD7XP
+        public static string TextToNum(string phone)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/k3R95H63Hj39t6iDn
         public static int[,] SquarePatch(int n)
         {
-            // If n is 0, return an empty 2D array.
             if (n == 0)
             {
                 return new int[0, 0];
             }
 
-            // Create a new n x n array.
             int[,] result = new int[n, n];
 
-            // Fill each element with the value n.
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < n; j++)
