@@ -18,7 +18,8 @@ namespace Edabit
         // https://edabit.com/challenge/wkfN3Y6on8YnYnSvH
         public static int SumPrimes(int[] arr)
         {
-
+            int[] primes = arr.Where(x => Easy.isPrime(x)).ToArray();
+            return primes.Sum();
         }
 
         // https://edabit.com/challenge/fi5dqwejaQ5JQD7XP
