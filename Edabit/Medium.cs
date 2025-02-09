@@ -15,6 +15,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/wkfN3Y6on8YnYnSvH
+        public static int SumPrimes(int[] arr)
+        {
+
+        }
+
         // https://edabit.com/challenge/fi5dqwejaQ5JQD7XP
         public static string TextToNum(string phone)
         {

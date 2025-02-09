@@ -6,6 +6,26 @@ namespace Edabit.Tests
     public class Medium_Test
     {
         [Theory]
+        [InlineData(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }, 17)]
+        [InlineData(new int[] { 2, 3, 4, 11, 20, 50, 71 }, 87)]
+        [InlineData(new int[] { 19, 21, 24, 27, 30, 37 }, 56)]
+        [InlineData(new int[] { 69, 79, 87, 97, 101 }, 277)]
+        [InlineData(new int[] { 53, 59, 28, 50, 45, 33, 61 }, 173)]
+        [InlineData(new int[] { }, 0)]
+        [InlineData(new int[] { 11, 11, 11, 11, 11, 22, 22, 22 }, 55)]
+        [InlineData(new int[] { 67, 24, 58, 28, 71, 73, 99 }, 211)]
+        public void ReturnSumPrimes(int[] arr, int expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.SumPrimes(arr);
+            
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("123-647-EYES", "123-647-3937")]
         [InlineData("(325)444-TEST", "(325)444-8378")]
         [InlineData("653-TRY-THIS", "653-879-8447")]
