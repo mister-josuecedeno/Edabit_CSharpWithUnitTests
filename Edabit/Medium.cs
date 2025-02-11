@@ -15,6 +15,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/AafHF2YMGCqDRWERo
+        public static string[] CapMe(string[] arr)
+        {
+            return new string[] { };
+        }
+
         // https://edabit.com/challenge/wkfN3Y6on8YnYnSvH
         public static int SumPrimes(int[] arr)
         {

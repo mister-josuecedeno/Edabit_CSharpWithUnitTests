@@ -6,6 +6,25 @@ namespace Edabit.Tests
     public class Medium_Test
     {
         [Theory]
+        [InlineData(new string[] { "mavis", "senaida", "letty" }, new string[] { "Mavis", "Senaida", "Letty" }]
+        [InlineData(new string[] { "samuel", "MABELLE", "letitia", "meridith" }, new string[] { "Samuel", "Mabelle", "Letitia", "Meridith" }]
+        [InlineData(new string[] { "Slyvia", "Kristal", "Sharilyn", "Calista" }, new string[] { "Slyvia", "Kristal", "Sharilyn", "Calista" }]
+        [InlineData(new string[] { "krisTopher", "olIva", "herminiA" }, new string[] { "Kristopher", "Oliva", "Herminia" }]
+        [InlineData(new string[] { "luke", "marsha", "stanford" }, new string[] { "Luke", "Marsha", "Stanford" }]
+        [InlineData(new string[] { "kara" }, new string[] { "Kara" }]
+        [InlineData(new string[] { "mARIANN", "jOI", "gEORGEANN" }, new string[] { "Mariann", "Joi", "Georgeann" }]
+        public void CapMe(string[] arr, string[] expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.CapMe(arr);
+            
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }, 17)]
         [InlineData(new int[] { 2, 3, 4, 11, 20, 50, 71 }, 87)]
         [InlineData(new int[] { 19, 21, 24, 27, 30, 37 }, 56)]
