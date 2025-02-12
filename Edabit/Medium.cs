@@ -10,6 +10,7 @@ using static System.Net.Mime.MediaTypeNames;
 using System.IO;
 using System.Data;
 using System.Linq.Expressions;
+using System.Globalization;
 
 namespace Edabit
 {
@@ -18,7 +19,9 @@ namespace Edabit
         // https://edabit.com/challenge/AafHF2YMGCqDRWERo
         public static string[] CapMe(string[] arr)
         {
-            return new string[] { };
+            TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+            string[] result = arr.Select(x => textInfo.ToTitleCase(x.ToLower())).ToArray();
+            return result;
         }
 
         // https://edabit.com/challenge/wkfN3Y6on8YnYnSvH
