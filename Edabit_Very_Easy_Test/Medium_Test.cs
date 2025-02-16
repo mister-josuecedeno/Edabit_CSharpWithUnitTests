@@ -6,6 +6,22 @@ namespace Edabit.Tests
     public class Medium_Test
     {
         [Theory]
+        [InlineData(new int[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 }, 3, "yes")]
+        [InlineData(new int[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 }, 4, "no")]
+        [InlineData(new int[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 }, 67, "yes")]
+        [InlineData(new int[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 }, 36, "no")]
+        public void  IsPrime(int[] primes, int num, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.IsPrime(primes, num);
+            
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new string[] { "mavis", "senaida", "letty" }, new string[] { "Mavis", "Senaida", "Letty" })]
         [InlineData(new string[] { "samuel", "MABELLE", "letitia", "meridith" }, new string[] { "Samuel", "Mabelle", "Letitia", "Meridith" })]
         [InlineData(new string[] { "Slyvia", "Kristal", "Sharilyn", "Calista" }, new string[] { "Slyvia", "Kristal", "Sharilyn", "Calista" })]
