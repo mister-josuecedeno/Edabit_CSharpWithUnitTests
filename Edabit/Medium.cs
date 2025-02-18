@@ -16,6 +16,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/KEH9GYanedmB7Q4fT
+        public static string AlternatingCaps(string str)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/zHXnh6Eoej7NrHvFu
         public static string IsPrime(int[] primes, int num)
         {

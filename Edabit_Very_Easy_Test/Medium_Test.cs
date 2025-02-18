@@ -6,6 +6,25 @@ namespace Edabit.Tests
     public class Medium_Test
     {
         [Theory]
+        [InlineData("alternating caps", "AlTeRnAtInG cApS")]
+        [InlineData("What is your name?", "WhAt Is YoUr NaMe?")]
+        [InlineData("Lorem ipsum dolor sit amet consectetur adipisicing elit.", "LoReM iPsUm DoLoR sIt AmEt CoNsEcTeTuR aDiPiSiCiNg ElIt.")]
+        [InlineData("OMG this website is awesome!", "OmG tHiS wEbSiTe Is AwEsOmE!")]
+        [InlineData("The quick brown fox jumps over the lazy dog", "ThE qUiCk BrOwN fOx JuMpS oVeR tHe LaZy DoG")]
+        [InlineData("The intent is to provide players with a sense of pride and accomplishment for unlocking different heroes.", "ThE iNtEnT iS tO pRoViDe PlAyErS wItH a SeNsE oF pRiDe AnD aCcOmPlIsHmEnT fOr UnLoCkInG dIfFeReNt HeRoEs.")]
+
+        public void ReturnAlternatingCaps(string str, string expected)
+        {
+            // Arrange
+
+            // Actual
+            var actual = Medium.AlternatingCaps(str);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 }, 3, "yes")]
         [InlineData(new int[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 }, 4, "no")]
         [InlineData(new int[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 }, 67, "yes")]
