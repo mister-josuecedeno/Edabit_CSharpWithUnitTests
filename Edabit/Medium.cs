@@ -19,7 +19,21 @@ namespace Edabit
         // https://edabit.com/challenge/KEH9GYanedmB7Q4fT
         public static string AlternatingCaps(string str)
         {
-            return string.Empty;
+            char[] chars = str.ToCharArray();
+            
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    chars[i] = char.ToUpper(chars[i]);
+                }
+                else
+                {
+                    chars[i] = char.ToLower(chars[i]);
+                }
+            }
+
+            return new string(chars);
         }
 
         // https://edabit.com/challenge/zHXnh6Eoej7NrHvFu
