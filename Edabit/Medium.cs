@@ -20,10 +20,16 @@ namespace Edabit
         public static string AlternatingCaps(string str)
         {
             char[] chars = str.ToCharArray();
-            
+            int count = 0;
+
             for (int i = 0; i < chars.Length; i++)
             {
-                if (i % 2 == 0)
+                if (char.IsLetter(chars[i]) == false)
+                {
+                    continue;
+                }
+
+                if (count % 2 == 0)
                 {
                     chars[i] = char.ToUpper(chars[i]);
                 }
@@ -31,6 +37,8 @@ namespace Edabit
                 {
                     chars[i] = char.ToLower(chars[i]);
                 }
+                
+                count++;
             }
 
             return new string(chars);
