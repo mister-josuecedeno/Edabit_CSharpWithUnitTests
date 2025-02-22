@@ -16,6 +16,14 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/sSkPhsQjsHdT6Ri34
+        public static int Schoty(string[] frame)
+        {
+            int[] arrays = frame.Select(x => x.Split(new string[] { "---" }, StringSplitOptions.None)[0].Length).ToArray();
+            string number = string.Join("", arrays);
+            return int.Parse(number);
+        }
+
         // https://edabit.com/challenge/KEH9GYanedmB7Q4fT
         public static string AlternatingCaps(string str)
         {

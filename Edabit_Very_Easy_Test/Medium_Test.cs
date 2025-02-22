@@ -6,6 +6,22 @@ namespace Edabit.Tests
     public class Medium_Test
     {
         [Theory]
+        [InlineData(new string[] { "OOOOO---OOOOO", "---OOOOOOOOOO", "O---OOOOOOOOO", "O---OOOOOOOOO", "---OOOOOOOOOO", "OOOOOOOO---OO", "OO---OOOOOOOO" }, 5011082)]
+        [InlineData(new string[] { "OOOOOO---OOOO", "OOOOOO---OOOO", "OOOO---OOOOOO", "OOOOOOO---OOO", "O---OOOOOOOOO", "OOOOOOO---OOO", "OOOOOOO---OOO" }, 6647177)]
+        [InlineData(new string[] { "---OOOOOOOOOO", "---OOOOOOOOOO", "---OOOOOOOOOO", "OO---OOOOOOOO", "O---OOOOOOOOO", "---OOOOOOOOOO", "OOOOOOOOO---O" }, 2109)]
+        [InlineData(new string[] { "O---OOOOOOOOO", "OOO---OOOOOOO", "OOOOOOO---OOO", "---OOOOOOOOOO", "OOOOOOOO---OO", "OO---OOOOOOOO", "OOOOOOO---OOO" }, 1370827)]
+        [InlineData(new string[] { "---OOOOOOOOOO", "OOOOOOOOO---O", "OOO---OOOOOOO", "---OOOOOOOOOO", "OO---OOOOOOOO", "OOOOOO---OOOO", "OOOOO---OOOOO" }, 930265)]
+        [InlineData(new string[] { "---OOOOOOOOOO", "OOOOOO---OOOO", "OOOOOOO---OOO", "OOOOOOO---OOO", "---OOOOOOOOOO", "---OOOOOOOOOO", "OOOOOOOO---OO" }, 677008)]
+        public void Schoty(string[] frame, int expected)
+        {
+            // Arrange
+            // Actual
+            var actual = Medium.Schoty(frame);
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("alternating caps", "AlTeRnAtInG cApS")]
         [InlineData("What is your name?", "WhAt Is YoUr NaMe?")]
         [InlineData("Lorem ipsum dolor sit amet consectetur adipisicing elit.", "LoReM iPsUm DoLoR sIt AmEt CoNsEcTeTuR aDiPiSiCiNg ElIt.")]
