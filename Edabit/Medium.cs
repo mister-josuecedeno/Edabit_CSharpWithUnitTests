@@ -16,6 +16,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/z2pzd2AJ3zr32uedG
+        public static string SevenBoom(int[] arr)
+        {
+
+        }
+
         // https://edabit.com/challenge/sSkPhsQjsHdT6Ri34
         public static int Schoty(string[] frame)
         {

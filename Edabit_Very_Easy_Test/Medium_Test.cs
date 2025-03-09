@@ -6,6 +6,21 @@ namespace Edabit.Tests
     public class Medium_Test
     {
         [Theory]
+        [InlineData(new int[] { 2, 6, 7, 9, 3 }, "Boom!")]
+        [InlineData(new int[] { 33, 68, 400, 5 }, "there is no 7 in the array")]
+        [InlineData(new int[] { 86, 48, 100, 66 }, "there is no 7 in the array")]
+        [InlineData(new int[] { 76, 55, 44, 32 }, "Boom!")]
+        [InlineData(new int[] { 35, 4, 9, 37 }, "Boom!")]
+        public void SevenBoom(int[] arr, string expected)
+        {
+            // Arrange
+            // Actual
+            var actual = Medium.SevenBoom(arr);
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new string[] { "OOOOO---OOOOO", "---OOOOOOOOOO", "O---OOOOOOOOO", "O---OOOOOOOOO", "---OOOOOOOOOO", "OOOOOOOO---OO", "OO---OOOOOOOO" }, 5011082)]
         [InlineData(new string[] { "OOOOOO---OOOO", "OOOOOO---OOOO", "OOOO---OOOOOO", "OOOOOOO---OOO", "O---OOOOOOOOO", "OOOOOOO---OOO", "OOOOOOO---OOO" }, 6647177)]
         [InlineData(new string[] { "---OOOOOOOOOO", "---OOOOOOOOOO", "---OOOOOOOOOO", "OO---OOOOOOOO", "O---OOOOOOOOO", "---OOOOOOOOOO", "OOOOOOOOO---O" }, 2109)]
