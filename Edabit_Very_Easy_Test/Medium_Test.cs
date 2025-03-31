@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Medium_Test
     {
         [Theory]
+        [InlineData("Cat, dog, and mouse.", ".at, dog, and mouseC")]
+        [InlineData("Anna, Banana", "anna, BananA")]
+        [InlineData("[]", "][")]
+        [InlineData("", "Incompatible.")]
+        [InlineData(new int[] { 1, 2, 3 }, "Incompatible.")]
+        [InlineData("dfdkf49824fdfdfjhd", "Two's a pair.")]
+        [InlineData("#343473847#", "Two's a pair.")]
+        public void FlipEndChars(object str, string expected)
+        {
+            // Arrange
+            // Actual
+            var actual = Medium.FlipEndChars(str);
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(new int[] { 2, 6, 7, 9, 3 }, "Boom!")]
         [InlineData(new int[] { 33, 68, 400, 5 }, "there is no 7 in the array")]
         [InlineData(new int[] { 86, 48, 100, 66 }, "there is no 7 in the array")]

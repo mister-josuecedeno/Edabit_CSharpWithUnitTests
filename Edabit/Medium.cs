@@ -16,6 +16,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/FZ765MhPzbuTW7rzE
+        public static string FlipEndChars(object str)
+        {
+            return string.Empty;
+        }
+
         // https://edabit.com/challenge/z2pzd2AJ3zr32uedG
         public static string SevenBoom(int[] arr)
         {
