@@ -19,7 +19,17 @@ namespace Edabit
         // https://edabit.com/challenge/FZ765MhPzbuTW7rzE
         public static string FlipEndChars(object str)
         {
-            return string.Empty;
+            var strValue = str as string;
+
+            if (strValue == null || strValue.Length < 2)
+                return "Incompatible.";
+
+            if (strValue[0] == strValue[strValue.Length - 1])
+                return "Two's a pair.";
+
+            return strValue[strValue.Length - 1] +
+                   strValue.Substring(1, strValue.Length - 2) +
+                   strValue[0];
         }
 
         // https://edabit.com/challenge/z2pzd2AJ3zr32uedG
