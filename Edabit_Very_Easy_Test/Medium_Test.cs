@@ -6,6 +6,21 @@ namespace Edabit.Tests
     public class Medium_Test
     {
         [Theory]
+        [InlineData("Wh*r* d*d my v*w*ls g*?", "eeioeo", "Where did my vowels go?")]
+        [InlineData("abcd", "", "abcd")]
+        [InlineData("*PP*RC*S*", "UEAE", "UPPERCASE")]
+        [InlineData("Ch**s*, Gr*mm*t -- ch**s*", "eeeoieee", "Cheese, Grommit -- cheese")]
+        [InlineData("*l*ph*nt", "Eea", "Elephant")]
+        public void Uncensor(string txt, string vowels, string expected)
+        {
+            // Arrange
+            // Actual
+            var actual = Medium.Uncensor(txt, vowels);
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("Cat, dog, and mouse.", ".at, dog, and mouseC")]
         [InlineData("Anna, Banana", "anna, BananA")]
         [InlineData("[]", "][")]

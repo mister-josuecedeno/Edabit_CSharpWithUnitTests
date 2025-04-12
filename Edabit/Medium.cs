@@ -16,6 +16,26 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/wunaXvZw3WctYioeC
+        public static string Uncensor(string txt, string vowels)
+        {
+            StringBuilder result = new StringBuilder();
+            int vowelIndex = 0;
+            foreach (char c in txt)
+            {
+                if (c == '*')
+                {
+                    result.Append(vowels[vowelIndex]);
+                    vowelIndex++;
+                }
+                else
+                {
+                    result.Append(c);
+                }
+            }
+            return result.ToString();
+        }
+
         // https://edabit.com/challenge/FZ765MhPzbuTW7rzE
         public static string FlipEndChars(object str)
         {
