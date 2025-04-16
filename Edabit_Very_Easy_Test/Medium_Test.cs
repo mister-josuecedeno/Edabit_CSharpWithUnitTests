@@ -6,6 +6,21 @@ namespace Edabit.Tests
     public class Medium_Test
     {
         [Theory]
+        [InlineData("Marta appreciated deep perpendicular right trapezoids", true)]
+        [InlineData("Someone is outside the doorway", false)]
+        [InlineData("She eats super righteously", true)]
+        [InlineData("Ben naps so often", true)]
+        [InlineData("Cute triangles are cute", false)]
+        public void IsSmooth(string sentence, bool expected)
+        {
+            // Arrange
+            // Actual
+            var actual = Medium.IsSmooth(sentence);
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("Wh*r* d*d my v*w*ls g*?", "eeioeo", "Where did my vowels go?")]
         [InlineData("abcd", "", "abcd")]
         [InlineData("*PP*RC*S*", "UEAE", "UPPERCASE")]

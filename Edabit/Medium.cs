@@ -16,6 +16,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/SkY5Nw3rS7WvkQmFc
+        public static bool IsSmooth(string sentence)
+        {
+            return false;
+        }
+
         // https://edabit.com/challenge/wunaXvZw3WctYioeC
         public static string Uncensor(string txt, string vowels)
         {
