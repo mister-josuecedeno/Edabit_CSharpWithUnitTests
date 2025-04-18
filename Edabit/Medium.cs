@@ -19,7 +19,18 @@ namespace Edabit
         // https://edabit.com/challenge/SkY5Nw3rS7WvkQmFc
         public static bool IsSmooth(string sentence)
         {
-            return false;
+            string[] words = sentence.Split(' ');
+            for (int i = 0; i < words.Length - 1; i++)
+            {
+                char lastChar = words[i][words[i].Length - 1];
+                char firstChar = words[i + 1][0];
+
+                if (char.ToLower(lastChar) != char.ToLower(firstChar))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         // https://edabit.com/challenge/wunaXvZw3WctYioeC
