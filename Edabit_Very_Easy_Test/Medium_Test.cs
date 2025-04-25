@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Medium_Test
     {
         [Theory]
+        [InlineData(-1, 0, 25, new double[] { 0, 25d })]
+        [InlineData(1, 10, 25, new double[] { -5d, 0d })]
+        [InlineData(8, 4, 0, new double[] { -0.25d, -0.5d })]
+        [InlineData(4, -200, 1000, new double[] { 25d, -1500d })]
+        [InlineData(1, -50, -1000, new double[] { 25d, -1625d })]
+        [InlineData(-1, 20, 600, new double[] { 10d, 700d })]
+        [InlineData(5, 1, 20, new double[] { -0.1d, 19.95d })]
+        public void FindVertex(int a, int b, int c, double[] expected)
+        {
+            // Arrange
+            // Actual
+            var actual = Medium.FindVertex(a, b, c);
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData("Marta appreciated deep perpendicular right trapezoids", true)]
         [InlineData("Someone is outside the doorway", false)]
         [InlineData("She eats super righteously", true)]

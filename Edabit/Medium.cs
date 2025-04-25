@@ -16,6 +16,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/TH8Y97XYtGgbDW8Qw
+        public static double[] FindVertex(int a, int b, int c)
+        {
+            return new double[] { };
+        }
+
         // https://edabit.com/challenge/SkY5Nw3rS7WvkQmFc
         public static bool IsSmooth(string sentence)
         {
