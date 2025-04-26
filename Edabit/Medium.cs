@@ -19,7 +19,17 @@ namespace Edabit
         // https://edabit.com/challenge/TH8Y97XYtGgbDW8Qw
         public static double[] FindVertex(int a, int b, int c)
         {
-            return new double[] { };
+            // Find x coordinate
+            double x = -(double)b / (2 * a);
+
+            // Find y coordinate
+            double y = a * x * x + b * x + c;
+
+            // Round both values to 2 decimal places
+            x = Math.Round(x, 2, MidpointRounding.AwayFromZero);
+            y = Math.Round(y, 2, MidpointRounding.AwayFromZero);
+
+            return new double[] { x, y };
         }
 
         // https://edabit.com/challenge/SkY5Nw3rS7WvkQmFc
