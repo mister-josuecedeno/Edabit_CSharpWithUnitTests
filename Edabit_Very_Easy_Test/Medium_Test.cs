@@ -6,6 +6,16 @@ namespace Edabit.Tests
     public class Medium_Test
     {
         [Theory]
+        public void PowerRanger(int power, int min, int max, int expected)
+        {
+            // Arrange
+            // Actual
+            var actual = Medium.PowerRanger(power, min, max);
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(-1, 0, 25, new double[] { 0, 25d })]
         [InlineData(1, 10, 25, new double[] { -5d, 0d })]
         [InlineData(8, 4, 0, new double[] { -0.25d, -0.5d })]

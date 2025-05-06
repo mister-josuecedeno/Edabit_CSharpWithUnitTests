@@ -16,6 +16,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/McGCFZYn8ikn3GSqz
+        public static int PowerRanger(int power, int min, int max)
+        {
+            return 0;
+        }
+
         // https://edabit.com/challenge/TH8Y97XYtGgbDW8Qw
         public static double[] FindVertex(int a, int b, int c)
         {
