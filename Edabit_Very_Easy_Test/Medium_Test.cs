@@ -6,6 +6,13 @@ namespace Edabit.Tests
     public class Medium_Test
     {
         [Theory]
+        [InlineData(5, 31, 33, 1)]
+        [InlineData(4, 250, 1300, 3)]
+        [InlineData(2, 49, 65, 2)]
+        [InlineData(3, 1, 27, 3)]
+        [InlineData(10, 1, 5, 1)]
+        [InlineData(1, 1, 5, 5)]
+        [InlineData(2, 1, 100, 10)]
         public void PowerRanger(int power, int min, int max, int expected)
         {
             // Arrange

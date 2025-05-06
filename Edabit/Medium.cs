@@ -19,7 +19,9 @@ namespace Edabit
         // https://edabit.com/challenge/McGCFZYn8ikn3GSqz
         public static int PowerRanger(int power, int min, int max)
         {
-            return 0;
+            int start = (int)Math.Ceiling(Math.Pow(min, 1.0 / power));
+            int end = (int)Math.Floor(Math.Pow(max, 1.0 / power));
+            return Math.Max(0, end - start + 1);
         }
 
         // https://edabit.com/challenge/TH8Y97XYtGgbDW8Qw
