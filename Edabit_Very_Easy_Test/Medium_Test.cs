@@ -6,6 +6,31 @@ namespace Edabit.Tests
     public class Medium_Test
     {
         [Theory]
+        [InlineData("#CD5C5C", true)]
+        [InlineData("#EAECEE", true)]
+        [InlineData("#eaecee", true)]
+        [InlineData("#CD5C58C", false)]
+        [InlineData("#CD5C5Z", false, "Alphabetic characters not in A-F.")]
+        [InlineData("#CD5C&C", false, "Unacceptable character.")]
+        [InlineData("CD5C5C", false, "Does not start with #.")]
+        [InlineData("#123CCCD", false, "Length exceeds 6.")]
+        [InlineData("#123456", true)]
+        [InlineData("#987654", true)]
+        [InlineData("#9876543", false, "Length exceeds 6.")]
+        [InlineData("#CCCCCC", true)]
+        [InlineData("#ZCCZCC", false, "Not acceptable alphabetic characters.")]
+        [InlineData("#Z88Z99", false, "Not acceptable alphabetic characters.")]
+        [InlineData("#Z88!99", false, "Unacceptable character.")]
+        public void  IsValidHexCode(string str, bool expected, string description = "")
+        {
+            // Arrange
+            // Actual
+            var actual = Medium.IsValidHexCode(str);
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
         [InlineData(5, 31, 33, 1)]
         [InlineData(4, 250, 1300, 3)]
         [InlineData(2, 49, 65, 2)]

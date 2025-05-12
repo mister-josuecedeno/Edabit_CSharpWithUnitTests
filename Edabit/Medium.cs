@@ -16,6 +16,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/8tyXtHqAT3LAuHMqu
+        public static bool IsValidHexCode(string str)
+        {
+            return false;
+        }
+
         // https://edabit.com/challenge/McGCFZYn8ikn3GSqz
         public static int PowerRanger(int power, int min, int max)
         {
