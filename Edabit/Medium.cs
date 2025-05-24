@@ -19,7 +19,29 @@ namespace Edabit
         // https://edabit.com/challenge/8tyXtHqAT3LAuHMqu
         public static bool IsValidHexCode(string str)
         {
-            return false;
+            // must begin with a '#'
+            if (string.IsNullOrEmpty(str) || str[0] != '#')
+            {
+                return false;
+            }
+            
+            // must be exactly 6 characters in length
+            if (str.Length != 7)
+            {
+                return false;
+            }
+
+            // must contain only hexadecimal characters (0-9, a-f, A-F)
+            for (int i = 1; i < str.Length; i++)
+            {
+                char c = str[i];
+                if (!((c >= '0' && c <= '9') || (c >= 'a' && c <= 'f') || (c >= 'A' && c <= 'F')))
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         // https://edabit.com/challenge/McGCFZYn8ikn3GSqz
