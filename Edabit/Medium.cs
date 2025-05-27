@@ -16,6 +16,12 @@ namespace Edabit
 {
     public static class Medium
     {
+        // https://edabit.com/challenge/TAZywz6R2hu9tDQWc
+        public static bool Cons(int[] arr)
+        {
+            return false;
+        }
+
         // https://edabit.com/challenge/8tyXtHqAT3LAuHMqu
         public static bool IsValidHexCode(string str)
         {

@@ -6,6 +6,23 @@ namespace Edabit.Tests
     public class Medium_Test
     {
         [Theory]
+        [InlineData(new int[] { 5, 1, 4, 3, 2 }, true)]
+        [InlineData(new int[] { 55, 59, 58, 56, 57 }, true)]
+        [InlineData(new int[] { -3, -2, -1, 1, 0 }, true)]
+        [InlineData(new int[] { 5, 1, 4, 3, 2, 8 }, false)]
+        [InlineData(new int[] { 5, 6, 7, 8, 9, 9 }, false)]
+        [InlineData(new int[] { 5, 3 }, false)]
+        public void Cons(int[] arr, bool expected)
+        {
+            // Arrange
+            // Actaul
+            var actual = Medium.Cons(arr);
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+
+        [Theory]
         [InlineData("#CD5C5C", true)]
         [InlineData("#EAECEE", true)]
         [InlineData("#eaecee", true)]
