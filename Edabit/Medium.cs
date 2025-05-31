@@ -19,7 +19,11 @@ namespace Edabit
         // https://edabit.com/challenge/TAZywz6R2hu9tDQWc
         public static bool Cons(int[] arr)
         {
-            return false;
+            int maximum = arr.Max();
+            int minimum = arr.Min();
+            int expectedValues = maximum - minimum + 1;
+            return arr.Length == expectedValues 
+                && arr.Length == arr.Distinct().Count();
         }
 
         // https://edabit.com/challenge/8tyXtHqAT3LAuHMqu
